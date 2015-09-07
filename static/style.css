@@ -16,31 +16,31 @@
 body {
   background-color: #498CA9;
   font-family: "MediumSans";
-  color: #DFD5C6;
-  padding: 3em 2em 4em 2em; }
+  color: #DFD5C6; }
 
-/* line 32, style.scss */
+/* line 31, style.scss */
 p {
   margin: 0 0 0 0;
   padding: 0 0 0 0; }
 
-/* line 37, style.scss */
+/* line 36, style.scss */
 a {
   font-family: "BoldSans";
   color: #DADE26;
   padding: 8px 12px 4px 12px;
   border: 1px solid #498CA9; }
-  /* line 43, style.scss */
+  /* line 42, style.scss */
   a:hover {
     border: 1px solid; }
 
-/* line 48, style.scss */
+/* line 47, style.scss */
 #container1 {
   display: inline-flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: baseline;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  padding: 3em 2em 4em 2em; }
   /* line 55, style.scss */
   #container1 div {
     flex-grow: 1; }
@@ -49,40 +49,87 @@ a {
     order: 1;
     flex: 1 1 30%;
     margin: 0 2em 2em 0; }
-  /* line 68, style.scss */
+  /* line 65, style.scss */
   #container1 #right-col {
     order: 2;
     flex: 1 1 17%;
     border: 1px solid;
     padding: 1em 2em 1em 2em; }
-    /* line 77, style.scss */
+    /* line 71, style.scss */
     #container1 #right-col p {
       margin: 0 0 .6em 0; }
-    /* line 81, style.scss */
+    /* line 75, style.scss */
     #container1 #right-col strong {
       font-family: "BoldSans"; }
-  /* line 87, style.scss */
+  /* line 81, style.scss */
   #container1 header {
     flex-shrink: 1;
     font-family: "BoldSans";
     font-size: 2.5em; }
-  /* line 94, style.scss */
+  /* line 87, style.scss */
   #container1 h2#subtitle {
     color: #2A2A2A;
     margin: .7em 1.4em 1em 0;
     display: inline-block; }
-  /* line 100, style.scss */
+  /* line 93, style.scss */
   #container1 .taglines {
     margin: 0 0 0 3.5em; }
-    /* line 103, style.scss */
+    /* line 96, style.scss */
     #container1 .taglines h3 {
       margin: .3em 0 0 0;
       font-family: "SemiBoldItalic"; }
 
 @media (max-width: 350px) {
-  /* line 113, style.scss */
+  /* line 106, style.scss */
   #right-col a {
     display: block;
     margin: 0 0 .4em 0; } }
+/* line 114, style.scss */
+#container2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 5em 2em 3em 0;
+  background-color: #D9D5B9;
+  color: #393939; }
+  /* line 123, style.scss */
+  #container2 div {
+    font-size: 1.7em;
+    margin: 0 1.3em 0 1.3em; }
+  /* line 128, style.scss */
+  #container2 .less-important {
+    font-size: 1.3em; }
+  /* line 133, style.scss */
+  #container2 #col1 {
+    order: 1;
+    padding: 1em 2em 1.5em 2em;
+    background-color: #646142;
+    color: #E1E1E1; }
+  /* line 140, style.scss */
+  #container2 #middle-col {
+    order: 2;
+    font-size: 6em;
+    vertical-align: middle;
+    text-align: center; }
+  /* line 147, style.scss */
+  #container2 #col2 {
+    border: 5px solid;
+    order: 2;
+    padding: 1em 2.5em 1.5em 2em;
+    font-size: 1.1em; }
+
+@media (max-width: 850px) {
+  /* line 158, style.scss */
+  #container2 #col2, #container2 #middle-col {
+    margin-top: 45px; } }
+@media (max-width: 1300px) {
+  /* line 165, style.scss */
+  #container2 {
+    flex-direction: column; }
+
+  /* line 169, style.scss */
+  #col1 {
+    margin-bottom: 1.2em; } }
 
 /*# sourceMappingURL=style.css.map */
