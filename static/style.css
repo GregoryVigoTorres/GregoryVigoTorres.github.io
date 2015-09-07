@@ -1,0 +1,88 @@
+@font-face {
+  font-family: "MediumSans";
+  src: url("fonts/CooperHewitt/CooperHewitt-Medium.woff");
+  font-style: normal; }
+@font-face {
+  font-family: "BoldSans";
+  src: url("fonts/CooperHewitt/CooperHewitt-Bold.woff");
+  font-weight: bold;
+  font-style: normal; }
+@font-face {
+  font-family: "SemiBoldItalic";
+  src: url("fonts/CooperHewitt/CooperHewitt-SemiboldItalic.woff");
+  font-weight: bold;
+  font-style: normal; }
+/* line 25, style.scss */
+body {
+  background-color: #498CA9;
+  font-family: "MediumSans";
+  color: #DFD5C6;
+  padding: 3em 2em 4em 2em; }
+
+/* line 32, style.scss */
+p {
+  margin: 0 0 0 0;
+  padding: 0 0 0 0; }
+
+/* line 37, style.scss */
+a {
+  font-family: "BoldSans";
+  color: #DADE26;
+  padding: 8px 12px 4px 12px;
+  border: 1px solid #498CA9; }
+  /* line 43, style.scss */
+  a:hover {
+    border: 1px solid; }
+
+/* line 48, style.scss */
+#container1 {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: baseline;
+  flex-wrap: wrap; }
+  /* line 55, style.scss */
+  #container1 div {
+    flex-grow: 1; }
+  /* line 59, style.scss */
+  #container1 #left-col {
+    order: 1;
+    flex: 1 1 30%;
+    margin: 0 2em 2em 0; }
+  /* line 68, style.scss */
+  #container1 #right-col {
+    order: 2;
+    flex: 1 1 17%;
+    border: 1px solid;
+    padding: 1em 2em 1em 2em; }
+    /* line 77, style.scss */
+    #container1 #right-col p {
+      margin: 0 0 .6em 0; }
+    /* line 81, style.scss */
+    #container1 #right-col strong {
+      font-family: "BoldSans"; }
+  /* line 87, style.scss */
+  #container1 header {
+    flex-shrink: 1;
+    font-family: "BoldSans";
+    font-size: 2.5em; }
+  /* line 94, style.scss */
+  #container1 h2#subtitle {
+    color: #2A2A2A;
+    margin: .7em 1.4em 1em 0;
+    display: inline-block; }
+  /* line 100, style.scss */
+  #container1 .taglines {
+    margin: 0 0 0 3.5em; }
+    /* line 103, style.scss */
+    #container1 .taglines h3 {
+      margin: .3em 0 0 0;
+      font-family: "SemiBoldItalic"; }
+
+@media (max-width: 350px) {
+  /* line 113, style.scss */
+  #right-col a {
+    display: block;
+    margin: 0 0 .4em 0; } }
+
+/*# sourceMappingURL=style.css.map */
