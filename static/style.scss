@@ -1,22 +1,29 @@
 
 @font-face {
-  font-family: "MediumSans";
-  src: url("fonts/CooperHewitt/CooperHewitt-Medium.woff");
-  font-style: normal;
-  }
+    font-family: "MediumSans";
+    src:url("fonts/CooperHewitt/CooperHewitt-Medium.woff") format('woff'),
+        url("fonts/CooperHewitt/CooperHewitt-Medium.svg") format('svg'),
+        url("fonts/CooperHewitt/CooperHewitt-Medium.eot");
+    font-weight: normal;
+    font-style: normal;
+    }
 
 @font-face {
-  font-family: "BoldSans";
-  src: url("fonts/CooperHewitt/CooperHewitt-Bold.woff");
-  font-weight: bold;
-  font-style: normal;
+    font-family: "BoldSans";
+    src:url("fonts/CooperHewitt/CooperHewitt-Bold.woff") format('woff'),
+        url("fonts/CooperHewitt/CooperHewitt-Bold.svg") format('svg'),
+        url("fonts/CooperHewitt/CooperHewitt-Bold.eot");
+    font-weight: bold;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: "SemiBoldItalic";
-  src: url("fonts/CooperHewitt/CooperHewitt-SemiboldItalic.woff");
-  font-weight: bold;
-  font-style: normal;
+    font-family: "SemiBoldItalic";
+    src:url("fonts/CooperHewitt/CooperHewitt-SemiboldItalic.woff") format('woff'),
+        url("fonts/CooperHewitt/CooperHewitt-SemiboldItalic.svg") format('svg'),
+        url("fonts/CooperHewitt/CooperHewitt-SemiboldItalic.eot");
+    font-weight: bold;
+    font-style: normal;
 }
 
 $blue-bg: #498CA9;
@@ -37,37 +44,31 @@ p {
 
 a {
     font-family: "BoldSans";
-    color: #DADE26;
     padding: 8px 12px 4px 12px;
-    border: 1px solid $blue-bg;
     text-decoration: none;
-
-    &:hover {
-        border: 1px solid;
-    }
 }
 
 #container1 {
-    display: inline-flex;
-    flex-direction: row;
+    display: flex;
     justify-content: flex-start; 
     align-items: baseline;
-    flex-wrap: wrap;
     padding: 3em 2em 6em 2em;
     
-    div {
-        flex-grow: 1;
-            }
+    a {
+        color: #DADE26;
+        &:hover {
+            background-color: #74A0B3;
+        }
+    }
 
     #left-col {
         order: 1;
-        flex: 1 1 30%;
-        margin: 0 2em 2em 0;
+        flex-basis: 75%;
+        margin: 0 2em 3.5em 0;
     }
 
     #right-col {
         order: 2;
-        flex: 1 1 17%;
         border: 1px solid;
         padding: 1em 2em 1em 2em;
 
@@ -104,6 +105,8 @@ a {
 }
 
 #github-links {
+    display: flex;
+    flex-direction: column;
     font-size: 1.5em;
     letter-spacing: 1px;
     background-color: $lt-bg;
@@ -116,16 +119,11 @@ a {
     }
 
     a {
-        //color: #594195;
         color: #BC260F;
         border: 0px none;
 
         &:hover {
-            //text-decoration: underline;
-            //border-bottom: 3px solid;
             background-color: rgba(188, 38, 15, 0.1);
-            // font-family: "SemiBoldItalic";
-            // letter-spacing: 2px;
         }
     }
 }
@@ -197,7 +195,6 @@ a {
         color: #E1E1E1;
     }
 
-
     #col1 {
         font-family: "SemiBoldItalic";
     }
@@ -210,8 +207,6 @@ a {
 
         ul {
             margin: .8em;
-            // list-style: none;
-
         }
     }
 }
@@ -223,24 +218,39 @@ footer {
 
 /* RESPONSIVE */
 
-@media (max-width: 700px) {
-    #right-col {
+@media (max-width: 500px) {
+    #container3 {
+        padding: 0;
+        div { 
+            font-size: .70em;
+        }
+    }
 
+    #github-links {
         a {
+            display: block;
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    #right-col {
+        a {
+            font-size: 1.4em;
             display: block;
             margin:0 0 .4em 0;
         }
     }
 
     #container1 {
+        flex-direction: column;
+        align-items: center;
+        
         #left-col {
             .taglines {
                 margin-left:1em;
             }
         }
-    }
-
-    ul {
     }
 
     #github-links {
@@ -250,14 +260,14 @@ footer {
 }
 
 @media (max-width: 850px) {
-    #container2 {
+
+   #container2 {
         #col2, #middle-col {
             margin-top: 45px;
         }
     }
 
     ul {
-        // margin-top: .8em;
         padding-left: 1em;
     }
 }
@@ -274,18 +284,6 @@ footer {
     #middle-col {
         padding-top: 24px;
     }
-
 }
 
 
-@media (max-width: 500px) {
-
-
-
-    #container3 {
-        padding: 0;
-        div { 
-            font-size: .70em;
-        }
-    }
-}
