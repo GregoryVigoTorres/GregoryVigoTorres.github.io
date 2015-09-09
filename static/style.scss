@@ -48,6 +48,11 @@ a {
     text-decoration: none;
 }
 
+strong {
+    font-family: "BoldSans";
+}
+
+
 #container1 {
     display: flex;
     justify-content: flex-start; 
@@ -74,10 +79,6 @@ a {
 
         p {
             margin: 0 0 .6em 0;
-        }
-
-        strong {
-            font-family: "BoldSans";
         }
 
     }
@@ -137,14 +138,13 @@ a {
     background-color: $lt-bg;
     color: $dk-fg;
 
-    div {
-        font-size: 1.7em;
-        margin: 0 1.3em 0 1.3em;
+    ul {
+        list-style: none;
     }
 
-    .less-important {
-        font-size: 1.3em;
-
+    div {
+        font-size: 1.2em;
+        margin: 0 1.3em 0 1.3em;
     }
 
     #col1 {
@@ -152,6 +152,7 @@ a {
         padding: 1em 2em 1.5em 2em;
         background-color: #646142; 
         color: #E1E1E1;
+        flex-basis: 25%;
     }
 
     #middle-col {
@@ -159,13 +160,13 @@ a {
         font-size: 6em;
         vertical-align: middle;
         text-align: center;
+        flex-basis: 5%;
     }
 
-    #col2 {
+    #col3 {
         border: 5px solid;
-        order: 2;
+        order: 3;
         padding: 1em 2.5em 1.5em 2em;
-        font-size:1.1em;
     }
 
 }
@@ -177,6 +178,7 @@ a {
   
     strong {
         font-family: "SemiBoldItalic";
+        // color: #DBD7BF;
     }
 
     header {
@@ -207,12 +209,13 @@ a {
 
         ul {
             margin: .8em;
+            list-style: outside;
         }
     }
 }
 
 footer {
-    padding: 1em 3em 2em 1em;
+    padding: 1em 0em 2em 1em;
 }
 
 
@@ -247,9 +250,15 @@ footer {
         align-items: center;
         
         #left-col {
+            flex-basis: auto;
+
             .taglines {
                 margin-left:1em;
             }
+        }
+
+        #right-col {
+            flex-basis: auto;
         }
     }
 
@@ -272,18 +281,24 @@ footer {
     }
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1200px) {
     #container2 {
         flex-direction: column;
-    }
-   
-    #col1 {
-        margin-bottom: 1.2em;
-    }
+        
+        #col1 {
+            margin-bottom: 1.2em;
+            flex-basis: auto;
+        }
 
-    #middle-col {
-        padding-top: 24px;
+        #middle-col {
+            margin: 0 0 0 0;
+            padding-top: 24px;
+            flex-basis: auto;
+         }
+
+         #col3 {
+             flex-basis: auto;
+         }
     }
 }
-
 
