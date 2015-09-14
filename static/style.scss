@@ -85,14 +85,18 @@ nav {
 
     ul li {
         height: 50px;
+
+        &:hover {
+            background-color: #252525;
+            opacity: 0.8;
+        }
     }
 
     a {
         color:$lt-bg;
-        &:hover {
-            text-decoration: underline;
-            background-color: #252525;
-        }
+        // &:hover {
+        //     // text-decoration: underline;
+        // }
     }
 }
 
@@ -314,6 +318,8 @@ footer {
 @media screen and (min-width: 799px) {
     /* change nav for bigger screen */
 
+    $nav-height: 2.5em;
+
     nav {
         display: block;
         position: fixed;
@@ -321,27 +327,30 @@ footer {
         transform: translate(0,0);
         max-width: 100%;
         width: 100%;
-        height: 1.7em;
+        height: $nav-height;
         padding: 0;
 
         ul {
             display: inline-block;
             max-width: 100%;
             width: 100%;
-            margin: 7px 0 3px 0;
-
+            margin: 0;
         }
 
         ul li {
             display: inline-block;
+            height: $nav-height;
+
             a {
+                padding-top: 12px;
+                display: inline-block;
                 color: white;
             }
         }
     }
 
     #container1 {
-        margin-top: 1.7em;
+        margin-top: $nav-height;
     }
 
     #button-container {
