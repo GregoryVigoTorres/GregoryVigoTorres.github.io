@@ -1,16 +1,16 @@
 @font-face {
   font-family: "MediumSans";
-  src: url("fonts/CooperHewitt/CooperHewitt-Medium.woff") format("woff"), url("fonts/CooperHewitt/CooperHewitt-Medium.svg") format("svg"), url("fonts/CooperHewitt/CooperHewitt-Medium.eot");
+  src: url("fonts/CooperHewitt/CooperHewitt-Medium.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
 @font-face {
   font-family: "BoldSans";
-  src: url("fonts/CooperHewitt/CooperHewitt-Bold.woff") format("woff"), url("fonts/CooperHewitt/CooperHewitt-Bold.svg") format("svg"), url("fonts/CooperHewitt/CooperHewitt-Bold.eot");
-  font-weight: bold;
-  font-style: normal; }
+  src: url("fonts/CooperHewitt/CooperHewitt-Bold.woff") format("woff");
+  font-style: normal;
+  font-weight: bold; }
 @font-face {
   font-family: "SemiBoldItalic";
-  src: url("fonts/CooperHewitt/CooperHewitt-SemiboldItalic.woff") format("woff"), url("fonts/CooperHewitt/CooperHewitt-SemiboldItalic.svg") format("svg"), url("fonts/CooperHewitt/CooperHewitt-SemiboldItalic.eot");
+  src: url("fonts/CooperHewitt/CooperHewitt-SemiboldItalic.woff") format("woff");
   font-weight: bold;
   font-style: normal; }
 body {
