@@ -35,6 +35,7 @@ body {
   background-color: $blue-bg;
   font-family: "MediumSans";
   color: #DFD5C6;
+  font-size: 16px;
   }
 
 p {
@@ -46,12 +47,78 @@ a {
     font-family: "BoldSans";
     padding: 8px 12px 4px 12px;
     text-decoration: none;
+    min-width: 48px;
+    min-height: 48px;
+    // margin: 40px;
 }
 
 strong {
     font-family: "BoldSans";
 }
 
+
+#button-container {
+    position: fixed;
+    text-align: right;
+    width: 100%;
+    height: 35px;
+    padding-top:20px;
+
+    span {
+        padding: 9px 20px 4px 7px;
+        font-size: 30px;
+        font-family: "BoldSans", "Sans";
+        // background-color: $dk-fg;
+        background-color: black;
+        opacity: 0.65;
+
+    }
+}
+
+nav {
+    width: 150px;
+    height: 100%;
+    padding: 2em 0 0 1em;
+    background-color:#000000;
+    position: absolute;
+    top: 0px;
+    transform: translate(-300px, 0);
+    // transform: transform 0.3s ease;
+
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    ul li {
+        height: 40px;
+    }
+
+    a {
+        color:$lt-bg;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+nav.open {
+    transform: translate(0, 0);
+    position: fixed;
+}
+
+
+#up-arrow {
+    text-align: right;
+    position: fixed;
+    bottom: 0px;
+    opacity: 0.75;
+    width: 100%;
+
+    img {
+        padding: 20px;
+    }
+}
 
 #container1 {
     display: flex;
@@ -76,6 +143,7 @@ strong {
         order: 2;
         border: 1px solid;
         padding: 1em 2em 1em 2em;
+        max-width: 33%;
 
         p {
             margin: 0 0 .6em 0;
@@ -117,6 +185,7 @@ strong {
    
     p {
         margin: 0 0 .6em 0;
+        min-height:40px;
     }
 
     a {
@@ -147,12 +216,13 @@ strong {
         margin: 0 1.3em 0 1.3em;
     }
 
+    #col1, #col3 {
+        padding: 1em 2.5em 1.5em 2em;
+    }
+
     #col1 {
         order: 1;
-        padding: 1em 2em 1.5em 2em;
-        background-color: #646142; 
-        color: #E1E1E1;
-        flex-basis: 25%;
+        border: 5px solid;
     }
 
     #middle-col {
@@ -164,9 +234,9 @@ strong {
     }
 
     #col3 {
-        border: 5px solid;
+        background-color: #646142; 
+        color: #E1E1E1;
         order: 3;
-        padding: 1em 2.5em 1.5em 2em;
     }
 
 }
@@ -204,7 +274,7 @@ strong {
     #col2 {
         
         p {
-            margin: .8em 0 0 0;
+            margin: 1.3em 0 0 0;
         }
 
         ul {
@@ -221,13 +291,24 @@ footer {
 
 /* RESPONSIVE */
 
-@media (max-width: 500px) {
+@media screen and (max-width: 500px) {
     #container3 {
         padding: 0;
         div { 
             font-size: .70em;
         }
     }
+
+    #container2 {
+        padding: 3.5em 0;
+    }
+
+    #container2 #col1, #container2 #col3 {
+        width: 75%;
+        padding: 1.5em 1em;
+        margin: auto;
+    }
+
 
     #github-links {
         a {
@@ -236,13 +317,48 @@ footer {
     }
 }
 
-@media (max-width: 575px) {
-    #right-col {
-        a {
-            font-size: 1.4em;
-            display: block;
-            margin:0 0 .4em 0;
+@media screen and (min-width: 799px) {
+    /* change nav for bigger screen */
+
+    nav {
+        display: block;
+        position: fixed;
+        top: 0;
+        transform: translate(0,0);
+        max-width: 100%;
+        width: 100%;
+        height: 1.7em;
+        padding: 0;
+
+        ul {
+            display: inline-block;
+            max-width: 100%;
+            width: 100%;
+            margin: 7px 0 3px 0;
+
         }
+
+        ul li {
+            display: inline-block;
+            a {
+                color: white;
+            }
+        }
+    }
+
+    #container1 {
+        margin-top: 1.7em;
+    }
+
+    #button-container {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 750px) {
+
+    body {
+        font-size: 18px;
     }
 
     #container1 {
@@ -251,7 +367,6 @@ footer {
         
         #left-col {
             flex-basis: auto;
-
             .taglines {
                 margin-left:1em;
             }
@@ -259,6 +374,14 @@ footer {
 
         #right-col {
             flex-basis: auto;
+            max-width: 85%;
+            // margin: auto;
+
+            a {
+                font-size: 1.4em;
+                display: block;
+                margin:0 0 .4em 0;
+            }
         }
     }
 
@@ -268,8 +391,7 @@ footer {
 
 }
 
-@media (max-width: 850px) {
-
+@media screen and (max-width: 850px) {
    #container2 {
         #col2, #middle-col {
             margin-top: 45px;

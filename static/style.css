@@ -13,71 +13,104 @@
   src: url("fonts/CooperHewitt/CooperHewitt-SemiboldItalic.woff") format("woff"), url("fonts/CooperHewitt/CooperHewitt-SemiboldItalic.svg") format("svg"), url("fonts/CooperHewitt/CooperHewitt-SemiboldItalic.eot");
   font-weight: bold;
   font-style: normal; }
-/* line 34, style.scss */
 body {
   background-color: #498CA9;
   font-family: "MediumSans";
-  color: #DFD5C6; }
+  color: #DFD5C6;
+  font-size: 16px; }
 
-/* line 40, style.scss */
 p {
   margin: 0 0 0 0;
   padding: 0 0 0 0; }
 
-/* line 45, style.scss */
 a {
   font-family: "BoldSans";
   padding: 8px 12px 4px 12px;
-  text-decoration: none; }
+  text-decoration: none;
+  min-width: 48px;
+  min-height: 48px; }
 
-/* line 51, style.scss */
 strong {
   font-family: "BoldSans"; }
 
-/* line 56, style.scss */
+#button-container {
+  position: fixed;
+  text-align: right;
+  width: 100%;
+  height: 35px;
+  padding-top: 20px; }
+  #button-container span {
+    padding: 9px 20px 4px 7px;
+    font-size: 30px;
+    font-family: "BoldSans", "Sans";
+    background-color: black;
+    opacity: 0.65; }
+
+nav {
+  width: 150px;
+  height: 100%;
+  padding: 2em 0 0 1em;
+  background-color: #000000;
+  position: absolute;
+  top: 0px;
+  transform: translate(-300px, 0); }
+  nav ul {
+    list-style: none;
+    padding: 0; }
+  nav ul li {
+    height: 40px; }
+  nav a {
+    color: #DCDBD5; }
+    nav a:hover {
+      text-decoration: underline; }
+
+nav.open {
+  transform: translate(0, 0);
+  position: fixed; }
+
+#up-arrow {
+  text-align: right;
+  position: fixed;
+  bottom: 0px;
+  opacity: 0.75;
+  width: 100%; }
+  #up-arrow img {
+    padding: 20px; }
+
 #container1 {
   display: flex;
   justify-content: flex-start;
   align-items: baseline;
   padding: 3em 2em 6em 2em; }
-  /* line 62, style.scss */
   #container1 a {
     color: #DADE26; }
-    /* line 64, style.scss */
     #container1 a:hover {
       background-color: #74A0B3; }
-  /* line 69, style.scss */
   #container1 #left-col {
     order: 1;
     flex-basis: 75%;
     margin: 0 2em 3.5em 0; }
-  /* line 75, style.scss */
   #container1 #right-col {
     order: 2;
     border: 1px solid;
-    padding: 1em 2em 1em 2em; }
-    /* line 80, style.scss */
+    padding: 1em 2em 1em 2em;
+    max-width: 33%; }
     #container1 #right-col p {
       margin: 0 0 .6em 0; }
-  /* line 86, style.scss */
   #container1 header {
     flex-shrink: 1;
     font-family: "BoldSans";
     font-size: 2.5em; }
-  /* line 92, style.scss */
   #container1 h2#subtitle {
     color: #2A2A2A;
     margin: .7em 1.4em 1em 0;
     display: inline-block; }
-  /* line 98, style.scss */
   #container1 .taglines {
     margin: 0 0 0 3.5em; }
-    /* line 101, style.scss */
     #container1 .taglines h3 {
       margin: .3em 0 0 0;
       font-family: "SemiBoldItalic"; }
 
-/* line 108, style.scss */
 #github-links {
   display: flex;
   flex-direction: column;
@@ -87,18 +120,15 @@ strong {
   color: #393939;
   padding: 3em 0 1em 0;
   text-align: center; }
-  /* line 118, style.scss */
   #github-links p {
-    margin: 0 0 .6em 0; }
-  /* line 122, style.scss */
+    margin: 0 0 .6em 0;
+    min-height: 40px; }
   #github-links a {
     color: #BC260F;
     border: 0px none; }
-    /* line 126, style.scss */
     #github-links a:hover {
       background-color: rgba(188, 38, 15, 0.1); }
 
-/* line 132, style.scss */
 #container2 {
   display: flex;
   flex-wrap: wrap;
@@ -107,42 +137,33 @@ strong {
   padding: 5em 2em 3em 0;
   background-color: #DCDBD5;
   color: #393939; }
-  /* line 141, style.scss */
   #container2 ul {
     list-style: none; }
-  /* line 145, style.scss */
   #container2 div {
     font-size: 1.2em;
     margin: 0 1.3em 0 1.3em; }
-  /* line 150, style.scss */
+  #container2 #col1, #container2 #col3 {
+    padding: 1em 2.5em 1.5em 2em; }
   #container2 #col1 {
     order: 1;
-    padding: 1em 2em 1.5em 2em;
-    background-color: #646142;
-    color: #E1E1E1;
-    flex-basis: 25%; }
-  /* line 158, style.scss */
+    border: 5px solid; }
   #container2 #middle-col {
     order: 2;
     font-size: 6em;
     vertical-align: middle;
     text-align: center;
     flex-basis: 5%; }
-  /* line 166, style.scss */
   #container2 #col3 {
-    border: 5px solid;
-    order: 3;
-    padding: 1em 2.5em 1.5em 2em; }
+    background-color: #646142;
+    color: #E1E1E1;
+    order: 3; }
 
-/* line 174, style.scss */
 #container3 {
   background-color: #DCDBD5;
   padding: 2em;
   font-size: 1.5em; }
-  /* line 179, style.scss */
   #container3 strong {
     font-family: "SemiBoldItalic"; }
-  /* line 184, style.scss */
   #container3 header {
     color: #393939;
     font-family: "SemiBoldItalic";
@@ -150,85 +171,102 @@ strong {
     display: inline-block;
     margin: 2em 0 0 0;
     padding: 5px 8px 0px 8px; }
-  /* line 193, style.scss */
   #container3 div {
     margin: 0 0 3em 0;
     padding: 2em;
     background-color: #3C3C3C;
     color: #E1E1E1; }
-  /* line 200, style.scss */
   #container3 #col1 {
     font-family: "SemiBoldItalic"; }
-  /* line 206, style.scss */
   #container3 #col2 p {
-    margin: .8em 0 0 0; }
-  /* line 210, style.scss */
+    margin: 1.3em 0 0 0; }
   #container3 #col2 ul {
     margin: .8em;
     list-style: outside; }
 
-/* line 217, style.scss */
 footer {
   padding: 1em 0em 2em 1em; }
 
 /* RESPONSIVE */
-@media (max-width: 500px) {
-  /* line 225, style.scss */
+@media screen and (max-width: 500px) {
   #container3 {
     padding: 0; }
-    /* line 227, style.scss */
     #container3 div {
       font-size: .70em; }
 
-  /* line 233, style.scss */
+  #container2 {
+    padding: 3.5em 0; }
+
+  #container2 #col1, #container2 #col3 {
+    width: 75%;
+    padding: 1.5em 1em;
+    margin: auto; }
+
   #github-links a {
     display: block; } }
-@media (max-width: 575px) {
-  /* line 241, style.scss */
-  #right-col a {
-    font-size: 1.4em;
+@media screen and (min-width: 799px) {
+  /* change nav for bigger screen */
+  nav {
     display: block;
-    margin: 0 0 .4em 0; }
+    position: fixed;
+    top: 0;
+    transform: translate(0, 0);
+    max-width: 100%;
+    width: 100%;
+    height: 1.7em;
+    padding: 0; }
+    nav ul {
+      display: inline-block;
+      max-width: 100%;
+      width: 100%;
+      margin: 7px 0 3px 0; }
+    nav ul li {
+      display: inline-block; }
+      nav ul li a {
+        color: white; }
 
-  /* line 248, style.scss */
+  #container1 {
+    margin-top: 1.7em; }
+
+  #button-container {
+    display: none; } }
+@media screen and (max-width: 750px) {
+  body {
+    font-size: 18px; }
+
   #container1 {
     flex-direction: column;
     align-items: center; }
-    /* line 252, style.scss */
     #container1 #left-col {
       flex-basis: auto; }
-      /* line 255, style.scss */
       #container1 #left-col .taglines {
         margin-left: 1em; }
-    /* line 260, style.scss */
     #container1 #right-col {
-      flex-basis: auto; }
+      flex-basis: auto;
+      max-width: 85%; }
+      #container1 #right-col a {
+        font-size: 1.4em;
+        display: block;
+        margin: 0 0 .4em 0; }
 
-  /* line 265, style.scss */
   #github-links {
     font-size: 1em; } }
-@media (max-width: 850px) {
-  /* line 274, style.scss */
+@media screen and (max-width: 850px) {
   #container2 #col2, #container2 #middle-col {
     margin-top: 45px; }
 
-  /* line 279, style.scss */
   ul {
     padding-left: 1em; } }
 @media (max-width: 1200px) {
-  /* line 285, style.scss */
   #container2 {
     flex-direction: column; }
-    /* line 288, style.scss */
     #container2 #col1 {
       margin-bottom: 1.2em;
       flex-basis: auto; }
-    /* line 293, style.scss */
     #container2 #middle-col {
       margin: 0 0 0 0;
       padding-top: 24px;
       flex-basis: auto; }
-    /* line 299, style.scss */
     #container2 #col3 {
       flex-basis: auto; } }
 
