@@ -58,11 +58,12 @@ nav {
     list-style: none;
     padding: 0; }
   nav ul li {
-    height: 40px; }
+    height: 50px; }
   nav a {
     color: #DCDBD5; }
     nav a:hover {
-      text-decoration: underline; }
+      text-decoration: underline;
+      background-color: #252525; }
 
 nav.open {
   transform: translate(0, 0);
