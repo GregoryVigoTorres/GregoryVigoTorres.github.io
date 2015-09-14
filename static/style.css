@@ -100,7 +100,7 @@ nav.open {
       margin: 0 0 .6em 0; }
   #container1 header {
     flex-shrink: 1;
-    font-family: "BoldSans" sans-serif;
+    font-family: "BoldSans", sans-serif;
     font-size: 2.5em; }
   #container1 h2#subtitle {
     color: #2A2A2A;
