@@ -1,5 +1,7 @@
 static/.sass-cache/
 static/style.css.map
+static/ptgs.css.map
 static/up_arrow.png
 static/up_arrow.svg
 *.py
+notes.txt
