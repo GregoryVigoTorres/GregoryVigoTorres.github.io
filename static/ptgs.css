@@ -1,0 +1,102 @@
+/* paintings */
+* {
+  max-width: 100%; }
+
+body {
+  background-color: white;
+  padding-top: 2em;
+  color: #393939;
+  width: 100%; }
+
+h2 {
+  color: #393939; }
+
+nav {
+  color: white; }
+
+ul {
+  list-style: none;
+  cursor: default;
+  padding: 0 0 0 0; }
+
+#up-arrow {
+  position: fixed;
+  bottom: 35px;
+  right: 25px;
+  display: none;
+  padding: 10px;
+  height: 35px;
+  width: 35px; }
+
+#series-title {
+  padding-left: 1em; }
+
+#image-container {
+  /* this is the outer cntainer */
+  padding: .5em 1em 3em 1em;
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap; }
+
+.image-container {
+  max-width: 100%; }
+  .image-container p {
+    margin-left: 1.5em;
+    color: black; }
+
+.thumbnail {
+  margin: 4em 2.5em .2em 2.5em;
+  padding: 2.5em;
+  background-color: white;
+  max-width: 100%; }
+
+.info-list {
+  position: absolute;
+  margin-top: 0;
+  padding: 0em 2em 1.5em 0; }
+  .info-list li:not(.show-hide-info) {
+    padding: .1em 1.7em .1em 1.5em;
+    width: 100%;
+    display: none; }
+
+.info-list-visible {
+  background-color: white;
+  box-shadow: 5px 3px 5px #424242; }
+
+footer {
+  padding-top: 3em; }
+
+@media screen and (max-width: 500px) {
+  .image-container {
+    width: 100%; }
+    .image-container .info-list {
+      padding-left: 0; }
+      .image-container .info-list li {
+        font-size: 14px; }
+    .image-container img {
+      max-width: 200px; }
+
+  .thumbnail {
+    margin: 1em 0 1em 0;
+    padding: .5em;
+    border: none;
+    max-width: 100%; }
+
+  .info-list {
+    padding-left: 2em; } }
+@media screen and (max-width: 550px) {
+  #image-container {
+    flex-direction: column;
+    justify-content: center; }
+
+  nav li {
+    margin-top: 60px; }
+  nav a {
+    padding: 40px 40px 40px 5px; } }
+@media screen and (min-width: 950px) {
+  #series-title {
+    margin-top: 2em; } }
+
+/*# sourceMappingURL=ptgs.css.map */
