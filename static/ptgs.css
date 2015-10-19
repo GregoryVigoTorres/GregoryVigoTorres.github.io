@@ -1,102 +1,83 @@
-/* paintings */
-* {
-  max-width: 100%; }
-
+/* copied from style.scss */
+@font-face {
+  font-family: "MediumSans";
+  src: url("fonts/CooperHewitt/CooperHewitt-Medium.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: "BoldSans";
+  src: url("fonts/CooperHewitt/CooperHewitt-Bold.woff") format("woff");
+  font-style: normal;
+  font-weight: bold; }
+@font-face {
+  font-family: "SemiBoldItalic";
+  src: url("fonts/CooperHewitt/CooperHewitt-SemiboldItalic.woff") format("woff");
+  font-weight: bold;
+  font-style: normal; }
 body {
-  background-color: white;
-  padding-top: 2em;
-  color: #393939;
-  width: 100%; }
+  font-family: "MediumSans"; }
 
-h2 {
-  color: #393939; }
-
-nav {
-  color: white; }
+h1, h2, h3, h4 {
+  font-family: "BoldSans"; }
 
 ul {
-  list-style: none;
-  cursor: default;
-  padding: 0 0 0 0; }
+  list-style: none; }
+
+.tab-bar {
+  font-family: "BoldSans"; }
+  .tab-bar section a {
+    padding: 14px;
+    color: white; }
+
+/* make this hidden on large screen */
+.off-canvas-wrap {
+  padding-bottom: 12rem; }
+  .off-canvas-wrap a {
+    font-family: "BoldSans"; }
+
+.left-off-canvas-menu ul {
+  margin-top: 1.3rem; }
+
+.inner-wrap {
+  padding-bottom: 2rem;
+  font-family: "MediumSans"; }
+
+.main-section {
+  padding: 0 0 4rem 1.2rem;
+  text-align: center; }
+
+.image-container {
+  display: inline-block;
+  margin-top: 2.3rem; }
+  .image-container img {
+    padding: 2rem; }
+  .image-container .info-list-visible {
+    box-shadow: 5px 3px 5px #676262;
+    border: 1px solid #676262; }
+  .image-container .info-list {
+    position: absolute;
+    background-color: white;
+    cursor: default; }
+    .image-container .info-list li.show-hide-info {
+      padding: 8px 10px 0 10px; }
+    .image-container .info-list li {
+      text-align: left;
+      font-size: 86%;
+      padding: 0 2rem 0 1.2rem; }
+    .image-container .info-list li:not(.show-hide-info) {
+      text-align: right;
+      display: none; }
 
 #up-arrow {
   position: fixed;
   bottom: 35px;
   right: 25px;
   display: none;
-  padding: 10px;
-  height: 35px;
-  width: 35px; }
-
-#series-title {
-  padding-left: 1em; }
-
-#image-container {
-  /* this is the outer cntainer */
-  padding: .5em 1em 3em 1em;
-  width: 100%;
-  display: inline-flex;
-  align-items: center;
-  align-content: center;
-  flex-wrap: wrap; }
-
-.image-container {
-  max-width: 100%; }
-  .image-container p {
-    margin-left: 1.5em;
-    color: black; }
-
-.thumbnail {
-  margin: 4em 2.5em .2em 2.5em;
-  padding: 2.5em;
-  background-color: white;
-  max-width: 100%; }
-
-.info-list {
-  position: absolute;
-  margin-top: 0;
-  padding: 0em 2em 1.5em 0; }
-  .info-list li:not(.show-hide-info) {
-    padding: .1em 1.7em .1em 1.5em;
-    width: 100%;
-    display: none; }
-
-.info-list-visible {
-  background-color: white;
-  box-shadow: 5px 3px 5px #424242; }
+  padding: 10px; }
 
 footer {
-  padding-top: 3em; }
-
-@media screen and (max-width: 500px) {
-  .image-container {
-    width: 100%; }
-    .image-container .info-list {
-      padding-left: 0; }
-      .image-container .info-list li {
-        font-size: 14px; }
-    .image-container img {
-      max-width: 200px; }
-
-  .thumbnail {
-    margin: 1em 0 1em 0;
-    padding: .5em;
-    border: none;
-    max-width: 100%; }
-
-  .info-list {
-    padding-left: 2em; } }
-@media screen and (max-width: 550px) {
-  #image-container {
-    flex-direction: column;
-    justify-content: center; }
-
-  nav li {
-    margin-top: 60px; }
-  nav a {
-    padding: 40px 40px 40px 5px; } }
-@media screen and (min-width: 950px) {
-  #series-title {
-    margin-top: 2em; } }
+  border-top: 1px solid black;
+  height: 3.3rem;
+  padding: .6rem 0rem 0rem 1.3rem; }
 
 /*# sourceMappingURL=ptgs.css.map */

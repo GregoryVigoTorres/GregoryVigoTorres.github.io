@@ -3,37 +3,56 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Gregory Vigo Torres</title>
-    <link href="static/normalize.css" media='all' type="text/css" rel="stylesheet">
-    <link href="static/style.css" media='all' type="text/css" rel="stylesheet">
-    <link href="static/ptgs.css" media='all' type="text/css" rel="stylesheet">
     <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <title>Gregory Vigo Torres</title>
+    
+    <link href="static/css/normalize.css" media='all' type="text/css" rel="stylesheet">
+    <link href="static/css/foundation.min.css" media='all' type="text/css" rel="stylesheet">
+    <link href="static/ptgs.css" media='all' type="text/css" rel="stylesheet">
+    <script src="static/js/vendor/jquery.js" charset="utf-8"></script>
     <script src="static/js/image_data.json" charset="utf-8"></script>
-    <script src="static/js/jquery-2.1.4.min.js"></script>
 </head>
 
 <body>
-    <nav>
-        <ul>
-            <li><a href="prisms.html">Prisms</a></li>
-            <li><a href="transparent_prisms.html">Transparent Prisms</a></li>
-        </ul>
-    </nav>
+<div class="off-canvas-wrap" data-offcanvas>
+    <div class="inner-wrap">
+        <nav class="tab-bar">
+            <section class="left-small">
+            <a class="left-off-canvas-toggle">&#9776;</a>
+            </section>
+            <section class="middle tab-bar-section">
+                Gregory Vigo Torres
+            </section>
+        </nav>
 
-    <div id="button-container">
-        <span id='show-nav-menu'>&#9776;</span>
+        <aside class="left-off-canvas-menu">
+            <ul>
+                <li><a href="transparent_prisms.html">Transparent Prisms</a></li>
+                <li><a href="prisms.html">Prisms</a></li>
+            </ul>
+        </aside>
+
+    <a class="exit-off-canvas"></a>
     </div>
+        
+    <section class="main-section">
+        <h3>Prisms</h3>
+        <script>var images = image_data['Prisms'];</script>
+        <ul class="large-block-grid-4" id="image-container"></ul>
+    </section>
 
     <img id="up-arrow" src="static/up_arrow.png" >
-
-    <h2 id="series-title">Prisms</h2>
-    <div id="image-container"></div>
-    <script>var images = image_data["Prisms"];</script>
+</div>
 
 <footer>
     <div>&#169; Gregory Vigo Torres, 2015</div>
 </footer>
 
-    <script src="static/js/image_viewer.js"></script>
+<script src="static/js/vendor/modernizr.js" charset="utf-8"></script>
+<script src="static/js/foundation/foundation.min.js" charset="utf-8"></script>
+<script src="static/js/gvt.js" charset="utf-8"></script>
+<script>$(document).foundation();</script>
+
 </body>
 </html>
