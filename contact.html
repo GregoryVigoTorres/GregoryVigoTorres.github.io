@@ -7,13 +7,13 @@
     
     <link href="static/css/normalize.css" media='all' type="text/css" rel="stylesheet">
     <link href="static/css/foundation.min.css" media='all' type="text/css" rel="stylesheet">
-    <link href="static/ptgs.css" media='all' type="text/css" rel="stylesheet">
     <script src="static/js/vendor/jquery.js" charset="utf-8"></script>
     <script src="static/js/image_data.json" charset="utf-8"></script>
+    <link href="static/ptgs.css" media='all' type="text/css" rel="stylesheet">
 </head>
 
 <body>
-<div class="off-canvas-wrap" data-offcanvas>
+<div class="off-canvas-wrap" style="padding:0 0 0 0; height:100%;" data-offcanvas>
     <div class="inner-wrap">
         <nav class="tab-bar">
             <section class="left-small">
@@ -32,26 +32,17 @@
             </ul>
         </aside>
 
-    <a class="exit-off-canvas"></a>
+    <a class="exit-off-canvas" style="box-shadow:none;"></a>
     </div>
-        
-    <section class="main-section">
-        <h3>Transparent Prisms</h3>
-        <script>var images = image_data['Transparent Prisms'];</script>
-        <ul class="large-block-grid-4" id="image-container"></ul>
+
+    <section class="main-contact-section">
+        <p>contact info</p>
+        <a href="mailto:gregory.vigo@gmail.com">gregory.vigo@gmail.com</a>
     </section>
-
-    <img id="up-arrow" src="static/up_arrow.png" >
 </div>
-
-<footer>
-    <div>&#169; Gregory Vigo Torres, 2015</div>
-    <div><a href="mailto:gregory.vigo@gmail.com">gregory.vigo@gmail.com</a></div>
-</footer>
 
 <script src="static/js/vendor/modernizr.js" charset="utf-8"></script>
 <script src="static/js/foundation/foundation.min.js" charset="utf-8"></script>
-<script src="static/js/gvt.js" charset="utf-8"></script>
 <script>$(document).foundation();</script>
 
 </body>
