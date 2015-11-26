@@ -1,3 +1,5 @@
+// Blinky cursor mostly copied from:
+// https://gist.github.com/navinpai/2902229
 
 @font-face {
     font-family: "MediumSans";
@@ -24,11 +26,10 @@ $blue-bg: #498CA9;
 $dk-fg: #393939;
 $lt-bg: #DCDBD5;  
 
-
 body {
-  background-color: $blue-bg;
+  // background-color: $blue-bg;
   font-family: "MediumSans", sans-serif;
-  color: #DFD5C6;
+  // color: #DFD5C6;
   font-size: 16px;
   }
 
@@ -64,7 +65,6 @@ strong {
         font-family: "BoldSans", sans-serif;
         background-color: black;
         opacity: 0.65;
-
     }
 }
 
@@ -76,7 +76,6 @@ nav {
     position: absolute;
     top: 0px;
     transform: translate(-300px, 0);
-    // transform: transform 0.3s ease;
 
     ul {
         list-style: none;
@@ -94,9 +93,6 @@ nav {
 
     a {
         color:$lt-bg;
-        // &:hover {
-        //     // text-decoration: underline;
-        // }
     }
 }
 
@@ -119,16 +115,27 @@ nav.open {
 }
 
 #container1 {
+    #right-col {
+        color: #CAFF90;
+        font-family: mono;
+    }
+
+    color: #E6E6E6;
+    background-color: black;
     display: flex;
     justify-content: flex-start; 
     align-items: baseline;
     padding: 3em 2em 6em 2em;
     
     a {
-        color: #DADE26;
-        &:hover {
-            background-color: #74A0B3;
-        }
+        // color: #41FBFD;
+        color: inherit;
+        padding-bottom: -3px;
+        text-decoration: underline;
+        // &:hover {
+        //     // text-decoration: underline;
+        //     border-bottom: 4px solid #41FBFD;
+        // }
     }
 
     #left-col {
@@ -147,6 +154,15 @@ nav.open {
             margin: 0 0 .6em 0;
         }
 
+        #fake-cursor {
+            width: 1px;
+            background-color: #CAFF90;
+
+          -webkit-animation: blink 2s linear 0s infinite;
+          -moz-animation: blink 2s linear 0s infinite;
+          -ms-animation: blink 2s linear 0s infinite;
+          -o-animation: blink 2s linear 0s infinite;
+        }
     }
 
     header {
@@ -169,6 +185,39 @@ nav.open {
             font-family: "SemiBoldItalic", sans-serif;
         }
     }
+}
+
+// blinky fake cursor
+@-webkit-keyframes blink {
+  0%   { background: #0a0 }
+  47%  { background: #090 }
+  50%  { background: #000 }
+  97%  { background: #000 }
+  100% { background: #090 }
+}
+
+@-moz-keyframes blink {
+  0%   { background: #0a0 }
+  47%  { background: #090 }
+  50%  { background: #000 }
+  97%  { background: #000 }
+  100% { background: #090 }
+}
+
+@-ms-keyframes blink {
+  0%   { background: #0a0 }
+  47%  { background: #090 }
+  50%  { background: #000 }
+  97%  { background: #000 }
+  100% { background: #090 }
+}
+
+@-o-keyframes blink {
+  0%   { background: #0a0 }
+  47%  { background: #090 }
+  50%  { background: #000 }
+  97%  { background: #000 }
+  100% { background: #090 }
 }
 
 #github-links {
@@ -220,7 +269,9 @@ nav.open {
 
     #col1 {
         order: 1;
-        border: 5px solid;
+        border: 2px solid;
+        color: $lt-bg;
+        background-color: #2D6DBA;
     }
 
     #middle-col {
@@ -277,7 +328,7 @@ nav.open {
 
         ul {
             margin: .8em;
-            list-style: outside;
+            list-style: none;
         }
     }
 }
