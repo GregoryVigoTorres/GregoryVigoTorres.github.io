@@ -69,6 +69,7 @@ ul {
         font-family: "BoldSans", sans-serif;
         background-color: black;
         opacity: 0.65;
+        color: $lt-gray;
     }
 }
 
@@ -110,18 +111,6 @@ nav {
 nav.open {
     transform: translate(0, 0);
     position: fixed;
-}
-
-#up-arrow {
-    text-align: right;
-    position: fixed;
-    bottom: 0px;
-    opacity: 0.75;
-    width: 100%;
-
-    img {
-        padding: 20px;
-    }
 }
 
 #top {
@@ -264,142 +253,88 @@ footer {
     text-align: center; 
 }
 
-
 /* RESPONSIVE */
 
-@media screen and (max-width: 500px) {
-    #container3 {
-        padding: 0;
-        div { 
-            font-size: .70em;
-        }
-    }
-
-    #container2 {
-        padding: 3.5em 0;
-    }
-
-    #container2 #col1, #container2 #col3 {
-        width: 75%;
-        padding: 1.5em 1em;
-        margin: auto;
-    }
-
-
-    #github-links {
-        a {
-            display: block;
-        }
-    }
-}
-
-@media screen and (min-width: 799px) {
-    /* change nav for bigger screen */
-
-    $nav-height: 2.5em;
-
-    nav {
-        display: block;
-        position: fixed;
-        top: 0;
-        transform: translate(0,0);
-        max-width: 100%;
-        width: 100%;
-        height: $nav-height;
-        padding: 0;
-
-        ul {
-            display: inline-block;
-            max-width: 100%;
-            width: 100%;
-            margin: 0;
-        }
-
-        ul li {
-            display: inline-block;
-            height: $nav-height;
-
-            a {
-                padding-top: 12px;
-                display: inline-block;
-                color: white;
-            }
-        }
-    }
-
-    #container1 {
-        margin-top: $nav-height;
-    }
-
-    #button-container {
-        display: none;
-    }
-}
-
-@media screen and (max-width: 750px) {
-    body {
-        font-size: 18px;
-    }
-
-    #container1 {
+@media screen and (max-width: 570px) {
+    #top {
         flex-direction: column;
-        align-items: center;
-        
-        #left-col {
-            flex-basis: auto;
-            .taglines {
-                margin-left:1em;
-            }
-        }
+        justify-content: space-between;
+        padding:0 0 0 0;
+        margin-bottom: 2.3rem; 
 
         #right-col {
-            flex-basis: auto;
-            max-width: 85%;
-            // margin: auto;
+            max-width: 100%;
+            width: 100%;
+            border-bottom: 2px solid $lt-gray;
+            padding: 0 0 0 0;
 
-            a {
-                font-size: 1.4em;
-                display: block;
-                margin:0 0 .4em 0;
+            p {
+                letter-spacing: unset;
+                padding: 1rem 1.3rem;
             }
         }
     }
 
-    #github-links {
-        font-size: 1em;
-    }
-}
+    #github {
+        padding: 1rem 0 0 0;
 
-@media screen and (max-width: 850px) {
-   #container2 {
-        #col2, #middle-col {
-            margin-top: 45px;
+        #github-links {
+            max-width: 100%;
+            width: 100%;
+            margin-bottom: 1.3rem;
+
+            .repos {
+                .right-col {
+                    display: none;
+                }
+            }
         }
     }
 
-    ul {
-        padding-left: 1em;
-    }
-}
-
-@media (max-width: 1200px) {
-    #container2 {
-        flex-direction: column;
-        
-        #col1 {
-            margin-bottom: 1.2em;
-            flex-basis: auto;
+    #cv {
+        div {
+            padding: 0 0 4rem 0;
+            p {
+                padding: 0 1.2rem 0 1.2rem
+            }
         }
-
-        #middle-col {
-            margin: 0 0 0 0;
-            padding-top: 24px;
-            flex-basis: auto;
-         }
-
-         #col3 {
-             flex-basis: auto;
-         }
     }
 }
 
+@media screen and (max-width: 500px) {
+    #top { 
+        background-image: url("/static/images/cv/gears_small.jpg");
+    }
+}
+
+@media screen and (min-width: 501px) and (max-width: 750px) {
+    body {
+        font-size: 16px;
+    }
+
+    #top {
+        background-image: url("/static/images/cv/gears_medium.jpg");
+        background-size: cover;
+    }
+}
+
+@media screen and (max-width: 751px) {
+    #top {
+        #left-col {
+            header {
+                font-size: 1.5rem;
+            }
+
+            h2, h3 {
+                font-size: 1.2rem;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 751px) {
+    #top {
+        background-image: url("/static/images/cv/gears_large.jpg");
+        background-size: cover;
+    }
+}
