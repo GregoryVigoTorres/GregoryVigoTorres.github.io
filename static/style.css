@@ -63,17 +63,17 @@ nav {
     list-style: none;
     padding: 0; }
   nav ul li {
-    height: 50px;
-    padding: 0px 7px 0px 7px;
+    min-height: 80px;
     text-align: center; }
-    nav ul li:hover {
+  nav a {
+    color: #DCDBD5;
+    width: 150px;
+    padding: 24px; }
+    nav a:hover {
+      box-shadow: none;
+      text-decoration: none;
       background-color: #5A5A5A;
       opacity: 0.8; }
-  nav a {
-    color: #DCDBD5; }
-    nav a:hover {
-      box-shadow: unset;
-      text-decoration: none; }
 
 nav.open {
   transform: translate(0, 0);

@@ -88,22 +88,20 @@ nav {
     }
 
     ul li {
-        height: 50px;
-        padding: 0px 7px 0px 7px;
+        min-height: 80px;
         text-align: center;
-
-        &:hover {
-            background-color: #5A5A5A;
-            opacity: 0.8;
-        }
     }
 
     a {
         color:$lt-gray;
+        width: 150px;
+        padding: 24px;
         
         &:hover {
-            box-shadow: unset;
+            box-shadow: none;
             text-decoration: none;
+            background-color: #5A5A5A;
+            opacity: 0.8;
         }
     }
 }
