@@ -6,3 +6,7 @@ py
 notes.txt
 foundation
 *.svg
+*.xcf
+github_repos.json
+repos.html
+gears_orig.jpg
