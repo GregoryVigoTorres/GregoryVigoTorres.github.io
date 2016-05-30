@@ -1,12 +1,13 @@
-static/.sass-cache/
-static/style.css.map
+.sass-cache
+*.css.map
 static/up_arrow.svg
 py
 *.py
-notes.txt
-foundation
+*.zip
 *.svg
 *.xcf
+notes.txt
+foundation
 github_repos.json
 repos.html
 gears_orig.jpg
