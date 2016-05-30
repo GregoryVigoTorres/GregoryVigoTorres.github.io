@@ -1,150 +1,142 @@
 <html>
 <head>
     <title>Gregory Vigo Torres</title>
-    <link href="static/style.css" media='all' type="text/css" rel="stylesheet">
-    <link href="static/normalize.css" media='all' type="text/css" rel="stylesheet">
+    <link href="static/css/normalize.css" media='all' type="text/css" rel="stylesheet">
+    <link href="static/css/style.css" media='all' type="text/css" rel="stylesheet">
+    <link href="static/css/octicons.css" media='all' type="text/css" rel="stylesheet">
     <meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
 
 <body>
-    <div id="button-container">
-        <span id='button'>&#9776;</span>
-    </div>
-
-    <nav>
-        <ul>
-            <li><a href="#top">top</a></li>
-            <li><a href="#github">github</a></li>
-            <li><a href="#cv">cv</a></li>
-        </ul>
-    </nav>
+    <!--  -->
+    <!-- <nav> -->
+    <!--     <ul> -->
+    <!--         <li><a href="#top">top</a></li> -->
+    <!--         <li><a href="#github">github</a></li> -->
+    <!--         <li><a href="#cv">cv</a></li> -->
+    <!--     </ul> -->
+    <!-- </nav> -->
+<div id="button-container">
+    <!-- <span id='button'>&#38;#9776;</span> -->
+    <span class="octicon octicon-three-bars"></span>
+</div>
 
 <div id="top">
-    <div id="left-col">
+    <div id="name">
         <header>Gregory Vigo Torres</header>
-        <h2>Web Developer</h2> 
-        <ul>
-            <li> <h3>Python</h3> </li>
-            <li> <h3>Javascript</h3></li>
-            <li> <h3>Flask</h3></li>
-            <li> <h3>JQuery</h3></li>
-            <li> <h3>HTML</h3></li>
-            <li> <h3>CSS</h3></li>
-        </ul>
-    </div>
-    
-    <div id="right-col">
+        <p>Python, Javascript, HTML, CSS</p>
         <p>
-        I love Python and Javascript and the challenge of learning new technologies and
-        deepening my knowledge of things I'm already familiar with.
-        <br>
-        <br>
-            <a href="mailto:gregory@vigo-torr.es">email</a> 
-            &nbsp;&nbsp;
-            <a href="https://github.com/GregoryVigoTorres?tab=repositories" target="blank" >github</a>
+            <a class="redlink" href="mailto:gregory@vigo-torr.es">email</a>
+            <a class="redlink" href="https://github.com/GregoryVigoTorres?tab=repositories" target=blank>
+                <span class="octicon octicon-mark-github"></span> github</a>
+            <a class="redlink" href='https://twitter.com/GrgVT' target='blank'>@GrgVT</a>
+            <p>
+                <a href="">projects</a>
+                <a href="">cv</a>
+            </p>
         </p>
     </div>
 </div>
 
-<div id="github">
-    <div id="github-links">
-        <h2>Github</h2>
+<!-- <div id="github"> -->
+<!--     <div id="github&#45;links"> -->
+<!--         <h2>Github</h2> -->
+<!--  -->
+<!--         <div class="repos"> -->
+<!--         <h3>My Repos</h3> -->
+<!--             <p class="left&#45;col"><a href="https://github.com/GregoryVigoTorres/GregoryVigoTorres.github.io" target="blank">GregoryVigoTorres.github.io</a></p> -->
+<!--             <p class="right&#45;col">This website</p> -->
+<!--             <br> -->
+<!--             <p class="left&#45;col"><a href="https://github.com/GregoryVigoTorres/PaintingsApp" target="blank">PaintingsApp</a></p> -->
+<!--             <p class="right&#45;col">Personal website: Flask, JS</p> -->
+<!--             <br> -->
+<!--             <p class="left&#45;col"><a href="https://github.com/GregoryVigoTorres/sql_scraper" target="blank">sql_scraper</a></p> -->
+<!--             <p class="right&#45;col">Scrapy and sqlalchemy example</p> -->
+<!--             <br> -->
+<!--         <h3>Repos I've contributed to</h3> -->
+<!--             <p class="left&#45;col"><a href="https://github.com/GregoryVigoTorres/scrapy" target="blank">scrapy</a></p> -->
+<!--             <p class="right&#45;col">Scrapy, a fast high&#45;level web crawling &#38; scraping framework for Python.</p> -->
+<!--             <br> -->
+<!--         </div> -->
+<!--     </div> -->
+<!--     <div id="col2"> -->
+<!--         <p><strong>I also have some experience with</strong> -->
+<!--             <ul> -->
+<!--                 <li>git/github</li> -->
+<!--                 <li>SQLAlchemy</li> -->
+<!--                 <li>Pyramid</li> -->
+<!--                 <li>Django</li> -->
+<!--                 <li>Scrapy</li> -->
+<!--                 <li>Debian</li> -->
+<!--                 <li>OOP</li> -->
+<!--                 <li>... and some other things</li> -->
+<!--             </ul> -->
+<!--         </p> -->
+<!--     </div> -->
+<!-- </div> -->
+<!--  -->
+<!-- <div id="cv"> -->
+<!--     <div> -->
+<!--         <header>Online Courses</header> -->
+<!--         <ul> -->
+<!--             <li><strong>Web Development</strong>, Udacity</li> -->
+<!--             <li><strong>Basic Javascript</strong>, Udacity</li> -->
+<!--             <li><strong>Object Oriented Javascript</strong>, Udacity</li> -->
+<!--             <li><strong>Responsive Web Design Fundamentals</strong>, Udacity</li> -->
+<!--             <li><strong>Web Application Architectures</strong>, Coursera</li> -->
+<!--             <li><strong>php</strong>, Codeacademy</li> -->
+<!--             <li><strong>Git Fundamentals</strong>, Pluralsight</li> -->
+<!--         </ul> -->
+<!--  -->
+<!--         <p>I attended <strong>EuroPython 2015</strong> in Bilbao</p> -->
+<!--  -->
+<!--         <header>Formal Education</header> -->
+<!--         <ul> -->
+<!--             <li>MFA, <strong>The University of Pennsylvania</strong></li> -->
+<!--             <li>BFA, <strong>The School of The Art Institute of Chicago</strong></li> -->
+<!--         </ul> -->
+<!--  -->
+<!--         <header>Languages</header> -->
+<!--         <ul> -->
+<!--             <li><strong>English</strong>, native</li> -->
+<!--             <li><strong>Spanish</strong>, functionally bilingual</li> -->
+<!--         </ul> -->
+<!--  -->
+<!--         <header>Work Experience</header> -->
+<!--         <ul> -->
+<!--             <li>Maintenance &#38; l10n Project Management, <u>www.oblackowhite.com</u> [2014]</li> -->
+<!--             <li>Freelance Translator [2007&#45;2015]</li> -->
+<!--             <li>In Company English Teacher [2002&#45;2012]</li> -->
+<!--             <li>Assistant to the Collections Manager, <strong>The Architectural Archives</strong> of <strong>The University of Pennsylvania</strong> [2000&#45;2002]</li> -->
+<!--         </ul> -->
+<!--  -->
+<!--         <p> -->
+<!--         Besides coding, my other interests include  -->
+<!--         painting, design, everything free &#38;amp; open source and documentary film. -->
+<!--         </p> -->
+<!--     </div> -->
+<!-- </div> -->
 
-        <div class="repos">
-        <h3>My Repos</h3>
-            <p class="left-col"><a href="https://github.com/GregoryVigoTorres/GregoryVigoTorres.github.io" target="blank">GregoryVigoTorres.github.io</a></p>
-            <p class="right-col">This website</p>
-            <br>
-            <p class="left-col"><a href="https://github.com/GregoryVigoTorres/PaintingsApp" target="blank">PaintingsApp</a></p>
-            <p class="right-col">Personal website: Flask, JS</p>
-            <br>
-            <p class="left-col"><a href="https://github.com/GregoryVigoTorres/sql_scraper" target="blank">sql_scraper</a></p>
-            <p class="right-col">Scrapy and sqlalchemy example</p>
-            <br>
-        <h3>Repos I've contributed to</h3>
-            <p class="left-col"><a href="https://github.com/GregoryVigoTorres/scrapy" target="blank">scrapy</a></p>
-            <p class="right-col">Scrapy, a fast high-level web crawling & scraping framework for Python.</p>
-            <br>
-        </div>
-    </div>
-    <div id="col2">
-        <p><strong>I also have some experience with</strong>
-            <ul>
-                <li>git/github</li>
-                <li>SQLAlchemy</li>
-                <li>Pyramid</li>
-                <li>Django</li>
-                <li>Scrapy</li>
-                <li>Debian</li>
-                <li>OOP</li>
-                <li>... and some other things</li>
-            </ul>
-        </p>
-    </div>
-</div>
+<!-- <footer> -->
+<!--     <div>&#38;#169; Gregory Vigo Torres, 2015</div> -->
+<!-- </footer> -->
 
-<div id="cv">
-    <div>
-        <header>Online Courses</header>
-        <ul>
-            <li><strong>Web Development</strong>, Udacity</li>
-            <li><strong>Basic Javascript</strong>, Udacity</li>
-            <li><strong>Object Oriented Javascript</strong>, Udacity</li>
-            <li><strong>Responsive Web Design Fundamentals</strong>, Udacity</li>
-            <li><strong>Web Application Architectures</strong>, Coursera</li>
-            <li><strong>php</strong>, Codeacademy</li>
-            <li><strong>Git Fundamentals</strong>, Pluralsight</li>
-        </ul>
-
-        <p>I attended <strong>EuroPython 2015</strong> in Bilbao</p>
-
-        <header>Formal Education</header>
-        <ul>
-            <li>MFA, <strong>The University of Pennsylvania</strong></li>
-            <li>BFA, <strong>The School of The Art Institute of Chicago</strong></li>
-        </ul>
-
-        <header>Languages</header>
-        <ul>
-            <li><strong>English</strong>, native</li>
-            <li><strong>Spanish</strong>, functionally bilingual</li>
-        </ul>
-
-        <header>Work Experience</header>
-        <ul>
-            <li>Maintenance & l10n Project Management, <u>www.oblackowhite.com</u> [2014]</li>
-            <li>Freelance Translator [2007-2015]</li>
-            <li>In Company English Teacher [2002-2012]</li>
-            <li>Assistant to the Collections Manager, <strong>The Architectural Archives</strong> of <strong>The University of Pennsylvania</strong> [2000-2002]</li>
-        </ul>
-
-        <p>
-        Besides coding, my other interests include 
-        painting, design, everything free &amp; open source and documentary film.
-        </p>
-    </div>
-</div>
-
-<footer>
-    <div>&#169; Gregory Vigo Torres, 2015</div>
-</footer>
-
-<script>
-    var button = document.getElementById('button');
-    var nav = document.getElementsByTagName('nav')[0];
-
-    button.addEventListener('click', function(e) {
-        nav.classList.toggle('open');
-        e.stopPropagation();
-    });
-
-    var pageLinks = nav.getElementsByTagName('a'); 
-
-    for (i=0; i<pageLinks.length; i++) {
-        pageLinks[i].addEventListener('click', function(e) {
-            document.getElementsByTagName('nav')[0].classList.remove('open');
-        });
-    };
-</script>
+<!-- <script> -->
+<!--     var button = document.getElementById('button'); -->
+<!--     var nav = document.getElementsByTagName('nav')[0]; -->
+<!--  -->
+<!--     button.addEventListener('click', function(e) { -->
+<!--         nav.classList.toggle('open'); -->
+<!--         e.stopPropagation(); -->
+<!--     }); -->
+<!--  -->
+<!--     var pageLinks = nav.getElementsByTagName('a');  -->
+<!--  -->
+<!--     for (i=0; i<pageLinks.length; i++) { -->
+<!--         pageLinks[i].addEventListener('click', function(e) { -->
+<!--             document.getElementsByTagName('nav')[0].classList.remove('open'); -->
+<!--         }); -->
+<!--     }; -->
+<!-- </script> -->
 </body>
 </html>
