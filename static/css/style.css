@@ -120,9 +120,9 @@ ul {
 #cv {
   margin-top: 3rem; }
   #cv div {
-    padding: 3.5rem 3.5rem 7.5rem 5.5rem;
-    background-color: #C8D72D;
-    color: #393939; }
+    padding: .5rem 3.5rem 7.5rem 5.5rem;
+    color: #393939;
+    border: 2px solid #393939; }
     #cv div strong {
       font-family: "SemiBoldItalic", sans-serif; }
     #cv div header {
@@ -130,13 +130,25 @@ ul {
       color: #DCDBD5;
       background-color: #393939;
       display: inline-block;
-      margin: 2em 0 0 0;
+      margin: 1em 0 0 0;
       padding: 3px 8px 0px 8px; }
     #cv div p {
       margin: 1.3rem 0 0 0; }
     #cv div ul {
       margin: .8rem;
       list-style: none; }
+
+#back-to-top {
+  background-color: black;
+  color: white;
+  font-family: "BoldSans";
+  position: fixed;
+  bottom: 0;
+  right: 25px;
+  padding: 20px;
+  border-radius: 50%; }
+  #back-to-top:hover::before {
+    content: 'back to '; }
 
 footer {
   padding: 1em 0em 2em 1em;

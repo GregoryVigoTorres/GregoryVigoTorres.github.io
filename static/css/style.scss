@@ -227,53 +227,15 @@ ul {
     }
 
 }
-// #github {
-//     display: flex;
-//     flex-wrap: wrap;
-//     justify-content: space-around;
-//     align-items: center;
-//     padding: 5rem 2rem 3rem 0rem;
-//     background-color: white;
-//     color: $dk-gray;
-//
-//     #github-links {
-//         letter-spacing: 1px;
-//         background-color: $lt-gray;
-//         color: $dk-gray;
-//         padding: 3rem 2rem 1rem 2rem;
-//         max-width: 40%;
-//         order: 1;
-//        
-//         .repos {
-//             h3 {
-//                 width: 100%;
-//             }
-//
-//             .right-col, .left-col {
-//                 margin-left: 1rem;
-//             }
-//         }
-//
-//         h2 {
-//             margin: 0 0 0 0;
-//         }
-//     }
-//
-//     #col2 {
-//         padding: 1.3rem;
-//         order: 2;
-//         color: $lt-gray;
-//         background-color: #2D9DBA;
-//     }
-// } /* container2 */
 
 #cv {
     margin-top: 3rem;
 
     div {
-        padding: 3.5rem 3.5rem 7.5rem 5.5rem;
-        background-color: #C8D72D;
+        padding: .5rem 3.5rem 7.5rem 5.5rem;
+        // background-color: #C8D72D;
         color: $dk-gray;
+        border: 2px solid $dk-gray;
 
         strong {
             font-family: "SemiBoldItalic", sans-serif;
@@ -284,7 +246,7 @@ ul {
             color: $lt-gray;
             background-color: $dk-gray;
             display: inline-block;
-            margin: 2em 0 0 0;
+            margin: 1em 0 0 0;
             padding: 3px 8px 0px 8px;
         }
 
@@ -295,6 +257,22 @@ ul {
         ul {
             margin: .8rem;
             list-style: none;
+        }
+    }
+}
+
+#back-to-top {
+    background-color: black;
+    color: white;
+    font-family: "BoldSans";
+    position: fixed;
+    bottom: 0;
+    right: 25px;
+    padding: 20px;
+    border-radius: 50%;
+    &:hover {
+        &::before {
+            content: 'back to ';
         }
     }
 }
