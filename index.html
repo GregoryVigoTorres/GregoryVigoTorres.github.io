@@ -4,8 +4,8 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Gregory Vigo Torres</title>
     <link href="static/css/normalize.css" media='all' type="text/css" rel="stylesheet">
-    <link href="static/css/style.css" media='all' type="text/css" rel="stylesheet">
     <link href="static/css/octicons.css" media='all' type="text/css" rel="stylesheet">
+    <link href="static/css/style.css" media='all' type="text/css" rel="stylesheet">
     <meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
 
@@ -19,9 +19,6 @@
     <!--     </ul> -->
     <!-- </nav> -->
 
-<!-- <div id="button&#45;container"> -->
-<!--     <span class="octicon octicon&#45;three&#45;bars"></span> -->
-<!-- </div> -->
 
 <div id="top">
     <div id="name">
@@ -34,21 +31,22 @@
             <a class="redlink" href='https://twitter.com/GrgVT' target='blank'>@GrgVT</a>
             <a class="redlink" href='https://es.linkedin.com/in/gregoryvigotorres' target='blank'>linkedin</a>
             <p>
-                <a href="#projects">projects</a>
-                <a href="#skills">skills</a>
-                <a href="#cv">cv</a>
+                <a href="#projects-anchor">projects</a>
+                <a href="#skills-anchor">skills</a>
+                <a href="#cv-anchor">cv</a>
             </p>
         </p>
     </div>
 </div>
-
-<p class="title-span">Projects</p>
 
 <div id="coming-soon">
     <p>Coming Soon</p>
     <br>
     <p id="close-coming-soon">ok</p>
 </div>
+
+<span id="projects-anchor" ></span>
+<p class="title-span">Projects</p>
 
 <script>
     var comingSoonElem = document.getElementById('coming-soon');
@@ -66,7 +64,6 @@
         comingSoonElem.style.display = 'none';
     });
 </script>
-
 
 <div id="projects">
     <a class="project-link" href=javascript:showComingSoon('#pymcsqlface')>
@@ -102,7 +99,8 @@
     </a>
 </div>
 
-<p class="title-span">Skills Keywords</p>
+<span id="skills-anchor" class="hidden-link"></span>
+<p class="title-span">Skills</p>
 <div id="skills">
     <div>
         <ul>
@@ -111,6 +109,7 @@
             <li>HTML</li>
             <li>CSS</li>
             <li>SCSS</li>
+            <li>php</li>
             <li>Object Oriented Programming</li>
             <li>Unit testing</li>
         </ul>
@@ -156,6 +155,7 @@
     </div>
 </div>
 
+<span id="cv-anchor" class="hidden-link"></span>
 <div id="cv">
     <p class="title-span">CV</p>
     <div>
@@ -174,7 +174,7 @@
         <ul>
             <li>Python (2 &amp; 3)</li>
             <li>Javascript</li>
-            <li>some php &amp; ruby</li>
+            <li>a little php</li>
         </ul>
 
         <p>I attended <strong>EuroPython 2015</strong> in Bilbao</p>
@@ -206,6 +206,15 @@
     </div>
 </div>
 
+<div id="menu-button-container">
+    <span class="octicon octicon-three-bars" id="show-menu"></span>
+    <ul id="menu-items">
+        <li><a href="#projects-anchor">projects</a></li>
+        <li><a href="#skills-anchor">skills</a></li>
+        <li><a href="#cv-anchor">cv</a></li>
+    </ul>
+</div>
+
 <a id="back-to-top-link" href="#top" style="display: none;">
     <div id="back-to-top">top</div>
 </a>
@@ -218,15 +227,29 @@
     var topButton = document.getElementById("back-to-top-link");
     var foldElem = document.getElementById('top');
     var fold = foldElem.clientHeight; 
+
+    var showMenuButton = document.getElementById('menu-button-container');
+    var menuItems = document.getElementById('menu-items');
     
     document.onscroll = function(eve) {
         var pos = window.scrollY;
         if (pos > fold) {
             topButton.style.display = 'block';
+            showMenuButton.style.display = 'block';
         } else {
             topButton.style.display = 'none';
+            showMenuButton.style.display = 'none';
         };
     };
+
+
+    showMenuButton.addEventListener('mouseover', function(eve) {
+        menuItems.style.display = 'block'; 
+    });
+
+    showMenuButton.addEventListener('mouseout', function(eve) {
+        menuItems.style.display = 'none'; 
+    });
 
 </script>
 </body>

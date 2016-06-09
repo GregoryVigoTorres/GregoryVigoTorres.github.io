@@ -112,6 +112,8 @@ ul {
       margin: 0 12px 0 12px; }
   #projects p, #projects div {
     margin: auto; }
+  #projects div p {
+    padding: 2px; }
   #projects div {
     padding-top: 3rem;
     border: 2px solid black;
@@ -136,7 +138,8 @@ ul {
 #skills {
   margin-bottom: 6rem;
   display: flex;
-  justify-content: space-around; }
+  justify-content: space-around;
+  padding: 3rem 0 3rem 0; }
   #skills ul, #skills li {
     padding: 0;
     margin: 0; }
@@ -167,6 +170,24 @@ ul {
       margin: .8rem;
       list-style: none; }
 
+#menu-button-container {
+  display: none;
+  background-color: #006fe7;
+  color: white;
+  border-radius: 50%;
+  padding: 20px;
+  position: fixed;
+  right: 25px;
+  bottom: 69px;
+  text-align: center; }
+  #menu-button-container .octicon {
+    width: 36px;
+    height: 36px;
+    font-size: 36px; }
+  #menu-button-container #menu-items {
+    display: none;
+    padding: 0; }
+
 #back-to-top {
   background-color: #006fe7;
   color: white;
@@ -174,6 +195,7 @@ ul {
   position: fixed;
   bottom: 0;
   right: 25px;
+  max-height: 48px;
   padding: 20px;
   border-radius: 50%; }
   #back-to-top:hover::before {

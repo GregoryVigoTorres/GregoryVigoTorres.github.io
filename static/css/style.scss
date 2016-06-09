@@ -58,7 +58,6 @@ a {
     &:hover {
         box-shadow: inset 0 -8px 0 inherit;
     }
-
 }
 
 strong {
@@ -165,6 +164,10 @@ ul {
         margin: auto;
     }
 
+    div p {
+        padding: 2px;
+    }
+
     div {
         padding-top: 3rem;
         border: 2px solid black;
@@ -206,6 +209,7 @@ ul {
     margin-bottom: 6rem;
     display: flex;
     justify-content: space-around;
+    padding: 3rem 0 3rem 0;
 
     ul, li {
         padding: 0;
@@ -254,6 +258,29 @@ ul {
     }
 }
 
+#menu-button-container {
+    display: none;
+    background-color: $blue;
+    color: white;
+    border-radius: 50%;
+    padding: 20px;
+    position: fixed;
+    right: 25px;
+    bottom: 69px;
+    text-align: center;
+
+    .octicon {
+        width:36px;
+        height:36px;
+        font-size: 36px;
+    }
+
+    #menu-items {
+        display: none;
+        padding: 0;
+    }
+}
+
 #back-to-top {
     background-color: $blue;
     color: white;
@@ -261,6 +288,7 @@ ul {
     position: fixed;
     bottom: 0;
     right: 25px;
+    max-height: 48px;
     padding: 20px;
     border-radius: 50%;
     &:hover {
