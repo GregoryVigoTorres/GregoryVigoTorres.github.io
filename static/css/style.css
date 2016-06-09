@@ -43,22 +43,6 @@ strong {
 ul {
   list-style: none; }
 
-#button-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  text-align: right; }
-  #button-container span {
-    padding: 0 10px 0 10px;
-    font-size: 36px;
-    background-color: #006fe7;
-    color: white;
-    cursor: default;
-    opacity: 0.65;
-    color: #DCDBD5; }
-    #button-container span:hover {
-      color: #DCDBD5; }
-
 #top {
   color: #E6E6E6;
   display: flex;
@@ -86,6 +70,28 @@ ul {
   text-align: center;
   color: #006fe7; }
 
+#coming-soon {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  background-color: white;
+  color: #BC260F;
+  border: 2px solid #BC260F;
+  font-family: "BoldSans";
+  text-align: center;
+  padding: 8px; }
+  #coming-soon p {
+    margin: 0; }
+  #coming-soon #close-coming-soon {
+    cursor: default;
+    display: inline-block;
+    border: 2px solid white;
+    padding: 8px; }
+    #coming-soon #close-coming-soon:hover {
+      border: 2px solid #BC260F; }
+
 #projects {
   display: flex;
   flex-wrap: wrap;
@@ -93,10 +99,19 @@ ul {
   padding-bottom: 3rem;
   border: 2px solid black;
   margin-bottom: 5rem; }
+  #projects a {
+    padding: 0;
+    text-decoration: none;
+    min-width: 27%;
+    min-height: 0;
+    color: inherit;
+    border-bottom: none; }
+    #projects a:hover {
+      box-shadow: none;
+      font-size: 105%;
+      margin: 0 12px 0 12px; }
   #projects p, #projects div {
     margin: auto; }
-    #projects p:hover, #projects div:hover {
-      font-size: 110%; }
   #projects div {
     padding-top: 3rem;
     border: 2px solid black;
@@ -118,6 +133,19 @@ ul {
       background-color: rgba(0, 0, 0, 0.6);
       color: white; }
 
+#skills {
+  margin-bottom: 6rem;
+  display: flex;
+  justify-content: space-around; }
+  #skills ul, #skills li {
+    padding: 0;
+    margin: 0; }
+  #skills div {
+    margin: auto;
+    padding: 1.5rem;
+    border: 2px solid black;
+    font-weight: 700; }
+
 #cv {
   margin-top: 3rem; }
   #cv div {
@@ -132,7 +160,7 @@ ul {
       background-color: #393939;
       display: inline-block;
       margin: 1em 0 0 0;
-      padding: 3px 8px 0px 8px; }
+      padding: 3px 8px 2px 8px; }
     #cv div p {
       margin: 1.3rem 0 0 0; }
     #cv div ul {

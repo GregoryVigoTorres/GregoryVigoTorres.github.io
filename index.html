@@ -1,5 +1,7 @@
 <html>
 <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Gregory Vigo Torres</title>
     <link href="static/css/normalize.css" media='all' type="text/css" rel="stylesheet">
     <link href="static/css/style.css" media='all' type="text/css" rel="stylesheet">
@@ -33,6 +35,7 @@
             <a class="redlink" href='https://es.linkedin.com/in/gregoryvigotorres' target='blank'>linkedin</a>
             <p>
                 <a href="#projects">projects</a>
+                <a href="#skills">skills</a>
                 <a href="#cv">cv</a>
             </p>
         </p>
@@ -40,50 +43,119 @@
 </div>
 
 <p class="title-span">Projects</p>
-<div id="projects">
-    <div id="pymcsqlface">
-        <p><strong>pyMcSQLFace</strong></p>
-        <p>Simple web client for SQL databases</p>
-        <p>(Flask, SQLAlchemy, Websockets)</p>
-    </div>
 
-    <div id="not-my-type">
-        <p><strong>Not My Type</strong></p>
-        <p>View &amp; download fonts</p>
-        <p>(Flask, Angular)</p>
-    </div>
-
-    <div id="paintings">
-        <p><strong>Portfolio</strong></p>
-        <p>Portfolio app for paintings</p>
-        <p>(Flask, Javascript)</p>
-    </div>
-
-    <div id="sortable-tables">
-        <p><strong>Sortable tables</strong></p>
-        <p>Small vanilla Javascript library <br>for making HTML tables sortable</p>
-    </div>
-
+<div id="coming-soon">
+    <p>Coming Soon</p>
+    <br>
+    <p id="close-coming-soon">ok</p>
 </div>
-<div>&nbsp;
+
+<script>
+    var comingSoonElem = document.getElementById('coming-soon');
+    function showComingSoon(caller) {
+        var callerElem = document.querySelector(caller);
+        var topPos = callerElem.offsetHeight;
+        var leftPos = callerElem.offsetLeft;
+        comingSoonElem.style.top = topPos;
+        comingSoonElem.style.left = leftPos+25;
+        comingSoonElem.style.display = 'block';
+    };
+
+    var closeComingSoon = document.getElementById('close-coming-soon');
+    closeComingSoon.addEventListener('click',  function(eve) {
+        comingSoonElem.style.display = 'none';
+    });
+</script>
+
+
+<div id="projects">
+    <a class="project-link" href=javascript:showComingSoon('#pymcsqlface')>
+        <div id="pymcsqlface">
+            <p><strong>pyMcSQLFace</strong></p>
+            <p>Simple web client for SQL databases</p>
+            <p>(Flask, SQLAlchemy, Websockets)</p>
+        </div>
+    </a>
+
+    <a class="project-link" href="https://github.com/GregoryVigoTorres/notMyType" target="blank">
+        <div id="not-my-type">
+            <p><strong>Not My Type</strong></p>
+            <p>View &amp; download fonts</p>
+            <p>(Flask, Angular)</p>
+        </div>
+    </a>
+
+    <a class="project-link" href="https://github.com/GregoryVigoTorres/PaintingsApp" target="blank">
+        <div id="paintings">
+            <p><strong>Portfolio</strong></p>
+            <p>Portfolio app for paintings</p>
+            <p>(Flask, Javascript)</p>
+        </div>
+    </a>
+
+
+    <a class="project-link" href="https://github.com/GregoryVigoTorres/sortableTables" target="blank">
+        <div id="sortable-tables">
+            <p><strong>Sortable tables</strong></p>
+            <p>Small vanilla Javascript library <br>for making HTML tables sortable</p>
+        </div>
+    </a>
+</div>
+
+<p class="title-span">Skills Keywords</p>
+<div id="skills">
+    <div>
+        <ul>
+            <li>Python</li>
+            <li>Javascript</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>SCSS</li>
+            <li>Object Oriented Programming</li>
+            <li>Unit testing</li>
+        </ul>
     </div>
-<!-- <div id="github"> -->
-<!--     <div id="col2"> -->
-<!--         <p><strong>I also have some experience with</strong> -->
-<!--             <ul> -->
-<!--                 <li>git/github</li> -->
-<!--                 <li>SQLAlchemy</li> -->
-<!--                 <li>Pyramid</li> -->
-<!--                 <li>Django</li> -->
-<!--                 <li>Scrapy</li> -->
-<!--                 <li>Debian</li> -->
-<!--                 <li>OOP</li> -->
-<!--                 <li>... and some other things</li> -->
-<!--             </ul> -->
-<!--         </p> -->
-<!--     </div> -->
-<!-- </div> -->
-<!--  -->
+
+    <div>
+        <ul>
+            <li>Bootstrap</li>
+            <li>Foundation</li>
+            </li>Angular 1</li>
+            <li>JQuery</li>
+        </ul>
+    </div>
+    
+    <div>
+        <ul>
+            <li>SQL</li>
+            <li>Postgres</li>
+            <li>MySQL/MariaDB</li>
+            <li>SQLite</li>
+            <li>SQLAlchemy</li>
+        </ul>
+    </div>
+    
+    <div>
+        <ul>
+            <li>Flask</li>
+            <li>Django</li>
+            <li>Pyramid</li>
+            <li>Scrapy</li>
+        </ul>
+    </div>
+    
+    <div>
+        <ul>
+            <li>git</li>
+            <li>github</li>
+            <li>vim</li>
+            <li>Debian</li>
+            <li>Apache2</li>
+            <li>Nginx</li>
+        </ul>
+    </div>
+</div>
+
 <div id="cv">
     <p class="title-span">CV</p>
     <div>
@@ -98,6 +170,13 @@
             <li><strong>Git Fundamentals</strong>, Pluralsight</li>
         </ul>
 
+        <header>Programming Languages</header>
+        <ul>
+            <li>Python (2 &amp; 3)</li>
+            <li>Javascript</li>
+            <li>some php &amp; ruby</li>
+        </ul>
+
         <p>I attended <strong>EuroPython 2015</strong> in Bilbao</p>
 
         <header>Formal Education</header>
@@ -106,7 +185,7 @@
             <li>BFA, <strong>The School of The Art Institute of Chicago</strong></li>
         </ul>
 
-        <header>Languages</header>
+        <header>Human Languages</header>
         <ul>
             <li><strong>English</strong>, native</li>
             <li><strong>Spanish</strong>, functionally bilingual</li>
@@ -127,7 +206,7 @@
     </div>
 </div>
 
-<a href="#top">
+<a id="back-to-top-link" href="#top" style="display: none;">
     <div id="back-to-top">top</div>
 </a>
 
@@ -135,22 +214,20 @@
     <div>&#169; Gregory Vigo Torres, 2015</div>
 </footer>
 
-<!-- <script> -->
-<!--     var button = document.getElementById('button'); -->
-<!--     var nav = document.getElementsByTagName('nav')[0]; -->
-<!--  -->
-<!--     button.addEventListener('click', function(e) { -->
-<!--         nav.classList.toggle('open'); -->
-<!--         e.stopPropagation(); -->
-<!--     }); -->
-<!--  -->
-<!--     var pageLinks = nav.getElementsByTagName('a');  -->
-<!--  -->
-<!--     for (i=0; i<pageLinks.length; i++) { -->
-<!--         pageLinks[i].addEventListener('click', function(e) { -->
-<!--             document.getElementsByTagName('nav')[0].classList.remove('open'); -->
-<!--         }); -->
-<!--     }; -->
-<!-- </script> -->
+<script>
+    var topButton = document.getElementById("back-to-top-link");
+    var foldElem = document.getElementById('top');
+    var fold = foldElem.clientHeight; 
+    
+    document.onscroll = function(eve) {
+        var pos = window.scrollY;
+        if (pos > fold) {
+            topButton.style.display = 'block';
+        } else {
+            topButton.style.display = 'none';
+        };
+    };
+
+</script>
 </body>
 </html>
