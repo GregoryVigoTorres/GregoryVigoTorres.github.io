@@ -83,7 +83,8 @@ ul {
 .title-span {
   font-family: "BoldSans", sans-serif;
   font-size: 1.2rem;
-  text-align: center; }
+  text-align: center;
+  color: #006fe7; }
 
 #projects {
   display: flex;
@@ -139,7 +140,7 @@ ul {
       list-style: none; }
 
 #back-to-top {
-  background-color: black;
+  background-color: #006fe7;
   color: white;
   font-family: "BoldSans";
   position: fixed;

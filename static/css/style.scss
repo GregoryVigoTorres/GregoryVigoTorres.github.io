@@ -172,6 +172,7 @@ ul {
     font-family: "BoldSans", sans-serif;
     font-size: 1.2rem;
     text-align: center;
+    color: $blue;
 }
 
 #projects {
@@ -262,7 +263,7 @@ ul {
 }
 
 #back-to-top {
-    background-color: black;
+    background-color: $blue;
     color: white;
     font-family: "BoldSans";
     position: fixed;
