@@ -1,11 +1,11 @@
 @font-face {
   font-family: "MediumSans";
-  src: url("/static/fonts/ArchivoNarrow-Regular.ttf");
+  src: url("/static/fonts/Open_Sans/OpenSans-Regular.ttf");
   font-weight: normal;
   font-style: normal; }
 @font-face {
   font-family: "BoldSans";
-  src: url("/static/fonts/ArchivoBlack-Regular.ttf");
+  src: url("/static/fonts/Open_Sans/OpenSans-Bold.ttf");
   font-style: normal;
   font-weight: bold; }
 html, body {
@@ -44,31 +44,34 @@ ul {
   list-style: none; }
 
 #top {
-  color: #E6E6E6;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  color: rgba(0, 111, 231, 0.7);
+  text-align: center;
+  flex-flow: column wrap;
+  color: rgba(0, 90, 206, 0.9);
   text-shadow: 3px 3px 3px rgba(0, 111, 231, 0.3);
   height: 100%; }
-  #top #name header {
-    flex-shrink: 1;
+  #top header {
     font-family: "BoldSans", sans-serif;
     font-size: 2.5em; }
-  #top #name p {
-    text-align: center; }
-  #top #name a {
-    margin-right: 2rem;
-    margin-left: .5rem;
+  #top p {
+    text-align: center;
+    margin: auto;
+    padding: .5rem; }
+  #top a {
+    margin: 1rem;
     text-shadow: none; }
-  #top #name a:not(.redlink):hover {
-    box-shadow: inset 0 -8px 0 rgba(0, 111, 231, 0.3); }
+  #top a:not(.redlink) {
+    text-shadow: 3px 3px 3px rgba(0, 111, 231, 0.3); }
+    #top a:not(.redlink):hover {
+      box-shadow: inset 0 -8px 0 rgba(0, 111, 231, 0.3); }
 
 .title-span {
   font-family: "BoldSans", sans-serif;
   font-size: 1.2rem;
   text-align: center;
-  color: #006fe7; }
+  color: rgba(0, 90, 206, 0.9); }
 
 #coming-soon {
   display: none;
@@ -95,7 +98,7 @@ ul {
 #projects {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: center;
   padding-bottom: 3rem;
   border: 2px solid black;
   margin-bottom: 5rem; }
@@ -108,8 +111,7 @@ ul {
     border-bottom: none; }
     #projects a:hover {
       box-shadow: none;
-      font-size: 105%;
-      margin: 0 12px 0 12px; }
+      font-size: 105%; }
   #projects p, #projects div {
     margin: auto; }
   #projects div p {
@@ -138,13 +140,14 @@ ul {
 #skills {
   margin-bottom: 6rem;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   padding: 3rem 0 3rem 0; }
   #skills ul, #skills li {
     padding: 0;
     margin: 0; }
   #skills div {
-    margin: auto;
+    margin: 2rem;
     padding: 1.5rem;
     border: 2px solid black;
     font-weight: 700; }
@@ -172,14 +175,15 @@ ul {
 
 #menu-button-container {
   display: none;
-  background-color: #006fe7;
+  background-color: rgba(0, 90, 206, 0.9);
   color: white;
   border-radius: 50%;
   padding: 20px;
   position: fixed;
   right: 25px;
   bottom: 69px;
-  text-align: center; }
+  text-align: center;
+  z-index: 99; }
   #menu-button-container .octicon {
     width: 36px;
     height: 36px;
@@ -187,9 +191,12 @@ ul {
   #menu-button-container #menu-items {
     display: none;
     padding: 0; }
+    #menu-button-container #menu-items li a {
+      padding: 0;
+      z-index: 100; }
 
 #back-to-top {
-  background-color: #006fe7;
+  background-color: rgba(0, 90, 206, 0.9);
   color: white;
   font-family: "BoldSans";
   position: fixed;
@@ -203,10 +210,45 @@ ul {
 
 footer {
   padding: 1em 0em 2em 1em;
-  background-color: #393939;
+  background-color: rgba(0, 90, 206, 0.9);
   color: #DCDBD5;
   text-align: center; }
 
+.fake-hover {
+  font-size: 120%;
+  text-decoration: underline; }
+
 /* RESPONSIVE */
+@media screen and (max-width: 750px) {
+  #top {
+    justify-content: flex-start;
+    margin-bottom: 14rem;
+    margin-top: 4rem; }
+    #top p {
+      display: flex;
+      flex-flow: row wrap;
+      margin: auto;
+      justify-content: space-around; }
+    #top a {
+      margin: auto;
+      border: 1px solid red;
+      padding: 24px 24px 12px 24px; }
+    #top a:not(.redlink) {
+      border: 1px solid rgba(0, 90, 206, 0.9); }
+
+  #cv div {
+    padding-left: 0; }
+
+  #projects {
+    justify-content: space-around; }
+
+  #menu-items a, #menu-button-container a {
+    display: block;
+    min-height: 48px;
+    padding: 36px 64px 36px 64px; } }
+@media screen and (min-width: 751px) {
+  .menu-item:hover {
+    font-size: 110%;
+    box-shadow: inset 0 -5px 0 rgba(255, 255, 255, 0.4); } }
 
 /*# sourceMappingURL=style.css.map */

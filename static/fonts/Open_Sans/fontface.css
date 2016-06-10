@@ -1,0 +1,61 @@
+/* automatically generated css */
+
+    @font-face {
+        font-family: "OpenSans";
+        src: url("OpenSans-Regular.ttf");
+        style: "normal";
+    }
+
+    @font-face {
+        font-family: "OpenSans-Bold";
+        src: url("OpenSans-Bold.ttf");
+        style: "normal";
+    }
+
+    @font-face {
+        font-family: "OpenSans-BoldItalic";
+        src: url("OpenSans-BoldItalic.ttf");
+        style: "italic";
+    }
+
+    @font-face {
+        font-family: "OpenSans-Extrabold";
+        src: url("OpenSans-ExtraBold.ttf");
+        style: "normal";
+    }
+
+    @font-face {
+        font-family: "OpenSans-ExtraboldItalic";
+        src: url("OpenSans-ExtraBoldItalic.ttf");
+        style: "italic";
+    }
+
+    @font-face {
+        font-family: "OpenSans-Italic";
+        src: url("OpenSans-Italic.ttf");
+        style: "italic";
+    }
+
+    @font-face {
+        font-family: "OpenSans-Light";
+        src: url("OpenSans-Light.ttf");
+        style: "normal";
+    }
+
+    @font-face {
+        font-family: "OpenSans-Semibold";
+        src: url("OpenSans-Semibold.ttf");
+        style: "normal";
+    }
+
+    @font-face {
+        font-family: "OpenSans-SemiboldItalic";
+        src: url("OpenSans-SemiboldItalic.ttf");
+        style: "italic";
+    }
+
+    @font-face {
+        font-family: "OpenSansLight-Italic";
+        src: url("OpenSans-LightItalic.ttf");
+        style: "italic";
+    }

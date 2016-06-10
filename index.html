@@ -10,18 +10,8 @@
 </head>
 
 <body>
-    <!--  -->
-    <!-- <nav> -->
-    <!--     <ul> -->
-    <!--         <li><a href="#top">top</a></li> -->
-    <!--         <li><a href="#github">github</a></li> -->
-    <!--         <li><a href="#cv">cv</a></li> -->
-    <!--     </ul> -->
-    <!-- </nav> -->
-
-
 <div id="top">
-    <div id="name">
+    <div id="top-container">
         <header>Gregory Vigo Torres</header>
         <p>Python, Javascript, HTML, CSS</p>
         <p>
@@ -30,11 +20,11 @@
                 <span class="octicon octicon-mark-github"></span> github</a>
             <a class="redlink" href='https://twitter.com/GrgVT' target='blank'>@GrgVT</a>
             <a class="redlink" href='https://es.linkedin.com/in/gregoryvigotorres' target='blank'>linkedin</a>
-            <p>
-                <a href="#projects-anchor">projects</a>
-                <a href="#skills-anchor">skills</a>
-                <a href="#cv-anchor">cv</a>
-            </p>
+        </p>
+        <p>
+            <a href="#projects-anchor">projects</a>
+            <a href="#skills-anchor">skills</a>
+            <a href="#cv-anchor">cv</a>
         </p>
     </div>
 </div>
@@ -69,7 +59,7 @@
     <a class="project-link" href=javascript:showComingSoon('#pymcsqlface')>
         <div id="pymcsqlface">
             <p><strong>pyMcSQLFace</strong></p>
-            <p>Simple web client for SQL databases</p>
+            <p>Web client for SQL databases</p>
             <p>(Flask, SQLAlchemy, Websockets)</p>
         </div>
     </a>
@@ -99,7 +89,7 @@
     </a>
 </div>
 
-<span id="skills-anchor" class="hidden-link"></span>
+<span id="skills-anchor"></span>
 <p class="title-span">Skills</p>
 <div id="skills">
     <div>
@@ -110,7 +100,7 @@
             <li>CSS</li>
             <li>SCSS</li>
             <li>php</li>
-            <li>Object Oriented Programming</li>
+            <li>OOP</li>
             <li>Unit testing</li>
         </ul>
     </div>
@@ -155,19 +145,19 @@
     </div>
 </div>
 
-<span id="cv-anchor" class="hidden-link"></span>
+<span id="cv-anchor"></span>
 <div id="cv">
     <p class="title-span">CV</p>
     <div>
         <header>Online Courses</header>
         <ul>
-            <li><strong>Web Development</strong>, Udacity</li>
-            <li><strong>Basic Javascript</strong>, Udacity</li>
-            <li><strong>Object Oriented Javascript</strong>, Udacity</li>
-            <li><strong>Responsive Web Design Fundamentals</strong>, Udacity</li>
-            <li><strong>Web Application Architectures</strong>, Coursera</li>
-            <li><strong>php</strong>, Codeacademy</li>
-            <li><strong>Git Fundamentals</strong>, Pluralsight</li>
+            <li><strong>Web Development</strong> Udacity</li>
+            <li><strong>Basic Javascript</strong> Udacity</li>
+            <li><strong>Object Oriented Javascript</strong> Udacity</li>
+            <li><strong>Responsive Web Design Fundamentals</strong> Udacity</li>
+            <li><strong>Web Application Architectures</strong> Coursera</li>
+            <li><strong>php</strong> Codeacademy</li>
+            <li><strong>Git Fundamentals</strong> Pluralsight</li>
         </ul>
 
         <header>Programming Languages</header>
@@ -181,14 +171,14 @@
 
         <header>Formal Education</header>
         <ul>
-            <li>MFA, <strong>The University of Pennsylvania</strong></li>
-            <li>BFA, <strong>The School of The Art Institute of Chicago</strong></li>
+            <li>MFA <strong>The University of Pennsylvania</strong></li>
+            <li>BFA <strong>The School of The Art Institute of Chicago</strong></li>
         </ul>
 
         <header>Human Languages</header>
         <ul>
-            <li><strong>English</strong>, native</li>
-            <li><strong>Spanish</strong>, functionally bilingual</li>
+            <li><strong>English</strong> Native</li>
+            <li><strong>Spanish</strong> Functionally bilingual</li>
         </ul>
 
         <header>Work Experience</header>
@@ -209,9 +199,9 @@
 <div id="menu-button-container">
     <span class="octicon octicon-three-bars" id="show-menu"></span>
     <ul id="menu-items">
-        <li><a href="#projects-anchor">projects</a></li>
-        <li><a href="#skills-anchor">skills</a></li>
-        <li><a href="#cv-anchor">cv</a></li>
+        <li><a class="menu-item" href="#projects-anchor">projects</a></li>
+        <li><a class="menu-item" href="#skills-anchor">skills</a></li>
+        <li><a class="menu-item" href="#cv-anchor">cv</a></li>
     </ul>
 </div>
 
@@ -220,7 +210,7 @@
 </a>
 
 <footer>
-    <div>&#169; Gregory Vigo Torres, 2015</div>
+    <div>&#169; Gregory Vigo Torres 2015, 2016</div>
 </footer>
 
 <script>
@@ -228,28 +218,62 @@
     var foldElem = document.getElementById('top');
     var fold = foldElem.clientHeight; 
 
-    var showMenuButton = document.getElementById('menu-button-container');
-    var menuItems = document.getElementById('menu-items');
+    var menuButtonContainer = document.getElementById('menu-button-container');
+    var menuItemList = document.getElementById('menu-items');
     
     document.onscroll = function(eve) {
         var pos = window.scrollY;
         if (pos > fold) {
             topButton.style.display = 'block';
-            showMenuButton.style.display = 'block';
+            menuButtonContainer.style.display = 'block';
         } else {
             topButton.style.display = 'none';
-            showMenuButton.style.display = 'none';
+            menuButtonContainer.style.display = 'none';
         };
     };
 
-
-    showMenuButton.addEventListener('mouseover', function(eve) {
-        menuItems.style.display = 'block'; 
+    menuButtonContainer.addEventListener('mouseover', function(eve) {
+        if (menuItemList.style != undefined) {
+            menuItemList.style.display = 'block'; 
+        };
     });
 
-    showMenuButton.addEventListener('mouseout', function(eve) {
-        menuItems.style.display = 'none'; 
+    menuButtonContainer.addEventListener('mouseout', function(eve) {
+        if (menuItemList.style != undefined) {
+            menuItemList.style.display = 'none'; 
+        };
     });
+
+    // SMALLER SCREENS
+    if (window.screen.availWidth < 800) {
+        menuButtonContainer.addEventListener('touchmove', function(eve) {
+            for (i=0; i < menuItemList.children.length; i++) { 
+                // unset background on menu items
+                menuItemList.children[i].firstElementChild.classList.remove('fake-hover'); 
+            };    
+
+            var currElem = document.elementFromPoint(eve.touches[0].clientX, eve.touches[0].clientY);
+            if (currElem) {
+                if (currElem.tagName === 'A' && currElem.className === 'menu-item') {
+                    currElem.classList.add('fake-hover');
+                }
+            };
+            eve.preventDefault();
+        }, false);
+
+        // show/hide container
+        menuButtonContainer.addEventListener('touchstart', function(eve) {
+            menuItemList.style.display = 'block'; 
+            menuButtonContainer.style.width = '50%';
+        }, false);
+
+        for (i=0; i<menuItemList.children.length; i++) {
+            menuItemList.children[i].firstElementChild.addEventListener('click', function(eve) {
+                menuItemList.style.display = 'none';
+                menuButtonContainer.style.width = 'auto';
+            }, false);
+        };
+    }; // responsive things 
 
 </script>
 </body>

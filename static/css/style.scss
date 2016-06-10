@@ -1,14 +1,13 @@
 @font-face {
     font-family: "MediumSans";
-    src: url("/static/fonts/ArchivoNarrow-Regular.ttf");
+    src: url("/static/fonts/Open_Sans/OpenSans-Regular.ttf");
     font-weight: normal;
     font-style: normal;
     }
 
 @font-face {
     font-family: "BoldSans";
-    src: url("/static/fonts/ArchivoBlack-Regular.ttf");
-    // src: url("fonts/CooperHewitt/CooperHewitt-Bold.woff") format('woff');
+    src: url("/static/fonts/Open_Sans/OpenSans-Bold.ttf");
     font-style: normal;
     font-weight: bold;
 }
@@ -21,7 +20,11 @@ $link-border-red-hover: inset 0 -8px 0 rgba(171, 34, 6, 0.3);
 $red-link: #BC260F;
 $trans-blue: rgba(0, 111, 231, 0.7);
 $very-trans-blue: rgba(0, 111, 231, 0.3);
-$blue: rgba(0, 111, 231, 1.0);
+$dk-blue: #0352A7;
+// $blue: rgba(0, 111, 231, 1.0);
+// $blue: rgba(8, 84, 169, 0.9);
+// $blue: rgba(0, 106, 168, 0.9);
+$blue: rgba(0, 90, 206, 0.9);
 
 html, body {
     max-height:100vh;
@@ -69,37 +72,39 @@ ul {
 }
 
 #top {
-    color: #E6E6E6;
+    // flex here to keep #name centered vertically
     display: flex;
     justify-content: space-around; 
     align-items: center;
-    color: $trans-blue;
+    text-align: center;
+    flex-flow: column wrap;
+
+    color: $blue;
     text-shadow: 3px 3px 3px rgba(0, 111, 231, 0.3);
     height: 100%;
 
-    #name {
         header {
-            flex-shrink: 1;
             font-family: "BoldSans", sans-serif;
-            font-size:2.5em;
+            font-size: 2.5em;
         }
 
         p {
             text-align: center;
+            margin: auto;
+            padding: .5rem;
         }
 
         a {
-            margin-right: 2rem;
-            margin-left: .5rem;
+            margin: 1rem;
             text-shadow: none;
         }
         
         a:not(.redlink) {
+            text-shadow: 3px 3px 3px rgba(0, 111, 231, 0.3);
             &:hover {
                 box-shadow: inset 0 -8px 0 $very-trans-blue;
             }
         }
-    }
 }
 
 .title-span {
@@ -141,7 +146,7 @@ ul {
 #projects {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: center;
     padding-bottom: 3rem;
     border: 2px solid black;
     margin-bottom: 5rem;
@@ -156,7 +161,6 @@ ul {
         &:hover {
             box-shadow: none;
             font-size: 105%; 
-            margin: 0 12px 0 12px;
         }
     }
 
@@ -202,12 +206,12 @@ ul {
             color: white;
         }
     }
-
 }
 
 #skills {
     margin-bottom: 6rem;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     padding: 3rem 0 3rem 0;
 
@@ -217,12 +221,12 @@ ul {
     }
 
     div {
-        margin: auto;
+        // margin: auto;
+        margin: 2rem;
         padding:1.5rem;
         border: 2px solid black;
         font-weight: 700;
     }
-
 }
 
 #cv {
@@ -230,7 +234,6 @@ ul {
 
     div {
         padding: .5rem 3.5rem 7.5rem 5.5rem;
-        // background-color: #C8D72D;
         color: $dk-gray;
         border: 2px solid $dk-gray;
 
@@ -268,6 +271,7 @@ ul {
     right: 25px;
     bottom: 69px;
     text-align: center;
+    z-index: 99;
 
     .octicon {
         width:36px;
@@ -278,6 +282,11 @@ ul {
     #menu-items {
         display: none;
         padding: 0;
+
+        li a {
+            padding: 0;
+            z-index:100;
+        }
     }
 }
 
@@ -300,93 +309,64 @@ ul {
 
 footer {
     padding: 1em 0em 2em 1em;
-    background-color: $dk-gray;
+    background-color: $blue;
     color: $lt-gray;
     text-align: center; 
 }
 
-/* RESPONSIVE */
+.fake-hover {
+    font-size: 120%;
+    text-decoration: underline;
+}
 
-// @media screen and (max-width: 570px) {
-//     #top {
-//         flex-direction: column;
-//         justify-content: space-between;
-//         padding:0 0 0 0;
-//         margin-bottom: 2.3rem; 
-//
-//         #right-col {
-//             max-width: 100%;
-//             width: 100%;
-//             border-bottom: 2px solid $lt-gray;
-//             padding: 0 0 0 0;
-//
-//             p {
-//                 letter-spacing: unset;
-//                 padding: 1rem 1.3rem;
-//             }
-//         }
-//     }
-//
-//     #github {
-//         padding: 1rem 0 0 0;
-//
-//         #github-links {
-//             max-width: 100%;
-//             width: 100%;
-//             margin-bottom: 1.3rem;
-//
-//             .repos {
-//                 .right-col {
-//                     display: none;
-//                 }
-//             }
-//         }
-//     }
-//
-//     #cv {
-//         div {
-//             padding: 0 0 4rem 0;
-//             p {
-//                 padding: 0 1.2rem 0 1.2rem
-//             }
-//         }
-//     }
-// }
-//
-// @media screen and (max-width: 500px) {
-//     #top { 
-//         background-image: url("/static/images/cv/gears_small.jpg");
-//     }
-// }
-//
-// @media screen and (min-width: 501px) and (max-width: 750px) {
-//     body {
-//         font-size: 16px;
-//     }
-//
-//     #top {
-//         background-image: url("/static/images/cv/gears_medium.jpg");
-//         background-size: cover;
-//     }
-// }
-//
-// @media screen and (max-width: 751px) {
-//     #top {
-//         #left-col {
-//             header {
-//                 font-size: 1.5rem;
-//             }
-//
-//             h2, h3 {
-//                 font-size: 1.2rem;
-//             }
-//         }
-//     }
-// }
-//
-// @media screen and (min-width: 751px) {
-//     #top {
-//         background-image: url("/static/images/cv/gears_large.jpg");
-//         background-size: cover;
-//     }
-// }
+/* RESPONSIVE */
+@media screen and (max-width: 750px) {
+    #top {
+        justify-content: flex-start;
+        margin-bottom: 14rem;
+        margin-top: 4rem;
+
+        p {
+            display: flex;
+            flex-flow: row wrap;
+            margin: auto;
+            justify-content: space-around;
+        }
+
+        a { 
+            margin: auto;
+            border: 1px solid red;
+            padding: 24px 24px 12px 24px;
+        }
+
+        a:not(.redlink) {
+            border: 1px solid $blue;
+        }
+    }
+
+
+    #cv {
+        div {
+            padding-left: 0;
+        }
+    }
+
+    #projects {
+        justify-content: space-around;
+    }
+
+    #menu-items, #menu-button-container {
+        a {
+            display: block;
+            min-height: 48px;
+            padding: 36px 64px 36px 64px;
+        }
+    }
+}
+
+@media screen and (min-width: 751px) {
+    .menu-item:hover {
+        font-size: 110%;
+        box-shadow: inset 0 -5px 0 rgba(255, 255, 255, 0.4);
+    }
+}
