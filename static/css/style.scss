@@ -16,14 +16,12 @@ $dk-gray: #393939;
 $lt-gray: #DCDBD5;  
 $yellow-green: #D8FF84;
 
-$link-border-red-hover: inset 0 -8px 0 rgba(171, 34, 6, 0.3);
+$trans-red: rgba(171, 34, 6, 0.3);
+$link-border-red-hover: inset 0 -8px 0 $trans-red;
 $red-link: #BC260F;
 $trans-blue: rgba(0, 111, 231, 0.7);
 $very-trans-blue: rgba(0, 111, 231, 0.3);
 $dk-blue: #0352A7;
-// $blue: rgba(0, 111, 231, 1.0);
-// $blue: rgba(8, 84, 169, 0.9);
-// $blue: rgba(0, 106, 168, 0.9);
 $blue: rgba(0, 90, 206, 0.9);
 
 html, body {
@@ -72,7 +70,7 @@ ul {
 }
 
 #top {
-    // flex here to keep #name centered vertically
+    // flex here to keep container centered vertically
     display: flex;
     justify-content: space-around; 
     align-items: center;
@@ -82,29 +80,34 @@ ul {
     color: $blue;
     text-shadow: 3px 3px 3px rgba(0, 111, 231, 0.3);
     height: 100%;
+    
+    #contact-links-mobile {
+        display: none;
+    }
 
-        header {
-            font-family: "BoldSans", sans-serif;
-            font-size: 2.5em;
-        }
 
-        p {
-            text-align: center;
-            margin: auto;
-            padding: .5rem;
-        }
+    header {
+        font-family: "BoldSans", sans-serif;
+        font-size: 2.5em;
+    }
 
-        a {
-            margin: 1rem;
-            text-shadow: none;
+    p {
+        text-align: center;
+        margin: auto;
+        padding: .5rem;
+    }
+
+    a {
+        margin: 1rem;
+        text-shadow: none;
+    }
+    
+    a:not(.redlink) {
+        text-shadow: 3px 3px 3px rgba(0, 111, 231, 0.3);
+        &:hover {
+            box-shadow: inset 0 -8px 0 $very-trans-blue;
         }
-        
-        a:not(.redlink) {
-            text-shadow: 3px 3px 3px rgba(0, 111, 231, 0.3);
-            &:hover {
-                box-shadow: inset 0 -8px 0 $very-trans-blue;
-            }
-        }
+    }
 }
 
 .title-span {
@@ -112,6 +115,26 @@ ul {
     font-size: 1.2rem;
     text-align: center;
     color: $blue;
+}
+
+#about-me-anchor {
+    padding-top: 3rem;
+}
+
+#about-me {
+    p {
+        margin: 1.5rem 3rem 6rem 3rem;
+        padding: 2rem;
+        font-size: 110%;
+        background-color: $dk-gray;
+        color: white;
+        text-indent: 3rem;
+
+        a:hover {
+            box-shadow: inset 0 -8px 0 rgba(255, 255, 255, 0.3);
+        }
+        
+    }
 }
 
 #coming-soon {
@@ -321,29 +344,32 @@ footer {
 
 /* RESPONSIVE */
 @media screen and (max-width: 750px) {
+    #menu-button-container {
+        display: block;
+    }
+
     #top {
-        justify-content: flex-start;
-        margin-bottom: 14rem;
-        margin-top: 4rem;
-
-        p {
-            display: flex;
-            flex-flow: row wrap;
-            margin: auto;
-            justify-content: space-around;
+        #contact-links {
+            display: none;
         }
 
-        a { 
-            margin: auto;
-            border: 1px solid red;
-            padding: 24px 24px 12px 24px;
-        }
-
-        a:not(.redlink) {
-            border: 1px solid $blue;
+        #nav-links {
+            display: none;
         }
     }
 
+    #mobile-links-container #contact-links {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin-bottom: 9rem;
+
+        a {
+            padding: 18px;
+            margin: 18px;
+            border: 1px solid $red-link;
+        }
+    }
 
     #cv {
         div {
@@ -368,5 +394,19 @@ footer {
     .menu-item:hover {
         font-size: 110%;
         box-shadow: inset 0 -5px 0 rgba(255, 255, 255, 0.4);
+    }
+
+    a[href="#mobile-links-container"] {
+        display: none;
+    }
+
+    #mobile-links-container {
+        display: none;
+    }
+
+    #about-me {
+        p {
+            padding-bottom: 5rem;
+        }
     }
 }

@@ -13,20 +13,32 @@
 <div id="top">
     <div id="top-container">
         <header>Gregory Vigo Torres</header>
+        <p>Web Developer</p>
         <p>Python, Javascript, HTML, CSS</p>
-        <p>
+        <p id="contact-links">
             <a class="redlink" href="mailto:gregory@vigo-torr.es">email</a>
             <a class="redlink" href="https://github.com/GregoryVigoTorres?tab=repositories" target=blank>
                 <span class="octicon octicon-mark-github"></span> github</a>
             <a class="redlink" href='https://twitter.com/GrgVT' target='blank'>@GrgVT</a>
             <a class="redlink" href='https://es.linkedin.com/in/gregoryvigotorres' target='blank'>linkedin</a>
         </p>
-        <p>
+        <p id="nav-links">
+            <a href="#about-me-anchor">about</a>
             <a href="#projects-anchor">projects</a>
             <a href="#skills-anchor">skills</a>
             <a href="#cv-anchor">cv</a>
         </p>
     </div>
+</div>
+
+<span id="about-me-anchor" ></span>
+<p class="title-span">About Me</p>
+<div id="about-me">
+    <p>
+        I love making things with code and trying to learn something new every day. 
+        I have about 4 years of experience with Python and a little less with Javascript and varying levels of expertise in a <a href="#skills">number of other things</a>.
+        I think good design should be invisible, &#8220;simple is better than complex&#8221; and &#8220;complex is better than complicated&#8221;. 
+    </p>
 </div>
 
 <div id="coming-soon">
@@ -38,25 +50,9 @@
 <span id="projects-anchor" ></span>
 <p class="title-span">Projects</p>
 
-<script>
-    var comingSoonElem = document.getElementById('coming-soon');
-    function showComingSoon(caller) {
-        var callerElem = document.querySelector(caller);
-        var topPos = callerElem.offsetHeight;
-        var leftPos = callerElem.offsetLeft;
-        comingSoonElem.style.top = topPos;
-        comingSoonElem.style.left = leftPos+25;
-        comingSoonElem.style.display = 'block';
-    };
-
-    var closeComingSoon = document.getElementById('close-coming-soon');
-    closeComingSoon.addEventListener('click',  function(eve) {
-        comingSoonElem.style.display = 'none';
-    });
-</script>
-
 <div id="projects">
-    <a class="project-link" href=javascript:showComingSoon('#pymcsqlface')>
+    <a class="project-link" 
+        href="javascript:showComingSoon('#pymcsqlface')">
         <div id="pymcsqlface">
             <p><strong>pyMcSQLFace</strong></p>
             <p>Web client for SQL databases</p>
@@ -199,9 +195,11 @@
 <div id="menu-button-container">
     <span class="octicon octicon-three-bars" id="show-menu"></span>
     <ul id="menu-items">
+        <li><a class="menu-item" href="#about-me-anchor">about</a></li>
         <li><a class="menu-item" href="#projects-anchor">projects</a></li>
         <li><a class="menu-item" href="#skills-anchor">skills</a></li>
         <li><a class="menu-item" href="#cv-anchor">cv</a></li>
+        <li><a class="menu-item" href="#mobile-links-container">contact</a></li>
     </ul>
 </div>
 
@@ -209,72 +207,15 @@
     <div id="back-to-top">top</div>
 </a>
 
+<div id="mobile-links-container">
+    <p class="title-span">Contact</p>
+    <div></div>
+</div>
+
 <footer>
     <div>&#169; Gregory Vigo Torres 2015, 2016</div>
 </footer>
 
-<script>
-    var topButton = document.getElementById("back-to-top-link");
-    var foldElem = document.getElementById('top');
-    var fold = foldElem.clientHeight; 
-
-    var menuButtonContainer = document.getElementById('menu-button-container');
-    var menuItemList = document.getElementById('menu-items');
-    
-    document.onscroll = function(eve) {
-        var pos = window.scrollY;
-        if (pos > fold) {
-            topButton.style.display = 'block';
-            menuButtonContainer.style.display = 'block';
-        } else {
-            topButton.style.display = 'none';
-            menuButtonContainer.style.display = 'none';
-        };
-    };
-
-    menuButtonContainer.addEventListener('mouseover', function(eve) {
-        if (menuItemList.style != undefined) {
-            menuItemList.style.display = 'block'; 
-        };
-    });
-
-    menuButtonContainer.addEventListener('mouseout', function(eve) {
-        if (menuItemList.style != undefined) {
-            menuItemList.style.display = 'none'; 
-        };
-    });
-
-    // SMALLER SCREENS
-    if (window.screen.availWidth < 800) {
-        menuButtonContainer.addEventListener('touchmove', function(eve) {
-            for (i=0; i < menuItemList.children.length; i++) { 
-                // unset background on menu items
-                menuItemList.children[i].firstElementChild.classList.remove('fake-hover'); 
-            };    
-
-            var currElem = document.elementFromPoint(eve.touches[0].clientX, eve.touches[0].clientY);
-            if (currElem) {
-                if (currElem.tagName === 'A' && currElem.className === 'menu-item') {
-                    currElem.classList.add('fake-hover');
-                }
-            };
-            eve.preventDefault();
-        }, false);
-
-        // show/hide container
-        menuButtonContainer.addEventListener('touchstart', function(eve) {
-            menuItemList.style.display = 'block'; 
-            menuButtonContainer.style.width = '50%';
-        }, false);
-
-        for (i=0; i<menuItemList.children.length; i++) {
-            menuItemList.children[i].firstElementChild.addEventListener('click', function(eve) {
-                menuItemList.style.display = 'none';
-                menuButtonContainer.style.width = 'auto';
-            }, false);
-        };
-    }; // responsive things 
-
-</script>
+<script src="index.js"></script>
 </body>
 </html>
