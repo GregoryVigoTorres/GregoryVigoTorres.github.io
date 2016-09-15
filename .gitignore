@@ -1,13 +1,5 @@
 .sass-cache
 *.css.map
 static/up_arrow.svg
-py
-*.py
-*.zip
-*.svg
-*.xcf
-notes.txt
-foundation
-github_repos.json
-repos.html
-gears_orig.jpg
+__pycache__
+*.pyc
