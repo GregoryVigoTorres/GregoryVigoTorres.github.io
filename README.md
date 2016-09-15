@@ -1,5 +1,7 @@
 Just serve the static site with js using Flask for heroku.
 
+THIS HAS TO BE PYTHON 2.7
+
 Build assets directly with sass in dev environment.
 
 There's no database or anything. so it should be trivial
