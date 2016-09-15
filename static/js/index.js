@@ -1,14 +1,13 @@
 var comingSoonElem = document.getElementById('coming-soon');
-function showComingSoon(caller) {
-    var callerElem = document.querySelector(caller);
-    var topPos = callerElem.offsetHeight + (callerElem.clientHeight/4);
-    var leftPos = callerElem.offsetLeft + (callerElem.clientWidth/4);
+function showComingSoon(callerId) {
+  // show the little box centered inside the caller parent
+  var callerElem = document.getElementById(callerId);
+  var topPos = callerElem.offsetTop; // + (callerElem.clientHeight/4);
+  var leftPos = callerElem.offsetLeft + (callerElem.clientWidth/4);
 
-    console.log(callerElem);
-
-    comingSoonElem.style.top = topPos;
-    comingSoonElem.style.left = leftPos;
-    comingSoonElem.style.display = 'block';
+  comingSoonElem.style.top = topPos;
+  comingSoonElem.style.left = leftPos;
+  comingSoonElem.style.display = 'block';
 };
 
 var closeComingSoon = document.getElementById('close-coming-soon');
@@ -18,7 +17,7 @@ closeComingSoon.addEventListener('click',  function(eve) {
 
 var topButton = document.getElementById("back-to-top-link");
 var foldElem = document.getElementById('top');
-var fold = foldElem.clientHeight; 
+var fold = foldElem.clientHeight;
 
 var menuButtonContainer = document.getElementById('menu-button-container');
 var menuItemList = document.getElementById('menu-items');
@@ -27,22 +26,22 @@ document.onscroll = function(eve) {
     var pos = window.scrollY;
     if (pos > fold) {
         topButton.style.display = 'block';
-        menuButtonContainer.style.display = 'block'; 
+        menuButtonContainer.style.display = 'block';
     } else {
         topButton.style.display = 'none';
-        menuButtonContainer.style.display = 'none'; 
+        menuButtonContainer.style.display = 'none';
     };
 };
 
 menuButtonContainer.addEventListener('mouseover', function(eve) {
     if (menuItemList.style != undefined) {
-        menuItemList.style.display = 'block'; 
+        menuItemList.style.display = 'block';
     };
 });
 
 menuButtonContainer.addEventListener('mouseout', function(eve) {
     if (menuItemList.style != undefined) {
-        menuItemList.style.display = 'none'; 
+        menuItemList.style.display = 'none';
     };
 });
 
@@ -54,10 +53,10 @@ if (window.screen.availWidth < 800) {
     contactElemTarget.insertAdjacentElement('afterend', contactElems);
 
     menuButtonContainer.addEventListener('touchmove', function(eve) {
-        for (i=0; i < menuItemList.children.length; i++) { 
+        for (i=0; i < menuItemList.children.length; i++) {
             // unset background on menu items
-            menuItemList.children[i].firstElementChild.classList.remove('fake-hover'); 
-        };    
+            menuItemList.children[i].firstElementChild.classList.remove('fake-hover');
+        };
 
         var currElem = document.elementFromPoint(eve.touches[0].clientX, eve.touches[0].clientY);
         if (currElem) {
@@ -70,7 +69,7 @@ if (window.screen.availWidth < 800) {
 
     // show/hide container
     menuButtonContainer.addEventListener('touchstart', function(eve) {
-        menuItemList.style.display = 'block'; 
+        menuItemList.style.display = 'block';
         menuButtonContainer.style.width = '50%';
     }, false);
 
@@ -80,5 +79,5 @@ if (window.screen.availWidth < 800) {
             menuButtonContainer.style.width = 'auto';
         }, false);
     };
-}; // responsive things 
+}; // responsive things
 

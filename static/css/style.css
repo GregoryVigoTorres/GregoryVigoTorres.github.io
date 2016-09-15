@@ -90,16 +90,13 @@ ul {
 
 #coming-soon {
   display: none;
-  position: fixed;
-  left: 0;
-  top: 0;
+  position: absolute;
   z-index: 10;
-  background-color: white;
-  color: #BC260F;
-  border: 2px solid #BC260F;
+  background-color: #BC260F;
+  color: white;
   font-family: "BoldSans";
   text-align: center;
-  padding: 8px; }
+  padding: 12px; }
   #coming-soon p {
     margin: 0; }
   #coming-soon #close-coming-soon {
@@ -108,7 +105,7 @@ ul {
     border: 2px solid white;
     padding: 8px; }
     #coming-soon #close-coming-soon:hover {
-      border: 2px solid #BC260F; }
+      text-decoration: underline; }
 
 #projects {
   display: flex;
