@@ -122,18 +122,21 @@ ul {
 }
 
 #about-me {
-    p {
+    .content {
         margin: 1.5rem 3rem 6rem 3rem;
         padding: 2rem;
         font-size: 110%;
         background-color: $dk-gray;
         color: white;
-        text-indent: 3rem;
+        // text-indent: 3rem;
+
+        p {
+          margin: 0 0 1rem 0;
+        }
 
         a:hover {
             box-shadow: inset 0 -8px 0 rgba(255, 255, 255, 0.3);
         }
-
     }
 }
 
@@ -444,11 +447,5 @@ footer {
 
     #mobile-links-container {
         display: none;
-    }
-
-    #about-me {
-        p {
-            padding-bottom: 5rem;
-        }
     }
 }
