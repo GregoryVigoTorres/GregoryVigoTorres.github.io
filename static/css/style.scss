@@ -128,7 +128,6 @@ ul {
         font-size: 110%;
         background-color: $dk-gray;
         color: white;
-        // text-indent: 3rem;
 
         p {
           margin: 0 0 1rem 0;
@@ -306,11 +305,12 @@ ul {
         border: 2px solid $dk-gray;
 
         strong {
-            font-family: "SemiBoldItalic", sans-serif;
+            font-family: "BoldSans", sans-serif;
         }
 
         header {
-            font-family: "SemiBoldItalic", sans-serif;
+            font-family: "BoldSans", sans-serif;
+            font-size: 105%;
             color: $lt-gray;
             background-color: $dk-gray;
             display: inline-block;
