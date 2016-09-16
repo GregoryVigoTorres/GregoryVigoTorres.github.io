@@ -2,11 +2,9 @@ Just serve the static site with js using Flask for heroku.
 
 THIS HAS TO BE PYTHON 2.7
 
-Build assets directly with sass in dev environment.
+Build assets directly with sass in dev environment, keep css under version control.
 
 There's no database or anything. so it should be trivial
-
-... Are there too many skills listed?
 
 
 https://tranquil-reef-63239.herokuapp.com/
