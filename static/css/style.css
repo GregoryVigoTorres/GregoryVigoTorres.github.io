@@ -163,6 +163,24 @@ ul {
   #skills ul, #skills li {
     padding: 0;
     margin: 0; }
+  #skills .skills-title {
+    width: 100%;
+    text-align: center; }
+    #skills .skills-title strong {
+      font-size: 110%; }
+  #skills .top-skills-container {
+    background-color: #0352A7;
+    color: white;
+    border: 2px solid #0352A7;
+    width: 100%; }
+    #skills .top-skills-container div {
+      border: 2px solid white; }
+      #skills .top-skills-container div ul {
+        display: flex;
+        justify-content: space-between; }
+        #skills .top-skills-container div ul li {
+          margin: auto;
+          display: inline-block; }
   #skills div {
     margin: 2rem;
     padding: 1.5rem;
@@ -236,6 +254,7 @@ footer {
   text-decoration: underline; }
 
 /* RESPONSIVE */
+/* small screen */
 @media screen and (max-width: 750px) {
   #menu-button-container {
     display: block; }

@@ -257,6 +257,35 @@ ul {
         margin: 0;
     }
 
+    .skills-title {
+      width: 100%;
+      text-align: center;
+      strong {
+        font-size: 110%;
+      }
+    }
+
+    .top-skills-container {
+      background-color: $dk-blue;
+      color: white;
+      border: 2px solid $dk-blue;
+      width: 100%;
+
+      div {
+        border: 2px solid white;
+
+        ul {
+          display: flex;
+          justify-content: space-between;
+
+          li {
+            margin: auto;
+            display: inline-block;
+          }
+        }
+      }
+    }
+
     div {
         margin: 2rem;
         padding:1.5rem;
@@ -356,6 +385,7 @@ footer {
 }
 
 /* RESPONSIVE */
+/* small screen */
 @media screen and (max-width: 750px) {
     #menu-button-container {
         display: block;
