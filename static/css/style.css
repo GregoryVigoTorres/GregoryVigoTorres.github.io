@@ -49,22 +49,33 @@ ul {
   list-style: none; }
 
 #top {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  text-align: center;
-  flex-flow: column wrap;
-  background-color: rgba(41, 115, 206, 0.9);
-  color: #fff;
   height: 100%; }
   #top #contact-links-mobile {
     display: none; }
+  #top #menu-button {
+    border: 3px solid #fff;
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    text-align: center; }
+    #top #menu-button span {
+      padding-top: 8px;
+      font-size: 40px; }
+  #top #top-container {
+    background-color: rgba(41, 115, 206, 0.9);
+    color: #fff;
+    width: 75%;
+    height: 100%; }
   #top header {
     font-family: "BoldSerif", sans-serif;
-    font-size: 2.5em; }
+    font-size: 2.5em;
+    padding-left: 2rem;
+    padding-bottom: 1.5rem;
+    right: 55%;
+    position: absolute; }
   #top p {
-    text-align: center;
-    margin: auto;
+    position: absolute;
+    right: 55%;
     padding: .5rem; }
   #top a {
     margin: 1rem;
