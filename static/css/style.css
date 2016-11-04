@@ -5,7 +5,12 @@
   font-style: normal; }
 @font-face {
   font-family: "BoldSans";
-  src: url("/static/fonts/Open_Sans/OpenSans-Bold.ttf");
+  src: url("/static/fonts/Open_Sans/OpenSans-ExtraBold.ttf");
+  font-style: normal;
+  font-weight: bold; }
+@font-face {
+  font-family: "BoldSerif";
+  src: url("/static/fonts/Merriweather/Merriweather-Black.ttf");
   font-style: normal;
   font-weight: bold; }
 html, body {
@@ -49,13 +54,13 @@ ul {
   align-items: center;
   text-align: center;
   flex-flow: column wrap;
-  color: rgba(0, 90, 206, 0.9);
-  text-shadow: 3px 3px 3px rgba(0, 111, 231, 0.3);
+  background-color: rgba(41, 115, 206, 0.9);
+  color: #fff;
   height: 100%; }
   #top #contact-links-mobile {
     display: none; }
   #top header {
-    font-family: "BoldSans", sans-serif;
+    font-family: "BoldSerif", sans-serif;
     font-size: 2.5em; }
   #top p {
     text-align: center;
@@ -73,7 +78,7 @@ ul {
   font-family: "BoldSans", sans-serif;
   font-size: 1.2rem;
   text-align: center;
-  color: rgba(0, 90, 206, 0.9); }
+  color: rgba(41, 115, 206, 0.9); }
 
 #about-me-anchor {
   padding-top: 3rem; }
@@ -212,7 +217,7 @@ ul {
 
 #menu-button-container {
   display: none;
-  background-color: rgba(0, 90, 206, 0.9);
+  background-color: rgba(41, 115, 206, 0.9);
   color: white;
   border-radius: 50%;
   padding: 20px;
@@ -233,7 +238,7 @@ ul {
       z-index: 100; }
 
 #back-to-top {
-  background-color: rgba(0, 90, 206, 0.9);
+  background-color: rgba(41, 115, 206, 0.9);
   color: white;
   font-family: "BoldSans";
   position: fixed;
@@ -247,7 +252,7 @@ ul {
 
 footer {
   padding: 1em 0em 2em 1em;
-  background-color: rgba(0, 90, 206, 0.9);
+  background-color: rgba(41, 115, 206, 0.9);
   color: #DCDBD5;
   text-align: center; }
 
