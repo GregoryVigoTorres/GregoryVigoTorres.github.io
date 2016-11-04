@@ -4,3 +4,5 @@ static/up_arrow.svg
 __pycache__
 *.pyc
 instance/dev_config.py
+.tags
+venv
