@@ -73,6 +73,7 @@ a {
   min-height: 48px;
   color: inherit;
   border-bottom: 3px solid inherit;
+  cursor: default;
 
   &:hover {
     box-shadow: inset 0 -8px 0 inherit;
@@ -87,9 +88,9 @@ ul {
   list-style: none;
 }
 
+
 #top {
   background-color: $dk-gray;
-  // $left-space: 2rem;
   height: 100%;
 
   #contact-links-mobile {
@@ -108,11 +109,18 @@ ul {
     }
   }
 
+  $lt_color: #96D13C;
+  $dk-color: #158E00;
+
   #top-container {
-    background-color: #96D13C;
-    color: #158E00;
+    background-color: $lt_color;
+    color: $dk-gray;
     width: 75%;
     height: 100%;
+  }
+
+  nav {
+    margin-bottom: 1rem;
   }
 
   header {
@@ -122,17 +130,27 @@ ul {
     padding-bottom: 1.5rem;
   }
 
-  a {
-    color: #FDFFB7;
-    margin-left: 1rem;
-    text-shadow: none;
+  #contact-links {
+    padding-top: 1rem;
   }
-}
 
-.left-container {
-  text-align: right;
-  position: absolute;
-  width: 35%;
+  a {
+    letter-spacing: 2px;
+    color: #fff;
+    margin-left: 1.5rem;
+    text-shadow: none;
+    padding: 1rem 0 1rem .5rem;
+
+    &:hover {
+      background-color: #80B333;
+    }
+  }
+
+  .left-container {
+    text-align: right;
+    position: absolute;
+    width: 50%;
+  }
 }
 
 #about-me {
@@ -234,13 +252,17 @@ ul {
   }
 
   #top-skills-container {
-    background-color: #EF7E04;
+    background-color: #FFBD76;
     text-align: center;
+
+    li {
+      font-family: "SemiBold";
+    }
   }
 
   #other-skills-container {
+    background-color: #EF7E04;
     width: 50%;
-    background-color: #FFBD76;
     display: flex;
     flex-wrap: wrap;
 
@@ -326,19 +348,22 @@ ul {
 }
 
 #back-to-top {
-  background-color: $blue;
-  color: white;
+  border: 8px solid $dk-gray;
+  background-color: white;
+
   font-family: "BoldSans";
+  font-size: 1.25rem;
   position: fixed;
   bottom: 0;
   right: 25px;
   max-height: 48px;
-  padding: 20px;
+  padding: 15px;
   border-radius: 50%;
+
   &:hover {
-    &::before {
-      content: 'back to ';
-    }
+    background-color: $lt-gray;
+    color: black;
+    border: 8px solid black;
   }
 }
 
