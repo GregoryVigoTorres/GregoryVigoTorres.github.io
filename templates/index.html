@@ -12,95 +12,151 @@
   <body>
     <div id="top">
       <div id="top-container">
-        <div id="menu-button">
-          <span class="octicon octicon-three-bars" id="show-menu"></span>
+        <!-- <div id="menu&#45;button"> -->
+        <!--   <span class="octicon octicon&#45;three&#45;bars" id="show&#45;menu"></span> -->
+        <!-- </div> -->
+        <div class="left-container">
+          <header>Gregory Vigo Torres</header>
+          <p>Web &amp; Software Development</p>
+          <p id="contact-links">
+          <a href="mailto:gregory@vigo-torr.es">email</a>
+          <a href="https://github.com/GregoryVigoTorres?tab=repositories" target=blank>
+            <span class="octicon octicon-mark-github"></span> github</a>
+          <a href='https://es.linkedin.com/in/gregoryvigotorres' target='blank'>linkedin</a>
+          </p>
+          <!-- <p id="nav&#45;links"> -->
+          <!-- <a href="#about&#45;me&#45;anchor">about</a> -->
+          <!-- <a href="#projects&#45;anchor">projects</a> -->
+          <!-- <a href="#skills&#45;anchor">skills</a> -->
+          <!-- <a href="#cv&#45;anchor">cv</a> -->
+          </p>
         </div>
-        <header>Gregory Vigo Torres</header>
-        <p>Web &amp; Software Development</p>
-        <p id="contact-links">
-        <a href="mailto:gregory@vigo-torr.es">email</a>
-        <a href="https://github.com/GregoryVigoTorres?tab=repositories" target=blank>
-          <span class="octicon octicon-mark-github"></span> github</a>
-        <a href='https://es.linkedin.com/in/gregoryvigotorres' target='blank'>linkedin</a>
-        </p>
-        <p id="nav-links">
-        <a href="#about-me-anchor">about</a>
-        <a href="#projects-anchor">projects</a>
-        <a href="#skills-anchor">skills</a>
-        <a href="#cv-anchor">cv</a>
-        </p>
       </div>
     </div>
 
-    <span id="about-me-anchor" ></span>
-    <p class="title-span">About Me</p>
     <div id="about-me">
       <div class="content">
-        <p>
-        I love making things with code and finding effective and creative solutions to problems.
-        I have about 4 years of experience with <strong>Python</strong> and <strong>Javascript</strong>
-        and, while I hesitate to call myself a full stack developer,
-        I have at least a little experience with <a href="#skills">a lot of things</a>
-        from bash scripting to typography.
+          <p>
+          I'm mainly a <strong>Python</strong> and <strong>Javascript</strong> developer. My favorite stack is <strong>Debian</strong>, <strong>Nginx</strong>, <strong>Flask</strong>, <strong>SQLAlchemy</strong>, <strong>PostgreSQL</strong> and vanilla <strong>Javascript</strong>. I also have some experience with other things ranging from bash to typography to OOP, <strong>Django</strong>, unit tests and git. But, my main focus is on Python web apps.
         </p>
         <p>
-        I think truly good design is invisible, &#8220;simple is better than complex&#8221;
+        I think good design is invisible, &#8220;simple is better than complex&#8221;
         and &#8220;complex is better than complicated&#8221;.
         </p>
       </div>
     </div>
 
-    <div id="coming-soon">
-      <p>Coming Soon</p>
-      <br>
-      <p id="close-coming-soon">close</p>
-    </div>
+    <div id="project-container">
+      <div class="title">
+        Projects
+      </div>
 
-    <span id="projects-anchor" ></span>
-    <p class="title-span">Projects</p>
-
-    <div id="projects">
-      <a class="project-link" href="https://github.com/GregoryVigoTorres/notMyType" target="blank">
-        <div id="not-my-type" class="white-bg-container">
-          <p><strong>Not My Type</strong></p>
-          <p>View &amp; download fonts</p>
-          <p>(Flask, Angular)</p>
+      <div class="project-row">
+        <div class="left-col" >
+          <img src="{{ url_for('static', filename='images/paintings1.jpeg') }}">
         </div>
-      </a>
 
-      <a class="project-link" href="https://github.com/GregoryVigoTorres/PaintingsApp" target="blank">
-        <div id="paintings" class="black-bg-container">
-          <p><strong>Portfolio</strong></p>
-          <p>Portfolio app for paintings</p>
-          <p>(Flask, Javascript)</p>
+          <div class="right-col">
+            <p>
+              <strong>Painting Portfolio</strong>
+            </p>
+            <a href="https://github.com/GregoryVigoTorres/PaintingsApp" target="blank">
+              link to github repo
+            </a>
+            <br>
+            <a href="#">
+              link to static heroku site
+            </a>
+            <p class="white">
+                Upload images, series and texts
+            </p>
+            <p class="white">(Flask, Javascript, SQLAlchemy, PostgreSQL)</p>
+          </div>
+      </div>
+
+      <div class="project-row">
+        <div class="left-col">
+          <img src="{{ url_for('static', filename='images/notmytype1.jpeg') }}" >
         </div>
-      </a>
 
-      <a class="project-link" href="https://github.com/GregoryVigoTorres/sortableTables" target="blank">
-        <div id="sortable-tables" class="white-bg-container">
+          <div class="right-col">
+            <p><strong>Not My Type</strong></p>
+            <a class="project-link"
+               href="notmytype.herokuapp.com" targert="blank">
+              heroku link
+            </a>
+            <br>
+            <a href="#">
+              github link
+            </a>
+            <p class="white">
+              View and download free fonts with CSS snippet
+            </p>
+            <p class="white">(Flask, SQLAlchemy, JavaScript)</p>
+          </div>
+      </div>
+
+      <div class="project-row">
+        <div class="left-col">
+          <img src="{{ url_for('static', filename='images/xpathology.jpeg') }}" >
+        </div>
+
+          <div class="right-col">
+            <p><strong>XPathology</strong></p>
+            <a class="project-link"
+               href="xpathology.herokuapp.com" targert="blank">
+              heroku link
+            </a>
+            <br>
+            <a href="#">
+              github link
+            </a>
+            <p class="white">
+              XPath syntax reference
+            </p>
+            <p class="white">(HTML, JavaScript)</p>
+          </div>
+      </div>
+
+      <div class="project-row">
+        <div class="left-col">
+          <img src=" {{ url_for('static', filename='images/sortable_tables_screenshot.jpeg') }}")>
+        </div>
+
+        <div class="right-col">
           <p><strong>Sortable tables</strong></p>
-          <p>Small Javascript library </p>
-          <p>for making HTML tables sortable</p>
+          <a href="https://github.com/GregoryVigoTorres/sortableTables" target="blank">
+            github link
+          </a>
+          <p class="white">
+            Lightweight Javascript library for making HTML tables sortable
+          </p>
         </div>
-      </a>
+      </div>
 
-      <a class="project-link"
-         href="javascript:showComingSoon('pymcsqlface')">
-        <div id="pymcsqlface" class="white-bg-container">
-          <p><strong>pyMcSQLFace</strong></p>
-          <p>Web client for SQL databases</p>
-          <p>(Flask, SQLAlchemy, JavaScript)</p>
+      <div class="project-row">
+        <div class="left-col">
+          <img src="{{ url_for('static', filename='images/mcsqlface2.jpeg') }}" >
         </div>
-      </a>
+
+          <div class="right-col">
+            <p><strong>pyMcSQLFace</strong></p>
+            <a class="project-link"
+               href="javascript:showComingSoon('pymcsqlface')">
+              github ... coming soon
+            </a>
+            <p class="white">Browser based client for SQL databases</p>
+            <p class="white">(Flask, SQLAlchemy, JavaScript)</p>
+          </div>
+      </div>
     </div>
 
-    <span id="skills-anchor"></span>
-    <p class="title-span">Skills</p>
     <div id="skills">
-      <div class="top-skills-container">
-        <p class="skills-title">
-        <strong>Primarily</strong>
-        </p>
+      <div id="top-skills-container">
+        <div class="title">
+          I primarily use
+        </div>
+
         <div>
           <ul>
             <li>Python</li>
@@ -108,56 +164,57 @@
             <li>HTML</li>
             <li>CSS/SCSS</li>
             <li>Flask</li>
+            <li>SQLAlchemy</li>
           </ul>
         </div>
-      </div>
+      </div> <!-- top skills container -->
 
-      <p class="skills-title">
-      <strong>I have some experience with</strong>
-      </p>
+      <div id="other-skills-container">
+        <div class="title">
+          I have some experience with
+        </div>
 
-      <div>
-        <ul>
-          <li>Bootstrap</li>
-          <li>Foundation</li>
-          </li>Angular 1</li>
-          <li>Unit testing</li>
-        </ul>
-      </div>
+        <div>
+          <ul>
+            <li>Bootstrap</li>
+            <li>Foundation</li>
+            </li>Angular 1.5</li>
+            <li>Unit testing</li>
+          </ul>
+        </div>
 
-      <div>
-        <ul>
-          <li>SQLAlchemy</li>
-          <li>Postgres</li>
-          <li>MySQL/MariaDB</li>
-          <li>SQLite</li>
-        </ul>
-      </div>
+        <div>
+          <ul>
+            <li>PostgreSQL</li>
+            <li>MySQL/MariaDB</li>
+            <li>SQLite</li>
+          </ul>
+        </div>
 
-      <div>
-        <ul>
-          <li>Django</li>
-          <li>Pyramid</li>
-          <li>Ruby on Rails</li>
-          <li>Scrapy</li>
-        </ul>
-      </div>
+        <div>
+          <ul>
+            <li>Django</li>
+            <li>Pyramid</li>
+            <li>Ruby on Rails</li>
+            <li>Scrapy</li>
+          </ul>
+        </div>
 
-      <div>
-        <ul>
-          <li>git/github</li>
-          <li>Debian</li>
-          <li>bash</li>
-          <li>Apache2</li>
-          <li>Nginx</li>
-          <li>Docker/Vagrant</li>
-        </ul>
-      </div>
-    </div>
+        <div>
+          <ul>
+            <li>git/github</li>
+            <li>Debian</li>
+            <li>bash</li>
+            <li>Apache2</li>
+            <li>Nginx</li>
+            <li>Docker/Vagrant</li>
+          </ul>
+        </div>
+      </div><!-- other-skills-container -->
+    </div><!-- skills -->
 
-    <span id="cv-anchor"></span>
     <div id="cv">
-      <p class="title-span">CV</p>
+      <div class="title">CV</div>
       <div>
         <header>Online Courses</header>
         <ul>
@@ -174,9 +231,9 @@
 
         <header>Programming Languages</header>
         <ul>
-          <li>Python (2 &amp; 3)</li>
+          <li>Python</li>
           <li>Javascript</li>
-          <li>a little php &amp; ruby</li>
+          <li>a little php &amp; Ruby</li>
         </ul>
 
         <header>Human Languages</header>
@@ -194,10 +251,10 @@
 
         <header>Work Experience</header>
         <ul>
-          <li>Maintenance & l10n Project Management, <u>www.oblackowhite.com</u> [2014]</li>
+          <li>Maintenance & l10n Project Manager, <u>www.oblackowhite.com</u> [2014]</li>
           <li>Freelance Translator [2007-2015]</li>
           <li>In Company English Teacher [2002-2012]</li>
-          <li>Assistant to the Collections Manager, <strong>The Architectural Archives</strong> of <strong>The University of Pennsylvania</strong> [2000-2002]</li>
+          <!-- <li>Assistant to the Collections Manager, <strong>The Architectural Archives</strong> of <strong>The University of Pennsylvania</strong> [2000&#45;2002]</li> -->
         </ul>
 
         <p>
@@ -205,27 +262,16 @@
         painting, design, everything free &amp; open source and documentary film.
         </p>
       </div>
-    </div>
-
-    <div id="menu-button-container">
-      <span class="octicon octicon-three-bars" id="show-menu"></span>
-      <ul id="menu-items">
-        <li><a class="menu-item" href="#about-me-anchor">about</a></li>
-        <li><a class="menu-item" href="#projects-anchor">projects</a></li>
-        <li><a class="menu-item" href="#skills-anchor">skills</a></li>
-        <li><a class="menu-item" href="#cv-anchor">cv</a></li>
-        <li><a class="menu-item" href="#mobile-links-container">contact</a></li>
-      </ul>
-    </div>
+    </div><!-- cv -->
 
     <a id="back-to-top-link" href="#top" style="display: none;">
       <div id="back-to-top">top</div>
     </a>
 
-    <div id="mobile-links-container">
-      <p class="title-span">Contact</p>
-      <div></div>
-    </div>
+    <!-- <div id="mobile&#45;links&#45;container"> -->
+    <!--   <p class="title&#45;span">Contact</p> -->
+    <!--   <div></div> -->
+    <!-- </div> -->
 
     <footer>
       <div>
