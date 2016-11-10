@@ -1,0 +1,49 @@
+/* automatically generated css */
+
+    @font-face {
+        font-family: "Merriweather-Black";
+        src: url("Merriweather-Black.ttf");
+        style: "normal";
+    }
+
+    @font-face {
+        font-family: "Merriweather-BlackItalic";
+        src: url("Merriweather-BlackItalic.ttf");
+        style: "italic";
+    }
+
+    @font-face {
+        font-family: "Merriweather-Bold";
+        src: url("Merriweather-Bold.ttf");
+        style: "normal";
+    }
+
+    @font-face {
+        font-family: "Merriweather-BoldItalic";
+        src: url("Merriweather-BoldItalic.ttf");
+        style: "italic";
+    }
+
+    @font-face {
+        font-family: "Merriweather-Italic";
+        src: url("Merriweather-Italic.ttf");
+        style: "italic";
+    }
+
+    @font-face {
+        font-family: "Merriweather-Light";
+        src: url("Merriweather-Light.ttf");
+        style: "normal";
+    }
+
+    @font-face {
+        font-family: "Merriweather-LightItalic";
+        src: url("Merriweather-LightItalic.ttf");
+        style: "italic";
+    }
+
+    @font-face {
+        font-family: "Merriweather-Regular";
+        src: url("Merriweather-Regular.ttf");
+        style: "normal";
+    }

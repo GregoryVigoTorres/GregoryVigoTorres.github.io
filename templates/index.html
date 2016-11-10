@@ -3,47 +3,41 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Gregory Vigo Torres</title>
-    <link href="{{ url_for('static', filename='css/normalize.css') }}" media='all' type="text/css" rel="stylesheet">
-    <link href="{{ url_for('static', filename='css/octicons.css') }}" media='all' type="text/css" rel="stylesheet">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
     <link href="{{ url_for('static', filename='css/style.css') }}" media='all' type="text/css" rel="stylesheet">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
   </head>
 
   <body>
-    <div id="top">
-      <div id="top-container">
-        <nav>
-          <a href="#about-me">about me</a>
-          <a href="#project-container">projects</a>
-          <a href="#cv">cv</a>
-        </nav>
+    <div id="main-container">
+    <nav>
+      <a class="mobile-link" href="#projects">projects</a>
+      <a href="#cv">cv</a>
+    </nav>
 
-        <div class="left-container">
-          <header>Gregory Vigo Torres</header>
-          <p>Web &amp; Software Development</p>
-          <p id="contact-links">
-            <a href="mailto:gregory@vigo-torr.es">email</a>
-            <a href="https://github.com/GregoryVigoTorres?tab=repositories" target=blank>
-              <span class="octicon octicon-mark-github"></span> github</a>
-            <a href='https://es.linkedin.com/in/gregoryvigotorres' target='blank'>linkedin</a>
-          </p>
-        </div>
-      </div>
+    <div id="top">
+      <h2>Gregory Vigo Torres</h2>
+      <p>Web &amp; Software Development</p>
+      <p id="contact-links">
+        <a href="mailto:gregory@vigo-torr.es">email</a>
+        <a href="https://github.com/GregoryVigoTorres?tab=repositories" target=blank>
+          <span class="octicon octicon-mark-github"></span> github</a>
+        <a href='https://es.linkedin.com/in/gregoryvigotorres' target='blank'>linkedin</a>
+      </p>
     </div>
 
     <div id="about-me">
-      <div class="content">
-          <p>
-          I'm mainly a <strong>Python</strong> and <strong>Javascript</strong> developer. My favorite stack is <strong>Debian</strong>, <strong>Nginx</strong>, <strong>Flask</strong>, <strong>SQLAlchemy</strong>, <strong>PostgreSQL</strong> and plain <strong>Javascript</strong>. I also have some experience with a lot of other things ranging from bash to typography to OOP, MVC or <strong>Django</strong> and git. But, my main focus is on Python web apps.
-        </p>
-        <p>
-        I think good design is invisible, &#8220;simple is better than complex&#8221;
-        and &#8220;complex is better than complicated&#8221;.
-        </p>
-      </div>
+      <p>
+      I'm mainly a <strong>Python</strong> and <strong>Javascript</strong> web developer. My favorite stack is <strong>Debian</strong>, <strong>Nginx</strong>, <strong>Flask</strong>, <strong>SQLAlchemy</strong>, <strong>PostgreSQL</strong> and plain <strong>Javascript</strong>. I also have some experience with a lot of other things ranging from bash to typography to OOP, MVC or <strong>Django</strong>, <strong>git</strong> or <strong>SQL</strong>. But, my main focus is on Python web apps.
+
+      </p>
+      <p>
+      I think good design is invisible, &#8220;simple is better than complex&#8221;
+      and &#8220;complex is better than complicated&#8221;.
+      </p>
     </div>
 
-    <div id="project-container">
+    <div id="projects">
       <div class="title">
         Projects
       </div>
@@ -62,12 +56,10 @@
             </a>
             <br>
             <a href="#">
-              link to static heroku site
+              link to static version
             </a>
-            <p class="white">
-                Upload images, series and texts
-            </p>
-            <p class="white">(Flask, Javascript, SQLAlchemy, PostgreSQL)</p>
+            <p class="project-description">See a bunch of paintings</p>
+            <p class="project-description">(Flask, Javascript, SQLAlchemy, PostgreSQL)</p>
           </div>
       </div>
 
@@ -86,10 +78,8 @@
             <a href="#">
               github link
             </a>
-            <p class="white">
-              View and download free fonts with CSS snippet
-            </p>
-            <p class="white">(Flask, SQLAlchemy, JavaScript)</p>
+            <p class="project-description">View and download free fonts with a @font-face snippet</p>
+            <p class="project-description">(Flask, SQLAlchemy, Angular 1.5)</p>
           </div>
       </div>
 
@@ -108,10 +98,8 @@
             <a href="#">
               github link
             </a>
-            <p class="white">
-              XPath syntax reference
-            </p>
-            <p class="white">(HTML, JavaScript)</p>
+            <p class="project-description">XPath syntax reference</p>
+            <p class="project-description">(Flask, HTML, Javascript)</p>
           </div>
       </div>
 
@@ -125,9 +113,8 @@
           <a href="https://github.com/GregoryVigoTorres/sortableTables" target="blank">
             github link
           </a>
-          <p class="white">
-            Lightweight Javascript library for making HTML tables sortable
-          </p>
+          <p class="project-description">Lightweight Javascript library for making HTML tables sortable</p>
+          <p class="project-description">(plain Javascript)</p>
         </div>
       </div>
 
@@ -142,13 +129,57 @@
                href="javascript:showComingSoon('pymcsqlface')">
               github ... coming soon
             </a>
-            <p class="white">Browser based client for SQL databases</p>
-            <p class="white">(Flask, SQLAlchemy, JavaScript)</p>
+            <p class="project-description">Browser based client for SQL databases</p>
+            <p class="project-description">(Flask, SQLAlchemy, Javascript)</p>
           </div>
       </div>
     </div>
 
+    <!-- <div class="white&#45;space" style="height: 5rem;">&#38;nbsp;</div> -->
+
     <div id="skills">
+      <div id="other-skills-container">
+        <div class="title">
+          I have some experience with
+        </div>
+
+        <div>
+          <ul>
+            <li>Bootstrap</li>
+            <li>Foundation</li>
+            <li>Angular 1.5</li>
+            <li>Unit testing</li>
+          </ul>
+        </div>
+
+        <div>
+          <ul>
+            <li>PostgreSQL</li>
+            <li>MySQL/MariaDB</li>
+            <li>SQLite</li>
+          </ul>
+        </div>
+
+        <div>
+          <ul>
+            <li>Django</li>
+            <li>Pyramid</li>
+            <!-- <li>Ruby on Rails</li> -->
+            <li>Scrapy</li>
+          </ul>
+        </div>
+
+        <div>
+          <ul>
+            <li>git/github</li>
+            <li>Debian</li>
+            <li>Apache2</li>
+            <li>Nginx</li>
+            <li>Docker/Vagrant</li>
+          </ul>
+        </div>
+      </div><!-- other-skills-container -->
+
       <div id="top-skills-container">
         <div class="title">
           I primarily use
@@ -166,48 +197,6 @@
         </div>
       </div> <!-- top skills container -->
 
-      <div id="other-skills-container">
-        <div class="title">
-          I have some experience with
-        </div>
-
-        <div class="skills-list">
-          <ul>
-            <li>Bootstrap</li>
-            <li>Foundation</li>
-            <li>Angular 1.5</li>
-            <li>Unit testing</li>
-          </ul>
-        </div>
-
-        <div class="skills-list">
-          <ul>
-            <li>PostgreSQL</li>
-            <li>MySQL/MariaDB</li>
-            <li>SQLite</li>
-          </ul>
-        </div>
-
-        <div class="skills-list">
-          <ul>
-            <li>Django</li>
-            <li>Pyramid</li>
-            <li>Ruby on Rails</li>
-            <li>Scrapy</li>
-          </ul>
-        </div>
-
-        <div class="skills-list">
-          <ul>
-            <li>git/github</li>
-            <li>Debian</li>
-            <li>bash</li>
-            <li>Apache2</li>
-            <li>Nginx</li>
-            <li>Docker/Vagrant</li>
-          </ul>
-        </div>
-      </div><!-- other-skills-container -->
     </div><!-- skills -->
 
     <div id="cv">
@@ -254,23 +243,23 @@
           <!-- <li>Assistant to the Collections Manager, <strong>The Architectural Archives</strong> of <strong>The University of Pennsylvania</strong> [2000&#45;2002]</li> -->
         </ul>
 
-        <p>
+        <p class="footnote">
         Besides coding, my other interests include
         painting, design, everything free &amp; open source and documentary film.
         </p>
       </div>
     </div><!-- cv -->
 
-    <a id="back-to-top-link" href="#top" style="display: none;">
-      <div id="back-to-top">top</div>
-    </a>
+    <div class="white-space" style="height: 5rem;">&nbsp;</div>
+
+    <a id="back-to-top" href="#" style="display: none;">top</a>
 
     <footer>
       <div>
         <strong>&#169; Gregory Vigo Torres, 2016</strong>
       </div>
     </footer>
-
+  </div>
     <script src="{{ url_for('static', filename='js/index.js') }}"></script>
   </body>
 </html>

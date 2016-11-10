@@ -1,23 +1,10 @@
+@import 'normalize';
+
 @font-face {
   font-family: "MediumSans";
   src: url("/static/fonts/Open_Sans/OpenSans-Regular.ttf");
   font-weight: normal;
   font-style: normal;
-}
-
-@font-face {
-  font-family: "SemiBold";
-  src: url("/static/fonts/Open_Sans/OpenSans-Semibold.ttf");
-  font-style: normal;
-  font-weight: bold;
-}
-
-
-@font-face {
-  font-family: "BoldSans";
-  src: url("/static/fonts/Open_Sans/OpenSans-ExtraBold.ttf");
-  font-style: normal;
-  font-weight: bold;
 }
 
 @font-face {
@@ -27,446 +14,222 @@
   font-weight: bold;
 }
 
-
-$dk-gray: #393939;
-$lt-gray: #DCDBD5;
-$yellow-green: #D8FF84;
-
-$trans-red: rgba(171, 34, 6, 0.3);
-$link-border-red-hover: inset 0 -8px 0 $trans-red;
-$red-link: #BC260F;
-$trans-blue: rgba(0, 111, 231, 0.7);
-$very-trans-blue: rgba(0, 111, 231, 0.3);
-$dk-blue: #0352A7;
-// $blue: rgba(0, 90, 206, 0.9);
-$blue: rgba(41, 115, 206, 0.9);
-
-html, body {
-  max-height:100vh;
+@font-face {
+  font-family: "BoldSans";
+  src: url("/static/fonts/Open_Sans/OpenSans-ExtraBold.ttf");
+  font-style: normal;
+  font-weight: bold;
 }
 
 body {
-  font-family: "MediumSans", sans-serif;
-  font-size: 17px;
-  background-color: #fff;
+  font-family: "MediumSans";
+  min-height: 100%;
+  max-width: 100%;
+  text-rendering: optimizeLegibility;
 }
 
-a.redlink {
-  font-family: "BoldSans", sans-serif;
-  padding: 8px 0px 0px 0px;
-  text-decoration: none;
-  min-width: 48px;
-  min-height: 48px;
-  color: $red-link;
-  border-bottom: 3px solid inherit;
-
-  &:hover {
-    box-shadow: $link-border-red-hover;
-  }
-}
+$med-gray: #858585;
+$link-color: #2F7EBB; // med blue
+$nav-height: 4rem;
 
 a {
-  font-family: "BoldSans", sans-serif;
-  padding: 8px 0px 0px 0px;
+  color: $link-color;
   text-decoration: none;
-  min-width: 48px;
-  min-height: 48px;
-  color: inherit;
-  border-bottom: 3px solid inherit;
-  cursor: default;
-
-  &:hover {
-    box-shadow: inset 0 -8px 0 inherit;
-  }
-}
-
-strong {
-  font-family: "SemiBold", sans-serif;
 }
 
 ul {
   list-style: none;
 }
 
+nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: $nav-height;
+  font-family: "BoldSans";
+  background-color: #575757;
+  color: #fff;
 
-#top {
-  background-color: $dk-gray;
-  height: 100%;
+  a {
+    display: inline-block;
+    color: #fff;
+    padding: 1rem 1.3rem 1.3rem 1.3rem;
+  }
 
-  #contact-links-mobile {
+  .mobile-link {
     display: none;
   }
+}
 
-  #menu-button {
-    border: 3px solid #FDFFB7;
-    border-radius: 50%;
-    height: 60px;
-    width:60px;
-    text-align: center;
-    span {
-      padding-top: 8px;
-      font-size: 40px;
-    }
-  }
+#main-container {
+  display: flex;
+  flex-wrap: wrap;
+}
 
-  $main-container-width: 50%;
-  $container-bg: #96D13C;
+footer {
+  width: 100%;
+  padding: 4rem 0 3rem 0;
+  text-align: center;
+  font-size: 85%;
+  color: $med-gray;
+}
 
-  #top-container {
-    background-color: $container-bg;
-    color: $dk-gray;
-    width: 75%;
-    height: 100%;
-  }
+.white-space {
+  height: 3rem;
+  width: 100%;
+}
 
-  nav {
-    background-color: $container-bg;
-    width: $main-container-width;
-    text-align: right;
-    position: absolute;
-    z-index: 10;
-  }
+#top {
+  width: 50%;
+  margin: $nav-height 0 0 0;
+  padding: 3rem 0 5rem 0;
+  border: 8px solid $med-gray;
+  text-align: center;
+  font-family: "BoldSans";
 
-  header {
-    font-family: "BoldSerif", sans-serif;
-    font-size: 2.5em;
-    padding-top: 1rem;
-    padding-bottom: 1.5rem;
-  }
-
-  #contact-links {
-    padding-top: 1rem;
+  h2 {
+    font-family: "BoldSerif";
+    font-size: 2rem;
   }
 
   a {
-    letter-spacing: 2px;
-    color: #fff;
-    margin-left: 1.5rem;
-    text-shadow: none;
-    padding: 1rem 0 1rem .5rem;
-
-    &:hover {
-      background-color: #80B333;
-    }
-  }
-
-  .left-container {
-    padding-top: 3rem;
-    text-align: right;
-    position: absolute;
-    width: $main-container-width;
+    padding: 1rem;
   }
 }
 
 #about-me {
-  margin-bottom: 3rem;
-
-  .content {
-    max-width: 70%;
-    margin-left: 30%;
-    padding: 2rem;
-    font-size: 110%;
-    background-color: $dk-gray;
-    color: white;
-
-    p {
-      margin: 0 0 1rem 0;
-    }
-
-    a:hover {
-      box-shadow: inset 0 -8px 0 rgba(255, 255, 255, 0.3);
-    }
-  }
+  width: 40%;
+  background-color: #000;
+  color: #fff;
+  padding: 3rem 2rem;
 }
 
-.title {
-  font-family: "BoldSans";
-  font-size: 1.5rem;
-  text-align: center;
-}
-
-.white {
-  color: #787878;
-}
-
-#project-container {
+#projects {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
-  padding-bottom: 3rem;
-  margin-top: 9rem;
-  margin-bottom: 5rem;
-  max-width: 100%;
+  justify-content: center;
 
-  * {
-    margin: auto;
+  max-width: 100%;
+  margin: 0 0 0 5rem;
+  padding: 2rem;
+  border: 8px solid #9A35AD;
+  border: 8px solid #000;
+
+  .title {
+    width: 100%;
+    text-align: center;
+    font-family: "BoldSans";
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
   }
 
   .project-row {
-    margin: 1rem 0 1.5rem 0;
-    width: 100%;
-    display: flex;
-    background-color: #A6A6A6;
-    padding: 1.5rem 0 1.5rem 0;
+    padding: 2rem;
+    margin: 1rem;
+    border: 1px solid cyan;
+    max-width: 30%;
+    border: 8px solid #000;
 
-    .left-col {
-      flex: 20%;
-      max-width: 20%;
-      padding: 1rem;
-
-      img {
-        max-width: 100%;
-        border: 1px solid black;
-      }
+    img {
+      max-width: 100%;
+      border: 1px solid #000;
     }
 
-    .right-col {
-      // background-color: #B27B0C;
-      background-color: #fff;
-      // border: 3px solid black;
-      padding: 1.5rem;
-      flex-basis: 60%;
-      // max-width: 60%;
-
-      a {
-        box-shadow: inset 0px -8px rgba(0, 0, 0 ,0.3);
-      }
+    .project-description {
+      background-color: #D1CED2;
+      font-size: 85%;
+      margin: 0;
+      padding: 0 1rem 0 1rem;
     }
   }
 }
 
 #skills {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
+  width: 100%;
 
   ul, li {
-    padding: 0 0 0 0;
     margin: 0 0 0 0;
-  }
-
-  div.title {
-    font-size: 1.25rem;
-    width: 100%;
-    margin-bottom: 2rem;
+    padding: 0 0 0 0;
   }
 
   #top-skills-container, #other-skills-container {
-    width: 50%;
-    padding: 3rem 0 3rem 0;
-  }
-
-  #top-skills-container {
-    background-color: #FFBD76;
-    text-align: center;
-
-    li {
-      font-family: "SemiBold";
-    }
-  }
-
-  #other-skills-container {
-    background-color: #EF7E04;
-    width: 50%;
     display: flex;
     flex-wrap: wrap;
+    padding: 3rem 0 3rem 0;
+
+    border: 8px solid #3163BB;
+    width: 50%;
 
     div {
       margin: auto;
+    }
+  }
 
-      ul li {
-        font-size: 85%;
-      }
+  #top-skills-container {
+    // background-color: #000;
+    background-color: #3163BB;
+
+    color: #fff;
+    font-family: "BoldSans";
+  }
+
+  #other-skills-container {
+    display: flex;
+    flex-wrap: wrap;
+
+    padding: 2rem;
+
+    .title {
+      width: 100%;
+      font-family: "BoldSans";
+      margin-bottom: .7rem;
+    }
+
+    div {
+      font-size: 85%;
+      width: 40%;
     }
   }
 }
 
 #cv {
-  max-width: 100%;
-  background-color: #95C1D6;
+  border: 8px solid $med-gray;
+  // margin: 0 20% 0 20%;
+  margin: 0 40% 0 0;
 
-  $left-pad: 5.5rem;
-
-  .title {
-    padding: 4rem 0 2rem $left-pad;
-    text-align: left;
-    background-color: $dk-gray;
-    color: #95C1D6;
+  .title, header {
+    background-color: $med-gray;
+    color: #fff;
+    font-family: "BoldSans";
+    padding: .6rem;
   }
 
-  div {
-    padding: .5rem 3.5rem 7.5rem $left-pad;
-    color: $dk-gray;
-
-    strong {
-      font-family: "BoldSans", sans-serif;
-    }
-
-    header {
-      font-family: "BoldSans", sans-serif;
-      font-size: 105%;
-      color: $lt-gray;
-      background-color: $dk-gray;
-      display: inline-block;
-      margin: 1em 0 0 0;
-      padding: 3px 8px 3px 8px;
-    }
-
-    p {
-      margin: 1.3rem 0 0 0;
-    }
-
-    ul {
-      margin: .8rem;
-      list-style: none;
-    }
-  }
-}
-
-#menu-button-container {
-  display: none;
-  background-color: $blue;
-  color: white;
-  border-radius: 50%;
-  padding: 20px;
-  position: fixed;
-  right: 25px;
-  bottom: 69px;
-  text-align: center;
-  z-index: 99;
-
-  .octicon {
-    width:36px;
-    height:36px;
-    font-size: 36px;
+  header {
+    max-width: 30%;
   }
 
-  #menu-items {
-    display: none;
-    padding: 0;
+  p {
+    padding: 0 0 0 3rem;
+  }
 
-    li a {
-      padding: 0;
-      z-index:100;
-    }
+  .footnote {
+    font-size: 85%;
+    padding: 0 3rem 0 3rem;
   }
 }
 
 #back-to-top {
-  border: 8px solid $dk-gray;
-  background-color: white;
-
-  font-family: "BoldSans";
-  font-size: 1.25rem;
+  display: block;
   position: fixed;
   bottom: 0;
-  right: 25px;
-  max-height: 48px;
-  padding: 15px;
+  right: 3rem;
+  background-color: #000;
+  color: #fff;
+  padding: 1.5rem;
   border-radius: 50%;
-
-  &:hover {
-    background-color: $lt-gray;
-    color: black;
-    border: 8px solid black;
-  }
+  font-family: "BoldSans";
+  border: 1px solid #fff;
 }
 
-footer {
-  max-width: 100%;
-  padding: 3rem 0rem 8rem 0rem;
-  color: $dk-gray;
-  text-align: center;
-}
-
-.fake-hover {
-  font-size: 120%;
-  text-decoration: underline;
-}
-
-/* RESPONSIVE */
-/* small screen */
-@media screen and (max-width: 750px) {
-  body {
-    // font-size: 20px;
-    // max-width: 100%;
-    // border: none;
-  }
-
-  #top {
-    max-width: 100%;
-
-    nav {
-      width:100%;
-      text-align: left;
-      padding-bottom: 1.5rem;
-
-      a {
-        margin-left: 0;
-        margin-right: 1.5rem;
-      }
-    }
-
-    #top-container {
-      width: 80%;
-    }
-
-    .left-container {
-      width: 70%;
-
-      a {
-        display: block;
-      }
-    }
-  }
-
-  #about-me {
-    .content {
-      margin-left: 20%;
-      max-width: 100%;
-    }
-  }
-
-  #project-container {
-    .project-row {
-      flex-direction: column;
-
-      div {
-        margin: auto;
-      }
-
-      .left-col {
-        max-width: 70%;
-      }
-
-      .right-col {
-        flex-basis: unset;
-        max-width: 70%;
-      }
-    }
-  }
-
-  #skills {
-    max-width: 100%;
-    flex-direction: column;
-
-    #top-skills-container, #other-skills-container {
-      width: 100%;
-      padding: 3rem 0 3rem 0;
-      text-align: center;
-
-      .skills-list {
-        width: 50%;
-      }
-    }
-  }
-
-  #cv {
-    div {
-      padding-left: 0;
-    }
-  }
-}
-
-// @media screen and (min-width: 751px) {
-// }
+@import 'responsive';
