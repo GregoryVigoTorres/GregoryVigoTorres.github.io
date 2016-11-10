@@ -6,9 +6,8 @@
   box-sizing: border-box;
 }
 
-/* mobile */
-@media screen and (max-width: 750px) {
-
+/* mobile/tablet */
+@media screen and (max-width: 770px) {
   body {
     font-size: 22px;
   }
@@ -58,6 +57,14 @@
       margin-right: 0;
       border-left: none;
       border-right: none;
+
+      .right-col {
+        a {
+          padding: .5rem 0;
+          font-size: 85%;
+          max-width: 100%;
+        }
+      }
     }
   }
 

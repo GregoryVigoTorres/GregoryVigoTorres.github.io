@@ -359,11 +359,6 @@ th {
   font-weight: normal;
   font-style: normal; }
 @font-face {
-  font-family: "BoldSerif";
-  src: url("/static/fonts/Merriweather/Merriweather-Black.ttf");
-  font-style: normal;
-  font-weight: bold; }
-@font-face {
   font-family: "BoldSans";
   src: url("/static/fonts/Open_Sans/OpenSans-ExtraBold.ttf");
   font-style: normal;
@@ -377,6 +372,8 @@ body {
 a {
   color: #2F7EBB;
   text-decoration: none; }
+  a:hover {
+    background-color: rgba(47, 126, 187, 0.2); }
 
 ul {
   list-style: none; }
@@ -391,7 +388,7 @@ nav {
   position: absolute;
   top: 0;
   left: 0;
-  height: 4rem;
+  height: 4.5rem;
   font-family: "BoldSans";
   background-color: #575757;
   color: #fff; }
@@ -399,6 +396,8 @@ nav {
     display: inline-block;
     color: #fff;
     padding: 1rem 1.3rem 1.3rem 1.3rem; }
+    nav a:hover {
+      background-color: rgba(255, 255, 255, 0); }
   nav .mobile-link {
     display: none; }
 
@@ -419,13 +418,13 @@ footer {
 
 #top {
   width: 50%;
-  margin: 4rem 0 0 0;
+  margin: 4.5rem 0 0 0;
   padding: 3rem 0 5rem 0;
   border: 8px solid #858585;
   text-align: center;
   font-family: "BoldSans"; }
   #top h2 {
-    font-family: "BoldSerif";
+    font-family: "BoldSans";
     font-size: 2rem; }
   #top a {
     padding: 1rem; }
@@ -460,6 +459,8 @@ footer {
     #projects .project-row img {
       max-width: 100%;
       border: 1px solid #000; }
+    #projects .project-row .right-col a {
+      display: block; }
     #projects .project-row .project-description {
       background-color: #D1CED2;
       font-size: 85%;
@@ -505,7 +506,7 @@ footer {
     font-family: "BoldSans";
     padding: .6rem; }
   #cv header {
-    max-width: 30%; }
+    max-width: 35%; }
   #cv p {
     padding: 0 0 0 3rem; }
   #cv .footnote {
@@ -529,8 +530,8 @@ footer {
 * {
   box-sizing: border-box; }
 
-/* mobile */
-@media screen and (max-width: 750px) {
+/* mobile/tablet */
+@media screen and (max-width: 770px) {
   body {
     font-size: 22px; }
 
@@ -569,6 +570,10 @@ footer {
       margin-right: 0;
       border-left: none;
       border-right: none; }
+      #projects .project-row .right-col a {
+        padding: .5rem 0;
+        font-size: 85%;
+        max-width: 100%; }
 
   #skills {
     flex-direction: column-reverse; }

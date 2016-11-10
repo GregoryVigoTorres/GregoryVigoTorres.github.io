@@ -35,8 +35,6 @@
     </nav>
 
     <div id="top">
-
-
       <h2>Gregory Vigo Torres</h2>
       <p>Web &amp; Software Development</p>
       <p id="contact-links">
@@ -65,74 +63,79 @@
 
       <div class="project-row">
         <div class="left-col" >
-          <img src="{{ url_for('static', filename='images/paintings1.jpeg') }}">
+          <a href="https://gregoryvigotorres.herokuapp.com/" target="blank">
+            <img src="{{ url_for('static', filename='images/paintings1.jpeg') }}">
+          </a>
         </div>
-
-          <div class="right-col">
-            <p>
-              <strong>Painting Portfolio</strong>
-            </p>
-            <a href="https://github.com/GregoryVigoTorres/PaintingsApp" target="blank">
-              link to github repo
-            </a>
-            <br>
-            <a href="#">
-              link to static version
-            </a>
-            <p class="project-description">See a bunch of paintings</p>
-            <p class="project-description">(Flask, Javascript, SQLAlchemy, PostgreSQL)</p>
-          </div>
+        <div class="right-col">
+          <p>
+          <strong>Painting Portfolio</strong>
+          </p>
+          <a href="https://gregoryvigotorres.herokuapp.com/" target="blank">
+            gregoryvigotorres.herokuapp.com
+          </a>
+          <br>
+          <a href="https://github.com/GregoryVigoTorres/PaintingsApp" target="blank">
+            source code
+          </a>
+          <p class="project-description">See a bunch of paintings</p>
+          <p class="project-description">(Flask, Javascript, SQLAlchemy, PostgreSQL)</p>
+        </div>
       </div>
 
       <div class="project-row">
         <div class="left-col">
-          <img src="{{ url_for('static', filename='images/notmytype1.jpeg') }}" >
+          <a href="https://notmytype.herokuapp.com" target="blank">
+            <img src="{{ url_for('static', filename='images/notmytype1.jpeg') }}" >
+          </a>
         </div>
 
-          <div class="right-col">
-            <p><strong>Not My Type</strong></p>
-            <a class="project-link"
-               href="notmytype.herokuapp.com" targert="blank">
-              heroku link
-            </a>
-            <br>
-            <a href="#">
-              github link
-            </a>
-            <p class="project-description">View and download free fonts with a @font-face snippet</p>
-            <p class="project-description">(Flask, SQLAlchemy, Angular 1.5)</p>
-          </div>
+        <div class="right-col">
+          <p><strong>Not My Type</strong></p>
+          <a href="https://notmytype.herokuapp.com" target="blank">
+            notmytype.herokuapp.com
+          </a>
+          <br>
+          <a href="https://github.com/GregoryVigoTorres/notMyType" target="blank">
+            source code
+          </a>
+          <p class="project-description">View and download free fonts with a @font-face snippet</p>
+          <p class="project-description">(Flask, SQLAlchemy, Angular 1.5)</p>
+        </div>
       </div>
 
       <div class="project-row">
         <div class="left-col">
-          <img src="{{ url_for('static', filename='images/xpathology.jpeg') }}" >
+          <a href="https://xpathology.herokuapp.com" target="blank">
+            <img src="{{ url_for('static', filename='images/xpathology.jpeg') }}" >
+          </a>
         </div>
 
-          <div class="right-col">
-            <p><strong>XPathology</strong></p>
-            <a class="project-link"
-               href="xpathology.herokuapp.com" targert="blank">
-              heroku link
-            </a>
-            <br>
-            <a href="#">
-              github link
-            </a>
-            <p class="project-description">XPath syntax reference</p>
-            <p class="project-description">(Flask, HTML, Javascript)</p>
-          </div>
+        <div class="right-col">
+          <p><strong>XPathology</strong></p>
+          <a href="https://xpathology.herokuapp.com" target="blank">
+            xpathology.herokuapp.com
+          </a>
+          <br>
+          <a href="https://github.com/GregoryVigoTorres/xpathology" target="blank">
+            source code
+          </a>
+          <p class="project-description">XPath syntax reference</p>
+          <p class="project-description">(Flask, HTML, Javascript)</p>
+        </div>
       </div>
 
       <div class="project-row">
         <div class="left-col">
-          <img src=" {{ url_for('static', filename='images/sortable_tables_screenshot.jpeg') }}")>
+          <a href="https://github.com/GregoryVigoTorres/sortableTables" target="blank">
+            <img src=" {{ url_for('static', filename='images/sortable_tables_screenshot.jpeg') }}")>
+          </a>
         </div>
 
         <div class="right-col">
           <p><strong>Sortable tables</strong></p>
           <a href="https://github.com/GregoryVigoTorres/sortableTables" target="blank">
-            github link
+            source code
           </a>
           <p class="project-description">Lightweight Javascript library for making HTML tables sortable</p>
           <p class="project-description">(plain Javascript)</p>
@@ -146,11 +149,12 @@
 
           <div class="right-col">
             <p><strong>pyMcSQLFace</strong></p>
-            <a class="project-link"
-               href="javascript:showComingSoon('pymcsqlface')">
-              github ... coming soon
-            </a>
+            <!-- <a class="project&#45;link" -->
+            <!--    href=""> -->
+            <!--   github ... coming soon -->
+            <!-- </a> -->
             <p class="project-description">Browser based client for SQL databases</p>
+            <p class="project-description">Still in alpha pre-release</p>
             <p class="project-description">(Flask, SQLAlchemy, Javascript)</p>
           </div>
       </div>
