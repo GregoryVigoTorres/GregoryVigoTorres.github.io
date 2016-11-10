@@ -381,6 +381,12 @@ a {
 ul {
   list-style: none; }
 
+.icon-container {
+  display: inline-block;
+  padding: 1rem; }
+  .icon-container svg, .icon-container use {
+    fill: #A5A5A5; }
+
 nav {
   position: absolute;
   top: 0;
