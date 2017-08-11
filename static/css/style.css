@@ -363,226 +363,53 @@ th {
   src: url("/static/fonts/Open_Sans/OpenSans-ExtraBold.ttf");
   font-style: normal;
   font-weight: bold; }
+html {
+  min-height: 100vh;
+  width: 100vw; }
+
 body {
   font-family: "MediumSans";
-  min-height: 100%;
-  max-width: 100%;
+  min-height: 100vh;
+  max-width: 100vw;
   text-rendering: optimizeLegibility; }
 
-a {
-  color: #2F7EBB;
-  text-decoration: none; }
-  a:hover {
-    background-color: rgba(47, 126, 187, 0.2); }
+#main-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
 
-ul {
-  list-style: none; }
-
-.icon-container {
-  display: inline-block;
-  padding: 1rem; }
-  .icon-container svg, .icon-container use {
-    fill: #A5A5A5; }
-
-nav {
+.top-bg-stack {
+  width: 100%;
+  height: 100vh;
   position: absolute;
   top: 0;
   left: 0;
-  height: 4.5rem;
-  font-family: "BoldSans";
-  background-color: #575757;
-  color: #fff; }
-  nav a {
-    display: inline-block;
-    color: #fff;
-    padding: 1rem 1.3rem 1.3rem 1.3rem; }
-    nav a:hover {
-      background-color: rgba(255, 255, 255, 0); }
-  nav .mobile-link {
-    display: none; }
-
-#main-container {
-  display: flex;
-  flex-wrap: wrap; }
-
-footer {
-  width: 100%;
-  padding: 4rem 0 3rem 0;
-  text-align: center;
-  font-size: 85%;
-  color: #858585; }
-
-.white-space {
-  height: 3rem;
-  width: 100%; }
+  z-index: -1;
+  background-size: cover; }
 
 #top {
-  width: 50%;
-  margin: 4.5rem 0 0 0;
-  padding: 3rem 0 5rem 0;
-  border: 8px solid #858585;
+  z-index: 1;
   text-align: center;
-  font-family: "BoldSans"; }
-  #top h2 {
-    font-family: "BoldSans";
-    font-size: 2rem; }
-  #top a {
-    padding: 1rem; }
+  background: rgba(255, 255, 255, 0.8); }
 
-#about-me {
-  width: 40%;
-  background-color: #000;
-  color: #fff;
-  padding: 3rem 2rem; }
+.glenn-carstens-peters {
+  background-image: url("/static/images/background/glenn-carstens-peters-203007.jpg"); }
 
-#projects {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  max-width: 100%;
-  margin: 0 0 0 5rem;
-  padding: 2rem;
-  border: 8px solid #9A35AD;
-  border: 8px solid #000; }
-  #projects .title {
-    width: 100%;
-    text-align: center;
-    font-family: "BoldSans";
-    font-size: 1.3rem;
-    margin-bottom: 1rem; }
-  #projects .project-row {
-    padding: 2rem;
-    margin: 1rem;
-    border: 1px solid cyan;
-    max-width: 30%;
-    border: 8px solid #000; }
-    #projects .project-row img {
-      max-width: 100%;
-      border: 1px solid #000; }
-    #projects .project-row .right-col a {
-      display: block; }
-    #projects .project-row .project-description {
-      background-color: #D1CED2;
-      font-size: 85%;
-      margin: 0;
-      padding: 0 1rem 0 1rem; }
+.glen-carstens-peters-overlay {
+  background-image: url("/static/images/background/glenn-carstens-peters-203007_overlay.jpg"); }
 
-#skills {
-  display: flex;
-  width: 100%; }
-  #skills ul, #skills li {
-    margin: 0 0 0 0;
-    padding: 0 0 0 0; }
-  #skills #top-skills-container, #skills #other-skills-container {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 3rem 0 3rem 0;
-    border: 8px solid #3163BB;
-    width: 50%; }
-    #skills #top-skills-container div, #skills #other-skills-container div {
-      margin: auto; }
-  #skills #top-skills-container {
-    background-color: #3163BB;
-    color: #fff;
-    font-family: "BoldSans"; }
-  #skills #other-skills-container {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 2rem; }
-    #skills #other-skills-container .title {
-      width: 100%;
-      font-family: "BoldSans";
-      margin-bottom: .7rem; }
-    #skills #other-skills-container div {
-      font-size: 85%;
-      width: 40%; }
+.jeremy-perkins {
+  background-image: url("/static/images/background/jeremy-perkins-317087.jpg"); }
 
-#cv {
-  border: 8px solid #858585;
-  margin: 0 40% 0 0; }
-  #cv .title, #cv header {
-    background-color: #858585;
-    color: #fff;
-    font-family: "BoldSans";
-    padding: .6rem; }
-  #cv header {
-    max-width: 35%; }
-  #cv p {
-    padding: 0 0 0 3rem; }
-  #cv .footnote {
-    font-size: 85%;
-    padding: 0 3rem 0 3rem; }
+.kristopher-roller {
+  background-image: url("/static/images/background/kristopher-roller-188180.jpg"); }
 
-#back-to-top {
-  display: block;
-  position: fixed;
-  bottom: 0;
-  right: 3rem;
-  background-color: #000;
-  color: #fff;
-  padding: 1.5rem;
-  border-radius: 50%;
-  font-family: "BoldSans";
-  border: 1px solid #fff; }
+mikhail-vasilyev {
+  background-image: url("/static/images/background/mikhail-vasilyev-34524-kitten.jpg"); }
 
-@ms-viewport {
-  width: device-width; }
-* {
-  box-sizing: border-box; }
-
-/* mobile/tablet */
-@media screen and (max-width: 770px) {
-  body {
-    font-size: 22px; }
-
-  nav {
-    position: static;
-    width: 100%; }
-    nav .mobile-link {
-      display: inline-block; }
-
-  #main-container {
-    flex-direction: column;
-    width: 100%; }
-
-  #top {
-    margin: 0 0 0 0; }
-
-  #cv {
-    width: 100%;
-    min-width: 100%;
-    margin: 0 0 0 0; }
-    #cv header {
-      width: 100%;
-      max-width: 100%; }
-
-  #top, #about-me {
-    width: 100%; }
-
-  #projects {
-    padding: 2rem 0 0 0;
-    margin: 0 0 0 0;
-    justify-content: flex-start; }
-    #projects .project-row {
-      width: 100%;
-      max-width: 100%;
-      margin-left: 0;
-      margin-right: 0;
-      border-left: none;
-      border-right: none; }
-      #projects .project-row .right-col a {
-        padding: .5rem 0;
-        font-size: 85%;
-        max-width: 100%; }
-
-  #skills {
-    flex-direction: column-reverse; }
-    #skills #other-skills-container, #skills #top-skills-container {
-      width: 100%;
-      padding: 2rem; }
-      #skills #other-skills-container .title, #skills #top-skills-container .title {
-        margin-bottom: 1.3rem; }
-      #skills #other-skills-container div, #skills #top-skills-container div {
-        width: 100%; } }
+.split-bg {
+  background-image: url("/static/images/background/split.jpg"); }
 
 /*# sourceMappingURL=style.css.map */
