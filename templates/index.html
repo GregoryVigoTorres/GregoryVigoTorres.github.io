@@ -9,26 +9,23 @@
     </head>
 
     <body>
-        <div id="main-container">
-            <section id="top-container">
-                <div id="top">
-                    <h2>Gregory Vigo Torres</h2>
-                    <p>Web &amp; Software Development</p>
-                    <p id="contact-links">
-                    <a href="mailto:gregory.vigo@gmail.com">email</a>
-                    <a href="https://github.com/GregoryVigoTorres?tab=repositories" target=blank>
-                        <span class="octicon octicon-mark-github"></span> github</a>
-                    <a href='https://es.linkedin.com/in/gregoryvigotorres' target='blank'>linkedin</a>
-                    </p>
-                </div>
-
-                <section class="top-bg-stack jeremy-perkins"></section>
-                <section class="top-bg-stack kristopher-roller"></section>
-                <section class="top-bg-stack mikhail-vasilyev"></section>
-                <section class="top-bg-stack split-bg"></section>
-                <section class="top-bg-stack glen-carstens-peters"></section>
-
-            </section>
+        <section id="top-container">
+            <div id="top">
+                <h2>Gregory Vigo Torres</h2>
+                <p>Web &amp; Software Development</p>
+                <p id="contact-links">
+                <a href="mailto:gregory.vigo@gmail.com">email</a>
+                <a href="https://github.com/GregoryVigoTorres?tab=repositories" target=blank>
+                    <span class="octicon octicon-mark-github"></span> github</a>
+                <a href='https://es.linkedin.com/in/gregoryvigotorres' target='blank'>linkedin</a>
+                </p>
+            </div>
+        </section>
+        <section class="top-bg-stack jeremy-perkins"></section>
+        <section class="top-bg-stack mikhail-vasilyev"></section>
+        <section class="top-bg-stack kristopher-roller"></section>
+        <section class="top-bg-stack split-bg"></section>
+        <section class="top-bg-stack glen-carstens-peters-overlay"></section>
 
             <!-- <div id="about&#45;me"> -->
             <!--   <p> -->
@@ -260,7 +257,6 @@
             <!--         <strong>&#38;#169; Gregory Vigo Torres, 2016</strong> -->
             <!--     </div> -->
             <!-- </footer> -->
-        </div>
-        <script src="/static/gvt.js"></script>
+        <script src="{{ url_for('static', filename='js/index.js') }}"></script>
     </body>
 </html>

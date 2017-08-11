@@ -26,7 +26,7 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-#main-container {
+#top-container {
     width: 100%;
     height: 100vh;
     display: flex;
@@ -42,6 +42,24 @@ body {
     left: 0;
     z-index: -1;
     background-size: cover;
+    opacity: 0;
+}
+
+// 5 elems
+@keyframes fade-bg {
+    0% {opacity: 0;}
+    5% {opacity: 1;}
+    15% {opacity: 1;}
+    30% {opacity: 0;}
+    100% {opacity: 0;}
+}
+
+.top-bg-stack-active {
+    animation-name: fade-bg;
+    //animation-duration: 3s;
+    // animation-delay
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
 }
 
 #top {
@@ -63,10 +81,10 @@ body {
 }
 
 .kristopher-roller {
-    background-image: url("/static/images/background/kristopher-roller-188180.jpg");
+    background-image: url("/static/images/background/kristopher-roller-188180_cropped.jpg");
 }
 
-mikhail-vasilyev {
+.mikhail-vasilyev {
     background-image: url("/static/images/background/mikhail-vasilyev-34524-kitten.jpg");
 }
 
