@@ -1,3 +1,5 @@
+---
+---
 @import 'normalize';
 
 @font-face {
@@ -10,6 +12,13 @@
 @font-face {
   font-family: "BoldSans";
   src: url("/static/fonts/Open_Sans/OpenSans-ExtraBold.ttf");
+  font-style: normal;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "BoldSerif";
+  src: url("/static/fonts/NoticiaText_Bold/NoticiaText-Bold.ttf");
   font-style: normal;
   font-weight: bold;
 }
@@ -32,6 +41,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    h2 {
+      font-family: "BoldSerif";
+    }
 }
 
 .top-bg-stack {
