@@ -1,0 +1,73 @@
+/* automatically generated css */
+
+    @font-face {
+        font-family: "SourceSansPro-Black";
+        src: url("SourceSansPro-Black.ttf");
+        style: "normal";
+    }
+
+    @font-face {
+        font-family: "SourceSansPro-BlackIt";
+        src: url("SourceSansPro-BlackItalic.ttf");
+        style: "italic";
+    }
+
+    @font-face {
+        font-family: "SourceSansPro-Bold";
+        src: url("SourceSansPro-Bold.ttf");
+        style: "normal";
+    }
+
+    @font-face {
+        font-family: "SourceSansPro-BoldIt";
+        src: url("SourceSansPro-BoldItalic.ttf");
+        style: "italic";
+    }
+
+    @font-face {
+        font-family: "SourceSansPro-ExtraLight";
+        src: url("SourceSansPro-ExtraLight.ttf");
+        style: "normal";
+    }
+
+    @font-face {
+        font-family: "SourceSansPro-ExtraLightIt";
+        src: url("SourceSansPro-ExtraLightItalic.ttf");
+        style: "italic";
+    }
+
+    @font-face {
+        font-family: "SourceSansPro-It";
+        src: url("SourceSansPro-Italic.ttf");
+        style: "italic";
+    }
+
+    @font-face {
+        font-family: "SourceSansPro-Light";
+        src: url("SourceSansPro-Light.ttf");
+        style: "normal";
+    }
+
+    @font-face {
+        font-family: "SourceSansPro-LightIt";
+        src: url("SourceSansPro-LightItalic.ttf");
+        style: "italic";
+    }
+
+    @font-face {
+        font-family: "SourceSansPro-Regular";
+        src: url("SourceSansPro-Regular.ttf");
+        style: "normal";
+    }
+
+    @font-face {
+        font-family: "SourceSansPro-Semibold";
+        src: url("SourceSansPro-Semibold.ttf");
+        style: "normal";
+    }
+
+    @font-face {
+        font-family: "SourceSansPro-SemiboldIt";
+        src: url("SourceSansPro-SemiboldItalic.ttf");
+        style: "italic";
+    }
