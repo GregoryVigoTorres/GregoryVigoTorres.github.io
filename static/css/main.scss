@@ -1,27 +1,8 @@
 ---
 ---
 @import 'normalize';
-
-@font-face {
-  font-family: "MediumSans";
-  src: url("/static/fonts/Open_Sans/OpenSans-Regular.ttf");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "BoldSans";
-  src: url("/static/fonts/Open_Sans/OpenSans-ExtraBold.ttf");
-  font-style: normal;
-  font-weight: bold;
-}
-
-@font-face {
-  font-family: "BoldSerif";
-  src: url("/static/fonts/NoticiaText_Bold/NoticiaText-Bold.ttf");
-  font-style: normal;
-  font-weight: bold;
-}
+@import 'fonts';
+@import 'carousel';
 
 html {
     min-height: 100vh;
@@ -31,7 +12,7 @@ html {
 body {
   font-family: "MediumSans";
   min-height: 100vh;
-  max-width: 100vw;
+  width: 100vw;
   text-rendering: optimizeLegibility;
 }
 
@@ -40,9 +21,14 @@ a {
   color: #59B9CE;
 }
 
+h2 {
+  font-family: "boldserif";
+}
+
 #top-container {
-    width: 100%;
     height: 100vh;
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: bottom;
@@ -58,7 +44,7 @@ a {
     $shadow-color: rgba(0, 0, 0, 0.8);
 
     h2 {
-      font-family: "BoldSerif";
+      font-family: "boldserif";
       font-size: 2rem;
       margin: 0;
       text-shadow: 2px 2px 3px $shadow-color;
@@ -78,55 +64,27 @@ a {
     }
 }
 
-.top-bg-stack {
-    width: 100%;
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    background-size: cover;
-    background-repeat: no-repeat;
-    opacity: 0;
+#about {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  justify-content: space-between;
+  border: 1px solid red;
+  padding: 0;
+
+  .left-col {
+    flex-basis: 50%;
+    font-size: 1.5rem;
+    padding: 4rem;
+
+    h2 {
+      font-size: 2rem;
+    }
+  }
+
+  .right-col {
+    flex-basis: 25%;
+    border: 12px solid green;
+  }
 }
-
-// 5 elems
-@keyframes fade-bg {
-    0% {opacity: 0;}
-    5% {opacity: 1;}
-    15% {opacity: 1;}
-    30% {opacity: 0;}
-    100% {opacity: 0;}
-}
-
-.top-bg-stack-active {
-    animation-name: fade-bg;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-}
-
-
-.glenn-carstens-peters {
-    background-image: url("/static/images/background/glenn-carstens-peters-203007.jpg");
-}
-
-.glen-carstens-peters-overlay {
-    background-image: url("/static/images/background/glenn-carstens-peters-203007_overlay.jpg");
-}
-
-.jeremy-perkins {
-    background-image: url("/static/images/background/jeremy-perkins-317087.jpg");
-}
-
-.kristopher-roller {
-    background-image: url("/static/images/background/kristopher-roller-188180_cropped.jpg");
-}
-
-.mikhail-vasilyev {
-    background-image: url("/static/images/background/mikhail-vasilyev-34524-kitten.jpg");
-}
-
-.split-bg {
-    background-image: url("/static/images/background/split.jpg");
-}
-
