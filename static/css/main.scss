@@ -102,3 +102,17 @@ h2 {
     }
   }
 }
+
+footer {
+  font-family: "BoldSans";
+  border-top: 2px solid black;
+
+  div {
+    margin: 6rem 0 2rem 0;
+    padding: 0 2rem 0 2rem;
+  }
+
+  svg {
+    height: 2.5rem;
+  }
+}
