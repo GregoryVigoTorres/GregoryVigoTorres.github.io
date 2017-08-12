@@ -33,35 +33,6 @@ h2 {
     align-items: bottom;
 }
 
-#top {
-    z-index: 1;
-    text-align: center;
-    background: rgba(0, 0, 0, 0.4);
-    color: white;
-    font-family: "BoldSans";
-    padding: 2.5rem;
-    $shadow-color: rgba(0, 0, 0, 0.8);
-
-    h2 {
-      font-size: 2rem;
-      margin: 0;
-      text-shadow: 2px 2px 3px $shadow-color;
-    }
-
-    .top-links {
-      display: flex;
-      justify-content: space-around;
-    }
-
-    a {
-      margin: auto;
-      background: white;
-      color: #058AA6;
-      padding: 4px 8px;
-      box-shadow: 2px 2px 3px $shadow-color;
-    }
-}
-
 #about {
   min-height: 100vh;
   display: flex;
@@ -74,12 +45,15 @@ h2 {
     flex-grow: 2;
     font-size: 1.5rem;
     padding: 4rem;
-    text-indent: 3rem;
     background: #74ADBD;
     color: white;
 
     h2 {
       font-size: 2rem;
+    }
+
+    p {
+      text-indent: 3rem;
     }
   }
 
@@ -107,10 +81,19 @@ footer {
     justify-content: space-between;
     margin: 6rem 0 2rem 0;
     padding: 0 2rem 0 2rem;
+
+    p {
+      flex-basis: 50%;
+      flex-grow: 1;
+      text-align: center;
+    }
   }
 
   svg {
     height: 2.5rem;
     width: auto;
+    margin: 0 1rem;
   }
 }
+
+@import 'responsive'
