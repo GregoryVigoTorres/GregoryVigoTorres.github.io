@@ -67,10 +67,27 @@
           <div class="project-item">
             <img src="/static/images/{{ pr.img }}">
             <h3>{{ pr.name }}</h3>
-            <p>{{ pr.description }}
+
+            {% if pr.url %}
+              <p>
+                <a href="{{ pr.url }}" target=_blank>see it live!</a>
+              </p>
+            {% endif %}
+
+            {% if pr.projectPage %}
+              <p>
+                <a href="{{ pr.projectPage }}" target=_blank>project page</a>
+              </p>
+            {% endif %}
+
+            <p>
+              <a href="{{ pr.sourceCodeUrl }}" target=_blank>source code {% include github-icon.svg %}</a>
+            </p>
+
+            <p>{{ pr.description }}</p>
+            <p>({{ pr.tech }})</p>
           </div>
         {% endfor %}
-
 
         </section>
 

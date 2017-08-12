@@ -12,8 +12,40 @@
 
   .project-item {
     border: 2px solid black;
-    flex-basis: 300px;
-    margin: 2rem;
+    width: 300px;
+    margin: 3rem;
+    padding: 0 0 1rem 0;
+
+    img {
+      width: 100%;
+      border-bottom: 2px solid black;
+    }
+
+    h3, p {
+      padding: 0 1rem 0 1rem;
+    }
+
+    h3 {
+      font-family: "BoldSans";
+    }
+
+    p {
+      margin: 0;
+    }
+
+    a {
+      font-family: "BoldSans";
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    svg {
+      width: 1rem;
+      height: auto;
+    }
+
   }
 }
 
