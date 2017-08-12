@@ -62,6 +62,16 @@
 
         <section id="projects">
           <h2>Projects</h2>
+
+        {% for pr in site.data.projects %}
+          <div class="project-item">
+            <img src="/static/images/{{ pr.img }}">
+            <h3>{{ pr.name }}</h3>
+            <p>{{ pr.description }}
+          </div>
+        {% endfor %}
+
+
         </section>
 
         <script src="/static/js/index.js"></script>

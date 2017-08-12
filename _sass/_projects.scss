@@ -1,0 +1,19 @@
+#projects {
+  min-height: 100vh;
+  padding: 4rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  h2 {
+    text-align: center;
+    width: 100%;
+  }
+
+  .project-item {
+    border: 2px solid black;
+    flex-basis: 300px;
+    margin: 2rem;
+  }
+}
+

@@ -1,0 +1,66 @@
+[
+  {
+    "name": "spelt",
+    "tech": "Scrapy, scrapy-splash",
+    "url": "https://gregoryvigotorres.github.io/spelt/",
+    "sourceCodeUrl": "https://github.com/GregoryVigoTorres/spelt",
+    "img": "spelt.jpeg",
+    "description": "Crawl a website and serialize it to plain text"
+  },
+  {
+    "name": "Web2screenshot",
+    "tech": "Scrapy, scrapy-splash",
+    "url": "https://gregoryvigotorres.github.io/web2screenshot/",
+    "sourceCodeUrl": "https://github.com/GregoryVigoTorres/web2screenshot",
+    "img": "web2screenshot.jpeg",
+    "description": "Take screenshots of an entire website"
+  },
+  {
+    "name": "Artist's Site",
+    "tech": "Flask, Javascript, SQLAlchemy, PostgreSQL",
+    "url": "https://gregoryvigotorres.herokuapp.com/",
+    "sourceCodeUrl": "https://github.com/GregoryVigoTorres/PaintingsApp",
+    "img": "paintings2.jpeg",
+    "description": "Painting portfolio"
+  },
+  {
+    "name": "Not My Type",
+    "tech": "Flask, SQLAlchemy, Angular 1.5",
+    "url": "https://notmytype.herokuapp.com/",
+    "sourceCodeUrl": "https://github.com/GregoryVigoTorres/notMyType",
+    "img": "notmytype1.jpeg",
+    "description": "View and download free fonts"
+  },
+  {
+    "name": "XPathology",
+    "tech": "Flask, HTML, Javascript",
+    "url": "https://xpathology.herokuapp.com/",
+    "sourceCodeUrl": "https://github.com/GregoryVigoTorres/xpathology",
+    "img": "xpathology.jpeg",
+    "description": "Xpath reference"
+  },
+  {
+    "name": "Unofficial lxml docs",
+    "tech": "Sphinx",
+    "url": "https://gregoryvigotorres.github.io/lxml_docs/index.html",
+    "sourceCodeUrl": "https://github.com/GregoryVigoTorres/lxml_docs",
+    "img": "mylxml.jpeg",
+    "description": "lxml docs redesign"
+  },
+  {
+    "name": "Sortable tables",
+    "tech": "Javascript",
+    "url": "",
+    "sourceCodeUrl": "https://github.com/GregoryVigoTorres/sortableTables",
+    "img": "sortable_tables_screenshot.jpeg",
+    "description": "Micro library for sorting HTML tables"
+  },
+  {
+    "name": "sdltm2tmx",
+    "tech": "Python",
+    "url": "",
+    "sourceCodeUrl": "https://github.com/GregoryVigoTorres/sdltm2tmx",
+    "img": "screenshot_sdltm2tmx.jpeg",
+    "description": "Cli app for creating a tmx1.4 translation memory from an sdltm file"
+  }
+]

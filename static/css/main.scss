@@ -3,6 +3,7 @@
 @import 'normalize';
 @import 'fonts';
 @import 'carousel';
+@import 'projects';
 
 html {
     min-height: 100vh;
@@ -99,14 +100,5 @@ h2 {
       height: auto;
       margin: 3rem;
     }
-  }
-}
-
-#projects {
-  min-height: 100vh;
-  padding: 4rem;
-
-  h2 {
-    text-align: center;
   }
 }
