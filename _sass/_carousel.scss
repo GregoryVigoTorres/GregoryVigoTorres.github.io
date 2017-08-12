@@ -1,30 +1,31 @@
+// container for name and links
 #top {
-    z-index: 1;
-    text-align: center;
-    background: rgba(0, 0, 0, 0.4);
-    color: white;
-    font-family: "BoldSans";
-    padding: 2.5rem;
-    $shadow-color: rgba(0, 0, 0, 0.8);
+  z-index: 1;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+  font-family: "BoldSans";
+  padding: 2.5rem;
+  $shadow-color: rgba(0, 0, 0, 0.8);
 
-    h2 {
-      font-size: 2rem;
-      margin: 0;
-      text-shadow: 2px 2px 3px $shadow-color;
-    }
+  h2 {
+    font-size: 2rem;
+    margin: 0;
+    text-shadow: 2px 2px 3px $shadow-color;
+  }
 
-    .top-links {
-      display: flex;
-      justify-content: space-around;
-    }
+  .top-links {
+    display: flex;
+    justify-content: space-around;
+  }
 
-    a {
-      margin: auto;
-      background: white;
-      color: #058AA6;
-      padding: 4px 8px;
-      box-shadow: 2px 2px 3px $shadow-color;
-    }
+  a {
+    margin: auto;
+    background: white;
+    color: #058AA6;
+    padding: 4px 8px;
+    box-shadow: 2px 2px 3px $shadow-color;
+  }
 }
 
 .top-bg-stack {
@@ -56,28 +57,55 @@
   animation-iteration-count: infinite;
 }
 
+@media (min-width:501px) and (max-width:800px) {
+  .glenn-carstens-peters {
+    background-image: url("/static/images/background/800p_glenn-carstens-peters-203007.jpg");
+  }
 
-.glenn-carstens-peters {
-  background-image: url("/static/images/background/glenn-carstens-peters-203007.jpg");
+  .glen-carstens-peters-overlay {
+    background-image: url("/static/images/background/800p_glenn-carstens-peters-203007_overlay.jpg");
+  }
+
+  .jeremy-perkins {
+    background-image: url("/static/images/background/800p_jeremy-perkins-317087.jpg");
+  }
+
+  .kristopher-roller {
+    background-image: url("/static/images/background/800p_kristopher-roller-188180_cropped.jpg");
+  }
+
+  .mikhail-vasilyev {
+    background-image: url("/static/images/background/800p_mikhail-vasilyev-34524-kitten.jpg");
+  }
+
+  .split-bg {
+    background-image: url("/static/images/background/800p_split.jpg");
+  }
+
 }
 
-.glen-carstens-peters-overlay {
-  background-image: url("/static/images/background/glenn-carstens-peters-203007_overlay.jpg");
-}
+@media (min-width:801px) {
+  .glenn-carstens-peters {
+    background-image: url("/static/images/background/glenn-carstens-peters-203007.jpg");
+  }
 
-.jeremy-perkins {
-  background-image: url("/static/images/background/jeremy-perkins-317087.jpg");
-}
+  .glen-carstens-peters-overlay {
+    background-image: url("/static/images/background/glenn-carstens-peters-203007_overlay.jpg");
+  }
 
-.kristopher-roller {
-  background-image: url("/static/images/background/kristopher-roller-188180_cropped.jpg");
-}
+  .jeremy-perkins {
+    background-image: url("/static/images/background/jeremy-perkins-317087.jpg");
+  }
 
-.mikhail-vasilyev {
-  background-image: url("/static/images/background/mikhail-vasilyev-34524-kitten.jpg");
-}
+  .kristopher-roller {
+    background-image: url("/static/images/background/kristopher-roller-188180_cropped.jpg");
+  }
 
-.split-bg {
-  background-image: url("/static/images/background/split.jpg");
-}
+  .mikhail-vasilyev {
+    background-image: url("/static/images/background/mikhail-vasilyev-34524-kitten.jpg");
+  }
 
+  .split-bg {
+    background-image: url("/static/images/background/split.jpg");
+  }
+}
