@@ -1,3 +1,12 @@
+#top-container {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: bottom;
+}
+
 // container for name and links
 #top {
   z-index: 1;
@@ -39,6 +48,7 @@
   padding: 0;
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   opacity: 0;
 }
 
@@ -55,6 +65,33 @@
   animation-name: fade-bg;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
+}
+
+@media (max-width:500px) {
+  #top-container {
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  .glen-carstens-peters-overlay {
+    background-image: url("/static/images/background/500p_glenn-carstens-peters-203007_overlay.jpg");
+  }
+
+  .jeremy-perkins {
+    background-image: url("/static/images/background/500p_jeremy-perkins-317087.jpg");
+  }
+
+  .kristopher-roller {
+    background-image: url("/static/images/background/500p_kristopher-roller-188180_cropped.jpg");
+  }
+
+  .mikhail-vasilyev {
+    background-image: url("/static/images/background/500p_mikhail-vasilyev-34524-kitten.jpg");
+  }
+
+  .split-bg {
+    background-image: url("/static/images/background/500p_split.jpg");
+  }
 }
 
 @media (min-width:501px) and (max-width:800px) {
@@ -77,7 +114,6 @@
   .split-bg {
     background-image: url("/static/images/background/800p_split.jpg");
   }
-
 }
 
 @media (min-width:801px) {
