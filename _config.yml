@@ -3,6 +3,8 @@
 title: gregoryvigotorres.github.io
 email: gregory.vigo@gmail.com
 description: This is my github personal page.
+url: ""
+baseurl: ""
 repository: GregoryVigoTorres/GregoryVigoTorres.github.io.git
 
 # Build settings
