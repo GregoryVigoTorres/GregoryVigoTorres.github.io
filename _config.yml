@@ -1,0 +1,19 @@
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+title: gregoryvigotorres.github.io
+email: gregory.vigo@gmail.com
+description: This is my github personal page.
+repository: GregoryVigoTorres/GregoryVigoTorres.github.io.git
+
+# Build settings
+markdown: kramdown
+gems:
+  - jekyll-feed
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - refs
+  - templates
+sass:
+  stye: compressed
+

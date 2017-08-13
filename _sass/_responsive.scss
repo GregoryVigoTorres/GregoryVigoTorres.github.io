@@ -1,0 +1,42 @@
+// There are also media queries in _carousel.scss
+
+@media (max-width: 500px) {
+  #about {
+    flex-direction: column;
+
+    .right-col {
+      svg {
+        margin: 1rem;
+      }
+    }
+  }
+
+  #projects {
+    padding: 1rem;
+  }
+
+  footer {
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    div {
+      display: block;
+      padding: 0 1rem 0 1rem;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  #about {
+    .left-col {
+      p {
+        font-size: 1rem;
+        text-indent: 1.5rem;
+      }
+    }
+
+    .right-col {
+      align-content: center;
+    }
+  }
+}

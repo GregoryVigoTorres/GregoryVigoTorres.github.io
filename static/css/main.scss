@@ -1,0 +1,90 @@
+---
+---
+@import 'normalize';
+@import 'fonts';
+@import 'carousel';
+@import 'projects';
+
+html {
+  min-height: 100vh;
+}
+
+body {
+  font-family: "MediumSans";
+  min-height: 100vh;
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  text-decoration: none;
+  color: #59B9CE;
+}
+
+h2 {
+  font-family: "BoldSans";
+}
+
+#about {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  justify-content: flex-start;
+  padding: 0;
+
+  .left-col {
+    flex-grow: 2;
+    font-size: 1.5rem;
+    padding: 4rem;
+    background: #74ADBD;
+    color: white;
+
+    h2 {
+      font-size: 2rem;
+    }
+
+    p {
+      text-indent: 3rem;
+    }
+  }
+
+  .right-col {
+    flex-grow: 1;
+    // new flex context
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-evenly;
+
+    svg {
+      width: 50px;
+      height: auto;
+      margin: 3rem;
+    }
+  }
+}
+
+footer {
+  font-family: "BoldSans";
+  border-top: 2px solid black;
+
+  div {
+    display: flex;
+    justify-content: space-between;
+    margin: 6rem 0 2rem 0;
+    padding: 0 2rem 0 2rem;
+
+    p {
+      flex-basis: 50%;
+      flex-grow: 1;
+      text-align: center;
+    }
+  }
+
+  svg {
+    height: 2.5rem;
+    width: auto;
+    margin: 0 1rem;
+  }
+}
+
+@import 'responsive'
