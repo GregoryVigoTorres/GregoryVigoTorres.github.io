@@ -5,8 +5,9 @@ email: gregory.vigo@gmail.com
 description: This is my github personal page.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+twitter_username: ""
+github_username:  gregoryvigotorres
+repository: git@github.com:GregoryVigoTorres/GregoryVigoTorres.github.io.git
 
 # Build settings
 markdown: kramdown
